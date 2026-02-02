@@ -1,0 +1,258 @@
+:root {
+  --accent: #9A8FDB;        /* Dusty lilac */
+  --accent-hover: #B3A9F0;  /* Soft hover */
+  --bg: #FCFCFD;            /* Soft white */
+  --text: #222222;          /* Primary text */
+  --muted: #6B7280;         /* Secondary text */
+}
+
+body {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+body.loaded {
+  opacity: 1;
+}
+
+p {
+  color: var(--text);
+}
+
+.secondary-text {
+  color: var(--muted);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    background: var(--bg);
+}
+
+header h1 {
+    font-family: 'Special Elite', cursive;
+    font-weight: 400;
+    color: var(--accent);
+    margin: 0;
+    letter-spacing: 0.03em; /* important for readability */
+}
+
+header nav a {
+    margin-left: 1rem;
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 500;
+    font-family: 'Raleway', sans-serif;
+}
+
+header nav a.active {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+header nav a:hover {
+    color: var(--accent-hover);
+}
+
+a:hover {
+  color: var(--accent-hover);
+}
+
+section {
+    padding: 4rem 2rem;
+    max-width: 900px;
+    margin: auto;
+}
+
+h2 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+section h2::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: var(--accent);
+  margin-top: 0.5rem;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#hero {
+  padding: 6rem 2rem;
+  text-align: center;
+  /* background: linear-gradient(120deg, #fdfdfd, #fef9f5); */
+}
+
+#hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--accent);
+}
+
+#hero p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+#hero p {
+  position: relative;
+  display: inline-block;
+}
+
+#hero p::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -3px;
+  left: 0;
+  background-color: var(--accent);
+  transition: width 0.3s ease-in-out;
+}
+
+#hero p:hover::after {
+  width: 100%;
+}
+
+.tagline {
+  position: relative;
+  display: inline-block;
+  cursor: default; /* optional */
+}
+
+.tagline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;           /* distance from text */
+  width: 100%;
+  height: 2px;
+  background-color: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;  /* grow from left initially */
+  transition: transform 0.35s ease;
+}
+
+/* Grow on hover */
+.tagline.underline-grow::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Retract to right on mouse leave */
+.tagline.underline-retract::after {
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.35s ease;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  padding: 1.5rem;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  background-color: #fff;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  border-color: var(--accent);
+  background: linear-gradient(145deg, #fff, #fff9f5); /* subtle warm gradient */
+}
+
+.project-card h3 {
+  margin-top: 0;
+  color: var(--accent);
+}
+
+.project-card p {
+  margin-bottom: 0;
+  color: #555;
+}
+
+#contact {
+  padding: 4rem 2rem;
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+}
+
+#contact a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s, transform 0.2s;
+}
+
+#contact a:hover {
+  color: var(--accent-hover); /* slightly lighter accent */
+  transform: translateY(-2px); /* tiny lift */
+}
+
+#contact i {
+  margin-right: 0.5rem;
+  color: var(--accent);
+  transition: transform 0.2s;
+}
+
+#contact i:hover {
+  transform: scale(1.2); /* tiny pop on hover */
+}
+
+#back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s, background-color 0.2s, opacity 0.4s, box-shadow 0.3s;
+  opacity: 0; /* hidden initially */
+  pointer-events: none; /* ignore clicks when hidden */
+  z-index: 1000;
+}
+
+#back-to-top:hover {
+  transform: scale(1.2);
+  background-color: var(--accent-hover);
+  box-shadow: 0 6px 20px rgba(255,107,107,0.5); /* subtle glow effect */
+}
