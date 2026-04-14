@@ -1,0 +1,105 @@
+<!-- BERT.HTML -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Rosetta Probe | Ananya Navale</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Raleway:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<header>
+  <h1>Ananya Navale</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="work.html" class="active">Work</a>
+    <!-- <a href="photography.html">Photography</a> -->
+  </nav>
+</header>
+
+<section id="project-detail">
+
+  <!-- Poster image -->
+  <img src="assets/cs224n_poster.png" alt="The Rosetta Probe research poster" class="project-poster">
+
+  <!-- Hero -->
+  <p class="project-eyebrow">Research · NLP · Linguistics</p>
+  <h2 class="project-title">The Rosetta Probe</h2>
+  <p class="project-hero-line">Probing whether English BERT's syntactic geometry silently encodes the grammar of languages it has never seen.</p>
+
+  <!-- Metadata block -->
+  <div class="project-meta">
+    <div class="meta-item">
+      <span class="meta-label">Timeline</span>
+      <span class="meta-value">Winter 2026, 5 weeks</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-label">Role</span>
+      <span class="meta-value">Solo Researcher</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-label">Tools</span>
+      <span class="meta-value">Python, PyTorch, Google Colab, HuggingFace, Universal Dependencies</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-label">Class</span>
+      <span class="meta-value">CS 224N: Natural Language Processing with Deep Learning</span>
+    </div>
+  </div>
+
+  <!-- Abstract -->
+  <div class="project-body">
+    <p>If a language model learns the grammatical rules of one language, does it implicitly learn something universal about language itself? This paper investigates what English BERT – trained exclusively on English text – latently encodes about the syntax of other languages.</p>
+    <p>Applying the structural probe framework to eight languages (English, French, Spanish, Italian, German, Dutch, Czech, and Finnish) using a single frozen English BERT model, I find that BERT's syntactic geometry transfers cross-lingually to a surprising degree – with probe performance degrading as typological distance from English increases. Germanic languages consistently outperform Romance languages on root identification accuracy, suggesting the geometric encoding reflects language family structure in addition to typological proximity.</p>
+  </div>
+
+  <!-- Links -->
+  <div class="project-links">
+    <a href="https://drive.google.com/file/d/1rynQlpGQaqgrBAKQT2VJf0Dog5HmsxOo/view" target="_blank" class="project-link">Read the paper →</a>
+    <a href="https://github.com/AnanyaNavale/cs224n-rosetta-probe" target="_blank" class="project-link project-link-ghost">View on GitHub →</a>
+  </div>
+
+  <!-- Prev/Next -->
+  <div class="project-nav">
+    <a href="lunacart.html">← Previous: LunaCart</a>
+    <span></span>
+  </div>
+
+</section>
+
+<footer>
+  <p>&copy; 2026 Ananya Navale</p>
+</footer>
+
+<button id="back-to-top" title="Back to Top">↑</button>
+
+<script>
+  const btn = document.getElementById('back-to-top');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      btn.style.opacity = '1';
+      btn.style.pointerEvents = 'auto';
+    } else {
+      btn.style.opacity = '0';
+      btn.style.pointerEvents = 'none';
+    }
+  });
+  btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    document.body.classList.add('loaded');
+  });
+</script>
+
+</body>
+</html>

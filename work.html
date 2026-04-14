@@ -1,0 +1,90 @@
+<!-- PROJECTS.HTML -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Ananya Navale</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Raleway:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<header>
+  <h1>Ananya Navale</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="work.html" class="active">Work</a>
+    <!-- <a href="photography.html">Photography</a> -->
+  </nav>
+</header>
+
+<section id="projects-page">
+  <h2>All Projects</h2>
+  <div class="projects">
+
+    <a href="theo.html" class="project-card">
+      <div class="project-tag">UX Design · App</div>
+      <h3>Theo</h3>
+      <p>An ADHD study buddy app designed to support focus, reduce overwhelm, and make studying feel less like a battle.</p>
+    </a>
+
+    <a href="boogie.html" class="project-card">
+      <div class="project-tag">UX Design · Accessibility</div>
+      <h3>Boogie</h3>
+      <p>A ride-share prototype designed for blind and low-vision users – screen-reader friendly, map-free, and universally usable.</p>
+    </a>
+
+    <a href="frontseat-baby.html" class="project-card">
+      <div class="project-tag">Product Design · Prototype</div>
+      <h3>Frontseat Baby</h3>
+      <p>A reimagined KQED feature that gives listeners a more dynamic, personalized livestream and playlist experience with public radio.</p>
+    </a>
+
+    <a href="lunacart.html" class="project-card">
+      <div class="project-tag">Full Stack · Health</div>
+      <h3>LunaCart</h3>
+      <p>A Replit-built app helping college students eat healthier at night – with playful behavior tracking that actually makes it fun.</p>
+    </a>
+
+    <a href="rosetta-probe.html" class="project-card">
+      <div class="project-tag">Research · NLP</div>
+      <h3>The Rosetta Probe</h3>
+      <p>A research paper exploring how BERT encodes syntactic structure in languages beyond English written in Latin scripts.</p>
+    </a>
+
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2026 Ananya Navale</p>
+</footer>
+
+<button id="back-to-top" title="Back to Top">↑</button>
+
+<script>
+  const btn = document.getElementById('back-to-top');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      btn.style.opacity = '1';
+      btn.style.pointerEvents = 'auto';
+    } else {
+      btn.style.opacity = '0';
+      btn.style.pointerEvents = 'none';
+    }
+  });
+  btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    document.body.classList.add('loaded');
+  });
+</script>
+
+</body>
+</html>

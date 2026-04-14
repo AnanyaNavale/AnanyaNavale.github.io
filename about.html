@@ -1,39 +1,69 @@
+<!-- ABOUT.HTML -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Me | Ananya Navale</title>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
-
-  <!-- Link to your CSS -->
+  <title>About | Ananya Navale</title>
   <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Raleway:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-  <header>
+<header>
   <h1>Ananya Navale</h1>
   <nav>
     <a href="index.html">Home</a>
     <a href="about.html" class="active">About</a>
-    <a href="index.html#projects">Projects</a>
-    <a href="index.html#contact">Contact</a>
+    <a href="work.html">Work</a>
+    <!-- <a href="photography.html">Photography</a> -->
   </nav>
 </header>
 
+<section id="about">
+  <h2>About Me</h2>
+  <div class="about-grid">
+    <div class="about-text">
+      <p>Hi, I'm <strong>Ananya</strong> – an undergraduate pursuing my B.S. in Computer Science at Stanford University, with focuses in Human-Computer Interaction and Systems.</p>
+      <p>I work at the intersection of design, engineering, & research, with a focus on accessibility and human-centered design. I care about building things that are thoughtful, functional, and made with the people using them in mind.</p>
+      <p>Outside of my coursework, I contribute writing and photography to The Stanford Daily through articles, photo galleries, and the occasional concert review.</p>
+    </div>
+    <div class="about-photo">
+      <img src="assets/headshot.jpg" alt="Ananya Navale">
+    </div>
+  </div>
+  <div class="about-links">
+    <a href="mailto:ananya.navale@gmail.com"><i class="fas fa-envelope"></i> ananya.navale@gmail.com</a>
+    <a href="https://github.com/AnanyaNavale" target="_blank"><i class="fab fa-github"></i> github.com/AnanyaNavale</a>
+    <a href="https://linkedin.com/in/AnanyaNavale" target="_blank"><i class="fab fa-linkedin"></i> linkedin.com/in/AnanyaNavale</a>
+    <a href="https://instagram.com/theananymousphotographer" target="_blank"><i class="fab fa-instagram"></i> @theananymousphotographer</a>
+  </div>
+</section>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Write a short bio here.</p>
-  </section>
+<footer>
+  <p>&copy; 2026 Ananya Navale</p>
+</footer>
 
-  <footer>
-    <p>&copy; 2026 Ananya Navale</p>
-  </footer>
+<button id="back-to-top" title="Back to Top">↑</button>
 
-</body>
+<script>
+  const btn = document.getElementById('back-to-top');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      btn.style.opacity = '1';
+      btn.style.pointerEvents = 'auto';
+    } else {
+      btn.style.opacity = '0';
+      btn.style.pointerEvents = 'none';
+    }
+  });
+  btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
 
 <script>
   window.addEventListener('DOMContentLoaded', () => {
@@ -41,4 +71,5 @@
   });
 </script>
 
+</body>
 </html>

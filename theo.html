@@ -1,0 +1,117 @@
+<!-- THEO.HTML -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Theo | Ananya Navale</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Raleway:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<header>
+  <h1>Ananya Navale</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="work.html" class="active">Work</a>
+    <!-- <a href="photography.html">Photography</a> -->
+  </nav>
+</header>
+
+<section id="project-detail">
+
+  <!-- Cover image placeholder -->
+  <div class="project-cover"></div>
+
+  <!-- Hero -->
+  <p class="project-eyebrow">UX Design · App</p>
+  <h2 class="project-title">Theo</h2>
+  <p class="project-hero-line">Gentle nudges. Real progress.</p>
+
+  <!-- Metadata block -->
+  <div class="project-meta">
+    <div class="meta-item">
+      <span class="meta-label">Timeline</span>
+      <span class="meta-value">Fall 2025, 10 weeks</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-label">Role</span>
+      <span class="meta-value">Lead Designer & Front-End Developer</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-label">Tools</span>
+      <span class="meta-value">Figma, React Native (TypeScript), Supabase, Expo.dev</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-label">Class</span>
+      <span class="meta-value">CS 147: Introduction to Human-Computer Interaction</span>
+    </div>
+  </div>
+
+  <!-- Writeup -->
+  <div class="project-body">
+
+    <p>Theo was my first real introduction to the HCI design process, and it became the project that made me fall in love with design. I took on a broad role – leading visual design, building a series of prototypes from low-fi paper through Figma med-fi, developing a functional hi-fi application, conducting needfinding interviews, and contributing to development. Each stage of the process taught me something new, and I trusted it.</p>
+
+    <p>The primary design experience I aimed to create within the product was simplicity. For users with ADHD, visual noise isn't just aesthetic – it's a barrier. I pushed for a clean, neutral interface that stayed out of the way, letting the experience feel passively supportive rather than stimulating. That conviction carried us to Best Visual Design at the CS 147 Fall 2025 Final Project Expo.</p>
+
+  </div>
+
+  <!-- Award -->
+    <div class="project-award">
+    <i class="fas fa-star"></i> Voted <strong>Best Visual Design</strong> – CS 147 Fall 2025
+    </div>
+
+    <div class="project-award">
+    <i class="fas fa-star"></i> Voted <strong>Best Production Value</strong> Concept Video – CS 147 Fall 2025 Film Festival
+    </div>
+
+    <!-- Links -->
+    <div class="project-links">
+    <a href="https://web.stanford.edu/class/cs147/projects/EmpoweringLearnerswithAI/Theo/" target="_blank" class="project-link">View full project →</a>
+    <a href="https://github.com/AnanyaNavale/CS147-Theo" target="_blank" class="project-link project-link-ghost">View on GitHub →</a>
+    </div>
+
+  <!-- Prev/Next -->
+  <div class="project-nav">
+    <span></span>
+    <a href="boogie.html">Next: Boogie →</a>
+  </div>
+
+</section>
+
+<footer>
+  <p>&copy; 2026 Ananya Navale</p>
+</footer>
+
+<button id="back-to-top" title="Back to Top">↑</button>
+
+<script>
+  const btn = document.getElementById('back-to-top');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      btn.style.opacity = '1';
+      btn.style.pointerEvents = 'auto';
+    } else {
+      btn.style.opacity = '0';
+      btn.style.pointerEvents = 'none';
+    }
+  });
+  btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    document.body.classList.add('loaded');
+  });
+</script>
+
+</body>
+</html>
