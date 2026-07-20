@@ -1,0 +1,25 @@
+.section-header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+.section-heading {
+  font-family: var(--font-label);
+  font-size: 21px;
+  font-weight: 500;
+  color: var(--color-text-header);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.section-tagline {
+  font-family: var(--font-display);
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 70px;
+
+  padding-bottom: 3px;
+}

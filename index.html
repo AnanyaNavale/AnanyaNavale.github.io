@@ -1,99 +1,13 @@
-<!-- INDEX.HTML website frontend file. -->
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ananya Navale | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Raleway:wght@400;500;600&display=swap" rel="stylesheet">
-  <!-- Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
-
-<header>
-  <h1>Ananya Navale</h1>
-  <nav>
-    <a href="index.html" class="active">Home</a>
-    <a href="about.html">About</a>
-    <a href="work.html">Work</a>
-    <!-- <a href="photography.html">Photography</a> -->
-  </nav>
-</header>
-
-<section id="hero">
-  <h1>Hi there, I'm Ananya</h1>
-  <p class="tagline">Thoughtful by design. Experimental by nature.</p>
-  <p class="hero-sub">Building things that work beautifully for the humans using them.</p>
-</section>
-
-<section id="featured">
-  <h2>Featured Work</h2>
-  <div class="projects">
-
-    <a href="theo.html" class="project-card">
-      <div class="project-tag">UX Design · App</div>
-      <h3>Theo</h3>
-      <p>An ADHD study buddy app designed to support focus, reduce overwhelm, and make studying feel less like a battle.</p>
-    </a>
-
-    <a href="boogie.html" class="project-card">
-      <div class="project-tag">UX Design · Accessibility</div>
-      <h3>Boogie</h3>
-      <p>A ride-share prototype designed for blind and low-vision users – screen-reader friendly, map-free, and universally usable.</p>
-    </a>
-
-    <a href="frontseat-baby.html" class="project-card">
-      <div class="project-tag">Product Design · Prototype</div>
-      <h3>Frontseat Baby</h3>
-      <p>A reimagined KQED feature that gives listeners a more dynamic, personalized livestream and playlist experience with public radio.</p>
-    </a>
-
-  </div>
-  <p class="view-all"><a href="work.html">View all work →</a></p>
-</section>
-
-<footer>
-  <p>&copy; 2026 Ananya Navale</p>
-</footer>
-
-<button id="back-to-top" title="Back to Top">↑</button>
-
-<script>
-  const btn = document.getElementById('back-to-top');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 300) {
-      btn.style.opacity = '1';
-      btn.style.pointerEvents = 'auto';
-    } else {
-      btn.style.opacity = '0';
-      btn.style.pointerEvents = 'none';
-    }
-  });
-  btn.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-</script>
-
-<script>
-  const tagline = document.querySelector('.tagline');
-  tagline.addEventListener('mouseenter', () => {
-    tagline.classList.add('underline-grow');
-    tagline.classList.remove('underline-retract');
-  });
-  tagline.addEventListener('mouseleave', () => {
-    tagline.classList.add('underline-retract');
-    tagline.classList.remove('underline-grow');
-  });
-</script>
-
-<script>
-  window.addEventListener('DOMContentLoaded', () => {
-    document.body.classList.add('loaded');
-  });
-</script>
-
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>portfolio</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>

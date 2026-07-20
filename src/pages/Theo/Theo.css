@@ -1,0 +1,79 @@
+.theo-case-study .case-study-headline {
+  background: linear-gradient(
+    178deg,
+    var(--color-theo-tertiary) 0%,
+    var(--color-theo-primary) 50%,
+    var(--color-theo-secondary) 100%
+  );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.theo-case-study .overview-header {
+  background: linear-gradient(
+    104deg,
+    var(--color-theo-tertiary) 39%,
+    var(--color-theo-primary) 57%,
+    var(--color-theo-secondary) 100%
+  );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.theo-case-study .reflections {
+  background: var(--color-theo-reflection-background);
+}
+
+.theo-case-study .section-tagline {
+  background: linear-gradient(
+    100deg, 
+    var(--color-theo-tertiary) 25%, 
+    var(--color-theo-primary) 50%, 
+    var(--color-theo-secondary) 100%
+  );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.theo-case-study .question-number-outer {
+  background: linear-gradient(
+    135deg,
+    #250E0E 10%,
+    var(--color-theo-primary) 50%,
+    var(--color-theo-secondary) 100%
+  );
+}
+
+.theo-case-study .question-number-inner {
+  background: var(--color-theo-reflection-background);
+}
+
+.theo-case-study .question-number {
+  display: inline-block;
+  margin: 0;
+
+  background: linear-gradient(
+    135deg,
+    #250E0E 25%,
+    var(--color-theo-primary) 70%,
+    var(--color-theo-secondary) 100%
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}

@@ -1,0 +1,50 @@
+.view-case-study-button {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  cursor: pointer;
+  appearance: none;
+
+  background: rgba(0, 0, 0, 0.15);
+  color: var(--color-text-header);
+
+  transition:
+    background-color 300ms ease,
+    color 300ms ease,
+    transform 300ms ease;
+}
+
+.view-case-study-button:hover {
+  background: rgba(0, 0, 0, 0.5);
+  color: var(--color-text-light);
+  transform: scale(1.08);
+}
+
+.view-case-study-text {
+  width: 100%;
+  height: 100%;
+}
+
+.view-case-study-button:hover .view-case-study-text {
+  animation: rotate-text 10s linear infinite;
+}
+
+@keyframes rotate-text {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

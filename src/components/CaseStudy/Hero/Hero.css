@@ -1,0 +1,247 @@
+.case-study-hero {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  padding: 80px 150px 0;
+  gap: 100px;
+
+  align-items: center;
+}
+
+.case-study-hero-above-fold {
+  width: 100%;
+  max-width: 1140px;
+  display: flex;
+}
+
+
+/* Text Side */
+
+.case-study-header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  gap: 30px;
+}
+
+.case-study-title-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.case-study-title {
+  font-family: var(--font-body);
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--color-text-header);
+}
+
+.case-study-value-prop {
+  font-family: var(--font-body);
+  font-size: 17px;
+  font-weight: 350;
+  color: var(--color-text-header);
+}
+
+.case-study-headline {
+  width: 520px;
+  display: flex;
+  flex-direction: column;
+
+  gap: 30px;
+
+  font-family: var(--font-display);
+  font-size: 70px;
+  font-weight: 800;
+  line-height: 80px;
+}
+
+.case-study-headline span {
+  display: block;
+}
+
+/* Image side */
+
+.case-study-hero-image {
+  position: relative;
+  width: 100%;
+  height: 686px;
+  overflow: hidden;
+  border-radius: 30px;
+}
+
+.case-study-hero-background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.case-study-hero-image-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.case-study-hero-image-content-theo {
+  padding: 20px 15px;
+  gap: 15px;
+}
+
+.case-study-hero-image-column {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.case-study-hero-image-column-left {
+  padding: 25px 0 0 0;
+}
+
+.case-study-hero-image-column-right {
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 0 0 25px 0;
+}
+
+.case-study-hero-award {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  padding: 10px 15px;
+  align-items: flex-end;
+
+  border-style: solid;
+  border-color: var(--color-background-light-frame);
+  border-width: 1px;
+  border-radius: 10px;
+}
+
+.case-study-hero-award-text-first-line {
+  font-family: var(--font-label);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-text-light);
+}
+
+.case-study-hero-award-text-second-line {
+  font-family: var(--font-label);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #E7E7E7;
+}
+
+.case-study-hero-image-foreground {
+  height: 530px;
+  width: auto;
+
+  filter: drop-shadow(0px 8px 10px rgba(47, 27, 12, 0.35)) ;
+}
+
+.case-study-hero-below-fold {
+  width: 100%;
+  max-width: 1140px;
+  display: flex;
+  flex-direction: column;
+
+  gap: 30px;
+}
+
+.case-study-metadata-row {
+  width: 100%;
+  display: flex;
+
+  gap: 30px;
+}
+
+.case-study-metadata-card {
+  width: 100%;
+  /* Need to think more about this */
+  height: 142px;
+  display: flex;
+  flex-direction: column;
+
+  padding: 30px 20px;
+  gap: 10px;
+  align-items: center;
+  /* justify-content: center; */
+
+  background-color: var(--color-background-gray-frame);
+  border-radius: 30px;
+}
+
+.case-study-metadata-label {
+  font-family: var(--font-body);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--color-text-header);
+}
+
+.case-study-metadata-value {
+  font-family: var(--font-body);
+  font-size: 17px;
+  font-weight: 350;
+  color: var(--color-text-header);
+  text-align: center;
+  white-space: pre-line;
+}
+
+.case-study-hero-links-card {
+  width: 100%;
+  display: flex;
+
+  padding: 10px;
+  gap: 50px;
+  justify-content: center;
+
+  background-color: var(--color-background-gray-frame);
+  border-radius: 30px;
+}
+
+.case-study-hero-link {
+  display: flex;
+
+  gap: 10px;
+  align-items: center;
+}
+
+.case-study-hero-link-icon-button {
+  width: 45px;
+  height: 45px;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 100%;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+}
+
+.case-study-hero-link-icon {
+  width: 24px;
+  height: 24px;
+
+  color: var(--color-icon);
+}
+
+.case-study-hero-link-label {
+  font-family: var(--font-body);
+  font-size: 17px;
+  font-weight: 350;
+  color: var(--color-text-header);
+  text-align: center;
+}

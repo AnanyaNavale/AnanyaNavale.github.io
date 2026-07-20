@@ -1,0 +1,77 @@
+.lunacart-case-study .case-study-headline {
+  background: linear-gradient(
+    140deg,
+    var(--color-lunacart-quaternary) 25%,
+    var(--color-lunacart-tertiary) 45%,
+    var(--color-lunacart-primary) 80%
+  );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.lunacart-case-study .overview-header {
+  background: linear-gradient(
+    104deg,
+    var(--color-lunacart-quaternary) 0%,
+    var(--color-lunacart-tertiary) 50%,
+    var(--color-lunacart-primary) 100%
+  );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.lunacart-case-study .reflections {
+  background: var(--color-lunacart-reflection-background);
+}
+
+.lunacart-case-study .section-tagline {
+  background: linear-gradient(
+    103deg, 
+    var(--color-lunacart-quaternary) 0%, 
+    var(--color-lunacart-tertiary) 40%, 
+    var(--color-lunacart-primary) 70%
+  );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.lunacart-case-study .question-number-outer {
+  background: linear-gradient(
+    135deg,
+    var(--color-lunacart-quaternary) 30%,
+    var(--color-lunacart-primary) 100%
+  );
+}
+
+.lunacart-case-study .question-number-inner {
+  background: var(--color-lunacart-reflection-background);
+}
+
+.lunacart-case-study .question-number {
+  display: inline-block;
+  margin: 0;
+
+  background: linear-gradient(
+    130deg,
+    var(--color-lunacart-quaternary) 25%,
+    var(--color-lunacart-primary) 100%
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}

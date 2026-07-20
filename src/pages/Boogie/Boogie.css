@@ -1,0 +1,86 @@
+.boogie-case-study .case-study-headline {
+  background: linear-gradient(
+    140deg,
+    var(--color-boogie-tertiary) 0%,
+    var(--color-boogie-primary) 50%,
+    var(--color-boogie-secondary) 100%
+  );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.boogie-case-study .overview-header {
+  background: linear-gradient(
+    104deg,
+    var(--color-boogie-tertiary) 0%,
+    var(--color-boogie-primary) 50%,
+    var(--color-boogie-secondary) 100%
+  );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.boogie-case-study .overview-third-paragraph-outer {
+  background: linear-gradient(
+    104deg,
+    var(--color-boogie-tertiary) 0%,
+    var(--color-boogie-primary) 50%,
+    var(--color-boogie-secondary) 100%
+  );
+}
+
+.boogie-case-study .reflections {
+  background: var(--color-boogie-reflection-background);
+}
+
+.boogie-case-study .section-tagline {
+  background: linear-gradient(
+    105deg, 
+    var(--color-boogie-tertiary) 25%, 
+    var(--color-boogie-primary) 50%, 
+    var(--color-boogie-secondary) 100%
+  );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.boogie-case-study .question-number-outer {
+  background: linear-gradient(
+    135deg,
+    #04272A 0%,
+    var(--color-boogie-primary) 100%
+  );
+}
+
+.boogie-case-study .question-number-inner {
+  background: var(--color-boogie-reflection-background);
+}
+
+.boogie-case-study .question-number {
+  display: inline-block;
+  margin: 0;
+
+  background: linear-gradient(
+    135deg,
+    #04272A 25%,
+    var(--color-boogie-primary) 100%
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
