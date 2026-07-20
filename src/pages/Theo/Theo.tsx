@@ -4,6 +4,7 @@ import Navbar from "../../components/CaseStudy/NavBar";
 import Hero from "../../components/CaseStudy/Hero/Hero";
 import Overview from "../../components/CaseStudy/Overview/Overview";
 import Discovery from "../../components/CaseStudy/Theo/Discovery/Discovery";
+import Approach from "../../components/CaseStudy/Theo/Approach/Approach";
 import Reflections, { type ReflectionsContent } from "../../components/CaseStudy/Reflections/Reflections";
 import Footer from "../../components/CaseStudy/Footer";
 
@@ -78,6 +79,9 @@ function Theo() {
 
       {/* Discovery */}
       <Discovery />
+
+      {/* Approach */}
+      <Approach />
 
       {/* Theo Content */}
 

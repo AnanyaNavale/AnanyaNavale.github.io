@@ -1,0 +1,140 @@
+.exp-proto {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  
+  gap: 25px;
+}
+
+.exp-proto-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  padding: 0 0 30px 0;
+  gap: 20px;
+  align-items: center;
+  overflow: hidden;
+
+  background: var(--color-background-gray-frame);
+  border-radius: 30px;
+}
+
+.exp-proto-header {
+  width: 100%;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+
+  font-family: var(--font-label);
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.exp-proto-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  padding: 0 30px;
+  gap: 20px;
+}
+
+.exp-proto-title-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.exp-proto-title {
+  font-family: var(--font-label);
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-text-header);
+}
+
+.exp-proto-description {
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--color-text-header);
+}
+
+.exp-proto-img-container {
+  height: 275px;
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.exp-proto-img-container img {
+  width: 205px;
+  height: auto;
+  object-fit: contain;
+
+  border-radius: 5px;
+}
+
+.exp-proto-img {
+  width: auto;
+  height: 275px;
+
+  border-radius: 5px;
+}
+
+.exp-proto-text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  gap: 30px;
+}
+
+.exp-proto-text-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.exp-proto-text-title {
+  font-size: 17px;
+  font-weight: 550;
+  color: var(--color-text-header);
+}
+
+.exp-proto-text-content {
+  color: var(--color-text-body);
+}
+
+.exp-proto-icon-frame {
+  width: fit-content;
+  display: flex;
+  
+
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+
+  border-radius: 50%;
+  filter: drop-shadow(0px 4px 4px rgba(47, 27, 12, 0.35)) ;
+}
+
+.exp-proto-icon {
+  width: 35px;
+  height: 35px;
+}

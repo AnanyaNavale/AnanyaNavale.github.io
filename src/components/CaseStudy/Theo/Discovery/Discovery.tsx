@@ -2,8 +2,8 @@ import "./Discovery.css"
 
 import Section from "../../../Section/Section";
 import SectionHeader from "../../../Section/SectionHeader/SectionHeader";
-import TextBlock from "../../../TextBlock/TextBlock";
-import QuoteCards from "../QuoteCards/QuoteCards";
+import TextBlock, { type TextBlockItem } from "../../../TextBlock/TextBlock";
+import QuoteCards from "./QuoteCards/QuoteCards";
 
 import interviewDiagram from "../../../../assets/images/theo/interview-diagram.png";
 
@@ -16,18 +16,7 @@ function Discovery() {
       />
 
       <TextBlock
-        text={[
-          {
-            size: "body",
-            content: (
-              <>
-                We conducted 9 interviews with ADHD learners and professionals,
-                expecting the conversations to center almost entirely on
-                distraction and overstimulation.
-              </>
-            ),
-          },
-        ]}
+        text={textContent.firstParagraph}
       />
 
       <div className="discovery-interview-diagram-container">
@@ -39,22 +28,7 @@ function Discovery() {
       </div>
 
       <TextBlock
-        text={[
-          {
-            size: "body",
-            content: (
-              <>
-                Instead, the challenges extended far beyond distraction alone.
-                <br />
-                Some participants struggled with starting their work; others
-                struggled to stop.
-                <br />
-                These experiences represented only two ends of a much broader
-                spectrum.
-              </>
-            ),
-          },
-        ]}
+        text={textContent.secondParagraph}
       />
 
       <QuoteCards firstRow={quoteCardContent.firstRow} secondRow={quoteCardContent.secondRow}/>
@@ -72,6 +46,40 @@ function Discovery() {
 }
 
 export default Discovery;
+
+const textContent: {
+  firstParagraph: TextBlockItem[];
+  secondParagraph: TextBlockItem[];
+} = {
+  firstParagraph: [
+    {
+      size: "body",
+      content: (
+        <>
+          We conducted 9 interviews with ADHD learners and professionals,
+          expecting the conversations to center almost entirely on distraction
+          and overstimulation.
+        </>
+      ),
+    },
+  ],
+  secondParagraph: [
+    {
+      size: "body",
+      content: (
+        <>
+          Instead, the challenges extended far beyond distraction alone.
+          <br />
+          Some participants struggled with starting their work; others struggled
+          to stop.
+          <br />
+          These experiences represented only two ends of a much broader
+          spectrum.
+        </>
+      ),
+    },
+  ],
+};
 
 const quoteCardContent = {
   firstRow: [
