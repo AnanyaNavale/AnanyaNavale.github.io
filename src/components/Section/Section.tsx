@@ -3,7 +3,7 @@ import "./Section.css"
 type SectionProps = {
   innerWidth: React.CSSProperties["width"];
   children: React.ReactNode;
-  className?: string;
+  className: string;
 };
 
 function Section({

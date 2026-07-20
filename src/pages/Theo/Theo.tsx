@@ -3,6 +3,7 @@ import "./Theo.css";
 import Navbar from "../../components/CaseStudy/NavBar";
 import Hero from "../../components/CaseStudy/Hero/Hero";
 import Overview from "../../components/CaseStudy/Overview/Overview";
+import Discovery from "../../components/CaseStudy/Theo/Discovery/Discovery";
 import Reflections, { type ReflectionsContent } from "../../components/CaseStudy/Reflections/Reflections";
 import Footer from "../../components/CaseStudy/Footer";
 
@@ -17,6 +18,7 @@ function Theo() {
     <main className="theo-case-study">
       <Navbar />
 
+      {/* Hero */}
       <Hero
         title="Theo"
         valueProp="Gentle nudges. Real progress."
@@ -59,6 +61,8 @@ function Theo() {
           },
         ]}
       />
+
+      {/* Overview */}
       <Overview
         firstParagraph="Learners with ADHD (Attention-Deficit/Hyperactivity Disorder) often struggle to regulate their focus when working on tasks. They shift between distraction and hyperfocus, even when they know exactly what they need to do."
         secondParagraph={
@@ -72,8 +76,12 @@ function Theo() {
         }
       />
 
+      {/* Discovery */}
+      <Discovery />
+
       {/* Theo Content */}
 
+      {/* Reflections */}
       <Reflections
         tagline="Good design makes progress feel possible."
         content={reflectionsContent}

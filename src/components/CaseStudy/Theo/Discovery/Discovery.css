@@ -1,0 +1,26 @@
+.theo-discovery {
+  padding: 200px 150px 0;
+}
+
+.theo-discovery .section-inner {
+  gap: 50px;
+}
+
+.discovery-interview-diagram-container {
+  width: fit-content;
+  height: auto;
+  display: flex;
+
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+
+  border-radius: 30px;
+  background: var(--color-background-gray-frame);
+}
+
+.discovery-interview-diagram {
+  width: 845px;
+  height: auto;
+}
