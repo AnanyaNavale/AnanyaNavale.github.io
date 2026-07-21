@@ -4,6 +4,7 @@ import Navbar from "../../components/CaseStudy/NavBar";
 import Hero from "../../components/CaseStudy/Hero/Hero";
 import Overview from "../../components/CaseStudy/Overview/Overview";
 import Discovery from "@/components/CaseStudy/LunaCart/Discovery/Discovery";
+import KeyInsight from "@/components/CaseStudy/LunaCart/KeyInsight/KeyInsight";
 import Reflections, {
   type ReflectionsContent,
 } from "../../components/CaseStudy/Reflections/Reflections";
@@ -11,7 +12,6 @@ import Footer from "../../components/CaseStudy/Footer";
 
 import heroBackground from "../../assets/images/lunacart/hero-background.jpg";
 import heroScreen from "../../assets/images/lunacart/hero-screen.png";
-
 import { BsLink45Deg, BsWordpress } from "react-icons/bs";
 
 function LunaCart() {
@@ -78,6 +78,7 @@ function LunaCart() {
       <Discovery />
 
       {/* Key Insight */}
+      <KeyInsight />
 
       {/* Approach */}
 
