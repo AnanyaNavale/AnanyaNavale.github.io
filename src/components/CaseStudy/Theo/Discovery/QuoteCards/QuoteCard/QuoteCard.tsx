@@ -9,8 +9,8 @@ export type QuoteCardProps = {
 export default function QuoteCard({ quote, attr, borderColor }: QuoteCardProps) {
   return (
     <div className="quote-card" style={{ borderLeftColor: borderColor }}>
-      <p className="quote-text">{quote}</p>
-      <p className="quote-attr">{attr}</p>
+      <p className="quote-card-text">{quote}</p>
+      <p className="quote-card-attr">{attr}</p>
     </div>
   );
 }
