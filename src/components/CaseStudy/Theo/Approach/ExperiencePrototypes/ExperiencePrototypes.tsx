@@ -15,7 +15,7 @@ function ExperiencePrototypes() {
         color="var(--color-theo-primary)"
         headerColor="var(--color-text-light)"
         title="AI Session Tracker"
-        description="A simulated chatbot that tracks work sessions and progress"
+        description={"A simulated chatbot that tracks\nwork sessions and progress"}
         images={[expProto1]}
         text={[
           {
@@ -43,7 +43,7 @@ function ExperiencePrototypes() {
         headerColor="var(--color-text-header)"
         title="Digital Body Double"
         description={
-          "AI-generated images of animals that model\ncore human needs"
+          "AI-generated images of animals that\nmodel core human needs"
         }
         images={[expProto2]}
         text={[

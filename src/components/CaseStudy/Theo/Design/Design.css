@@ -1,0 +1,40 @@
+.theo-design {
+  padding: 100px 150px 200px;
+
+  background: var(--color-background-gray-frame);
+}
+
+.theo-design .section-inner {
+  gap: 75px;
+}
+
+.theo-design .section-header {
+  text-align: center;
+}
+
+.design-evolution {
+  width: 100%;
+
+  padding: 20px;
+
+  background: var(--color-background-light-frame);
+  border-radius: 30px;
+}
+
+.design-evolution img {
+  width: 1100px; 
+  object-fit: contain;
+}
+
+.design-final-screens {
+  width: 100%;
+
+  padding: 20px;
+
+  background: var(--color-background-light-frame);
+  border-radius: 30px;
+}
+
+.design-final-screens img {
+  width: 1098px;
+}

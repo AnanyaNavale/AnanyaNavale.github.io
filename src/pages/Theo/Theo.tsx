@@ -5,6 +5,8 @@ import Hero from "../../components/CaseStudy/Hero/Hero";
 import Overview from "../../components/CaseStudy/Overview/Overview";
 import Discovery from "../../components/CaseStudy/Theo/Discovery/Discovery";
 import Approach from "../../components/CaseStudy/Theo/Approach/Approach";
+import Vision from "@/components/CaseStudy/Theo/Vision/Vision";
+import Design from "@/components/CaseStudy/Theo/Design/Design";
 import Reflections, { type ReflectionsContent } from "../../components/CaseStudy/Reflections/Reflections";
 import Footer from "../../components/CaseStudy/Footer";
 
@@ -13,7 +15,6 @@ import heroLeftScreen from "../../assets/images/theo/hero-screen-1.png";
 import heroRightScreen from "../../assets/images/theo/hero-screen-2.png";
 
 import { BsLink45Deg, BsGithub } from "react-icons/bs";
-import Vision from "@/components/CaseStudy/Theo/Vision/Vision";
 
 function Theo() {
   return (
@@ -87,7 +88,8 @@ function Theo() {
       {/* Vision */}
       <Vision />
 
-      {/* Theo Content */}
+      {/* Design */}
+      <Design />
 
       {/* Reflections */}
       <Reflections
