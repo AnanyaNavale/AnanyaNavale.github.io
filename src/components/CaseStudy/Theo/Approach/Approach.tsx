@@ -49,10 +49,12 @@ const textContent: {
           prototypes.
         </>
       ),
+      alignment: "center",
     },
     {
       size: "large",
       content: <>We carried these forward into developing our solution.</>,
+      alignment: "center",
     },
   ],
 };

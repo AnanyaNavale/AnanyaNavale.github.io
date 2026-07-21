@@ -2,10 +2,10 @@ import "./ExperiencePrototypes.css"
 
 import ExpProto from "./ExpProto/ExpProto"
 
-import expProto1 from "@/assets/images/exp-proto-1.jpeg"
-import expProto2 from "@/assets/images/exp-proto-2.png"
-import expProto31 from "@/assets/images/exp-proto-3-1.png"
-import expProto32 from "@/assets/images/exp-proto-3-2.png"
+import expProto1 from "@/assets/images/theo/exp-proto-1.jpeg";
+import expProto2 from "@/assets/images/theo/exp-proto-2.png";
+import expProto31 from "@/assets/images/theo/exp-proto-3-1.png"
+import expProto32 from "@/assets/images/theo/exp-proto-3-2.png";
 
 function ExperiencePrototypes() {
   return (

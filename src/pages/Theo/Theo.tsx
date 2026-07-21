@@ -13,6 +13,7 @@ import heroLeftScreen from "../../assets/images/theo/hero-screen-1.png";
 import heroRightScreen from "../../assets/images/theo/hero-screen-2.png";
 
 import { BsLink45Deg, BsGithub } from "react-icons/bs";
+import Vision from "@/components/CaseStudy/Theo/Vision/Vision";
 
 function Theo() {
   return (
@@ -82,6 +83,9 @@ function Theo() {
 
       {/* Approach */}
       <Approach />
+
+      {/* Vision */}
+      <Vision />
 
       {/* Theo Content */}
 

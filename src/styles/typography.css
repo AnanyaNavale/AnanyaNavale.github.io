@@ -91,7 +91,13 @@
 .case-study-body-text {
   font-family: var(--font-body);
   font-size: 17px;
-  font-weight: 350px;
+  font-weight: 350;
+}
+
+.case-study-large-text {
+  font-family: var(--font-body);
+  font-size: 21px;
+  font-weight: 400;
 }
 
 .case-study-reflections-highlight {
