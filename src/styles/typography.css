@@ -103,3 +103,7 @@
 .case-study-reflections-highlight {
   color: var(--color-text-light);
 }
+
+.case-study-body-highlight {
+  color: var(--color-text-header);
+}

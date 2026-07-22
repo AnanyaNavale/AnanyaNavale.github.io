@@ -1,1 +1,2 @@
 - [] Finding out how to include large images (Theo final screens) - blurriness
+- [] Adjust images in LunaCart Key Insight section bento

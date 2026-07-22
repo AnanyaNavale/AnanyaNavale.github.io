@@ -5,6 +5,7 @@ import Hero from "../../components/CaseStudy/Hero/Hero";
 import Overview from "../../components/CaseStudy/Overview/Overview";
 import Discovery from "@/components/CaseStudy/LunaCart/Discovery/Discovery";
 import KeyInsight from "@/components/CaseStudy/LunaCart/KeyInsight/KeyInsight";
+import Design from "@/components/CaseStudy/LunaCart/Design/Design";
 import Reflections, {
   type ReflectionsContent,
 } from "../../components/CaseStudy/Reflections/Reflections";
@@ -83,6 +84,7 @@ function LunaCart() {
       {/* Approach */}
 
       {/* Design */}
+      <Design />
 
       <Reflections
         tagline="Designing for behavior means designing for reality."

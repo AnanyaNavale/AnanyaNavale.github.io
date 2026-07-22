@@ -54,6 +54,7 @@
   flex-direction: column;
 
   gap: 30px;
+  padding-bottom: 3px;
 
   font-family: var(--font-display);
   font-size: 70px;

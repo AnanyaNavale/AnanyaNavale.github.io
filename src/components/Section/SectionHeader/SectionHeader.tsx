@@ -16,7 +16,7 @@ function SectionHeader({
       {title && <h2 className="section-heading">{title}</h2>}
       {subSectionTagline ? (
         <div className="subsection-tagline">
-          <h3 className="subsection-tagline-regular">{subSectionTagline}</h3>
+          <h4 className="subsection-tagline-regular">{subSectionTagline}</h4>
           <h3 className="subsection-tagline-emphasized">{tagline}</h3>
         </div>
       ) : (
