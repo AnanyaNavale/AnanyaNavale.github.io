@@ -1,0 +1,53 @@
+.boogie-opportunity {
+  padding: 200px 150px;
+}
+
+.boogie-opportunity .section-inner {
+  gap: 50px;
+}
+
+.opportunity-screens {
+  display: flex;
+
+  justify-content: center;
+  gap: 200px;
+}
+
+.opportunity-screen {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  text-align: center;
+  gap: 30px;
+}
+
+.opportunity-screen img {
+  max-height: 600px;
+}
+
+.opportunity-screen-label {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+.opportunity-screen-label h6 {
+  font-family: var(--font-label);
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-text-body);
+}
+
+.opportunity-screen-label p {
+  font-size: 17px;
+  font-weight: 350;
+  line-height: 20px;
+  color: var(--color-text-header);
+
+  min-height: 40px;
+}

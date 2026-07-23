@@ -4,6 +4,7 @@ import Navbar from "../../components/CaseStudy/NavBar";
 import Hero from "../../components/CaseStudy/Hero/Hero";
 import Overview from "../../components/CaseStudy/Overview/Overview";
 import KeyInsight from "@/components/CaseStudy/Boogie/KeyInsight/KeyInsight";
+import Opportunity from "@/components/CaseStudy/Boogie/Opportunity/Opportunity";
 import Reflections, {
   type ReflectionsContent,
 } from "../../components/CaseStudy/Reflections/Reflections";
@@ -86,6 +87,9 @@ function Boogie() {
 
       {/* Key Insight */}
       <KeyInsight />
+
+      {/* Opportunity */}
+      <Opportunity />
 
       <Reflections
         tagline="Accessibility isn't an add-on. It reshapes the system."
