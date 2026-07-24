@@ -3,6 +3,7 @@ import "./Boogie.css";
 import Navbar from "../../components/CaseStudy/NavBar";
 import Hero from "../../components/CaseStudy/Hero/Hero";
 import Overview from "../../components/CaseStudy/Overview/Overview";
+import Discovery from "@/components/CaseStudy/Boogie/Discovery/Discovery";
 import KeyInsight from "@/components/CaseStudy/Boogie/KeyInsight/KeyInsight";
 import Opportunity from "@/components/CaseStudy/Boogie/Opportunity/Opportunity";
 import Approach from "@/components/CaseStudy/Boogie/Approach/Approach";
@@ -88,6 +89,9 @@ function Boogie() {
           </>
         }
       />
+
+      {/* Discovery */}
+      <Discovery />
 
       {/* Key Insight */}
       <KeyInsight />
