@@ -6,6 +6,7 @@ import Overview from "../../components/CaseStudy/Overview/Overview";
 import KeyInsight from "@/components/CaseStudy/Boogie/KeyInsight/KeyInsight";
 import Opportunity from "@/components/CaseStudy/Boogie/Opportunity/Opportunity";
 import Approach from "@/components/CaseStudy/Boogie/Approach/Approach";
+import Handoff from "@/components/CaseStudy/Boogie/Handoff/Handoff";
 import Reflections, {
   type ReflectionsContent,
 } from "../../components/CaseStudy/Reflections/Reflections";
@@ -15,6 +16,7 @@ import heroBackground from "../../assets/images/boogie/hero-background.jpg";
 import heroScreen from "../../assets/images/boogie/hero-screen.png";
 
 import { BsGithub } from "react-icons/bs";
+
 
 function Boogie() {
   return (
@@ -58,6 +60,7 @@ function Boogie() {
           },
         ]}
       />
+
       <Overview
         firstParagraph={
           <>
@@ -94,6 +97,9 @@ function Boogie() {
 
       {/* Approach, Challenge, Product Thinking */}
       <Approach />
+
+      {/* Handoff */}
+      <Handoff />
 
       <Reflections
         tagline={"Accessibility isn't an add-on.\nIt reshapes the system."}
