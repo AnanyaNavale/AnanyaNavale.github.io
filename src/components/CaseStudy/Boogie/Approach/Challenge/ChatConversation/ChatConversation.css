@@ -1,0 +1,75 @@
+.chat-conversation {
+  width: 330px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+
+  gap: 30px;
+  padding-bottom: 20px;
+
+  border-radius: 30px;
+  background: var(--color-background-light-frame);
+  box-shadow: 0px 4px 4px rgba(47, 27, 12, 0.35);
+  overflow: hidden;
+}
+
+.chat-label {
+  width: 100%;
+  display: flex;
+
+  justify-content: center;
+  padding: 10px 0;
+
+  font-size: 17px;
+  font-weight: 350;
+  color: var(--color-text-light);
+}
+
+.chat-content {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+
+  padding: 0 20px;
+  gap: 10px;
+}
+
+.chat-row {
+  width: 100%;
+  display: flex;
+}
+
+.chat-msg {
+  display: flex;
+  flex-direction: column;
+
+  padding: 15px;
+  gap: 10px;
+  border-radius: 20px;
+}
+
+.chat-msg.boogiebot {
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  background: var(--color-background-light-frame);
+}
+
+.chat-msg.you {
+  background: var(--color-boogie-primary);
+
+  color: white;
+}
+
+.chat-msg h6 {
+  font-family: var(--font-chat);
+  font-size: 14px;
+  font-weight: 650;
+}
+
+.chat-msg p {
+  font-family: var(--font-chat);
+  font-size: 14px;
+  font-weight: 350;
+}
