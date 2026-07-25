@@ -1,0 +1,45 @@
+.navbar-wrapper {
+  width: 100%;
+  display: flex;
+
+  justify-content: flex-end;
+  padding: 30px 50px 0;
+}
+
+.navbar {
+  width: fit-content;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+
+  padding: 10px 20px;
+
+  border-radius: 100px;
+
+  border-style: solid;
+  border-width: 1px;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: inherit;
+}

@@ -16,6 +16,8 @@ type ProjectCardProps = {
   backgroundImage: string;
   foregroundImages: string[];
 
+  link: string;
+
   reverse?: boolean;
 };
 
@@ -27,6 +29,7 @@ export default function ProjectCard({
   metadata,
   backgroundImage,
   foregroundImages,
+  link,
   reverse = false,
 }: ProjectCardProps) {
   return (
@@ -55,7 +58,7 @@ export default function ProjectCard({
           </div>
         </div>
 
-        <ViewCaseStudyButton />
+        <ViewCaseStudyButton link={link}/>
       </div>
 
       <div className="project-card-image">

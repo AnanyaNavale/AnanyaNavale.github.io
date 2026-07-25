@@ -1,14 +1,17 @@
 import "./ViewCaseStudyButton.css";
+import { Link } from "react-router-dom";
 
 type ViewCaseStudyButtonProps = {
+  link: string;
   buttonText?: string;
 };
 
 export default function ViewCaseStudyButton({
+  link,
   buttonText = "VIEW · CASE · STUDY ·",
 }: ViewCaseStudyButtonProps) {
   return (
-    <button className="view-case-study-button">
+    <Link className="view-case-study-button" to={link}>
       <svg className="view-case-study-text" viewBox="0 0 100 100">
         <defs>
           <path
@@ -21,6 +24,6 @@ export default function ViewCaseStudyButton({
           <textPath href="#circlePath">{buttonText}</textPath>
         </text>
       </svg>
-    </button>
+    </Link>
   );
 }
