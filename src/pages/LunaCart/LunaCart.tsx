@@ -5,6 +5,7 @@ import Hero from "../../components/CaseStudy/Hero/Hero";
 import Overview from "../../components/CaseStudy/Overview/Overview";
 import Discovery from "@/components/CaseStudy/LunaCart/Discovery/Discovery";
 import KeyInsight from "@/components/CaseStudy/LunaCart/KeyInsight/KeyInsight";
+import Approach from "@/components/CaseStudy/LunaCart/Approach/Approach";
 import Design from "@/components/CaseStudy/LunaCart/Design/Design";
 import Reflections, {
   type ReflectionsContent,
@@ -82,6 +83,7 @@ function LunaCart() {
       <KeyInsight />
 
       {/* Approach */}
+      <Approach />
 
       {/* Design */}
       <Design />
