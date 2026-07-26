@@ -1,6 +1,7 @@
 import "./LunaCart.css";
+import { useEffect, useRef, useState } from "react";
 
-import Navbar from "../../components/CaseStudy/NavBar";
+import NavBar from "../../components/NavBar/NavBar";
 import Hero from "../../components/CaseStudy/Hero/Hero";
 import Overview from "../../components/CaseStudy/Overview/Overview";
 import Discovery from "@/components/CaseStudy/LunaCart/Discovery/Discovery";
@@ -17,52 +18,81 @@ import heroScreen from "../../assets/images/lunacart/hero-screen.png";
 import { BsLink45Deg, BsWordpress } from "react-icons/bs";
 
 function LunaCart() {
+  const heroRef = useRef<HTMLDivElement>(null);
+  const [showNavbar, setShowNavbar] = useState(false);
+
+  useEffect(() => {
+    if (!heroRef.current) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        console.log("Hero visible:", entry.isIntersecting);
+        setShowNavbar(!entry.isIntersecting);
+      },
+      {
+        threshold: 0,
+      },
+    );
+
+    observer.observe(heroRef.current);
+
+    return () => observer.disconnect();
+  }, []);
+
+
   return (
     <main className="lunacart-case-study">
-      <Navbar />
+      <div className={`navbar-wrapper ${showNavbar ? "visible" : ""}`}>
+        <NavBar items={lunacartNavItems} />
+      </div>
 
-      <Hero
-        title="LunaCart"
-        valueProp="Future Me Ordered This"
-        headline={
-          <>
-            <span>Healthy food disappeared after dinner.</span>
-            <span>This app <br /> brought it back at midnight.</span>
-          </>
-        }
-        backgroundImage={heroBackground}
-        foregroundImages={[heroScreen]}
-        metadata={[
-          {
-            label: "Role",
-            value: "Lead UX Researcher & Designer",
-          },
-          {
-            label: "Team",
-            value: "Stanford CS 247B\nTeam of 5",
-          },
-          {
-            label: "Tools",
-            value: "Figma · Miro · Replit",
-          },
-          {
-            label: "Timeline",
-            value: "Jan–Mar 2026\n10 weeks",
-          },
-        ]}
-        links={[
-          {
-            icon: BsLink45Deg,
-            label: "Replit Project",
-            href: "https://luna-cart--anavale1.replit.app",
-          },
-          {
-            icon: BsWordpress,
-            label: "Project Blog Post",
-            href: "https://highercommonsense.com/cs247b/team-rakali-final-writeup/",
-          },
-        ]}
-      />
+      <div ref={heroRef}>
+        <Hero
+          title="LunaCart"
+          valueProp="Future Me Ordered This"
+          headline={
+            <>
+              <span>Healthy food disappeared after dinner.</span>
+              <span>
+                This app <br /> brought it back at midnight.
+              </span>
+            </>
+          }
+          backgroundImage={heroBackground}
+          foregroundImages={[heroScreen]}
+          metadata={[
+            {
+              label: "Role",
+              value: "Lead UX Researcher & Designer",
+            },
+            {
+              label: "Team",
+              value: "Stanford CS 247B\nTeam of 5",
+            },
+            {
+              label: "Tools",
+              value: "Figma · Miro · Replit",
+            },
+            {
+              label: "Timeline",
+              value: "Jan–Mar 2026\n10 weeks",
+            },
+          ]}
+          links={[
+            {
+              icon: BsLink45Deg,
+              label: "Replit Project",
+              href: "https://luna-cart--anavale1.replit.app",
+            },
+            {
+              icon: BsWordpress,
+              label: "Project Blog Post",
+              href: "https://highercommonsense.com/cs247b/team-rakali-final-writeup/",
+            },
+          ]}
+        />
+      </div>
+
       <Overview
         firstParagraph="Stanford students often pack a week's worth of academics and social engagements into a single day, leaving little time to work and even less time to eat until after dark. When the dining halls close, healthy meals become nonexistent, making students default to the greasy fast food options available at late-night spots on campus."
         secondParagraph={
@@ -77,21 +107,22 @@ function LunaCart() {
       />
 
       {/* Discovery */}
-      <Discovery />
+      <Discovery id="discovery" />
 
       {/* Key Insight */}
-      <KeyInsight />
+      <KeyInsight id="key-insight" />
 
       {/* Approach */}
-      <Approach />
+      <Approach id="approach" />
 
       {/* Design */}
-      <Design />
+      <Design id="design" />
 
       <Reflections
         tagline="Designing for behavior means designing for reality."
         content={reflectionsContent}
         questions={reflectionQuestions}
+        id="reflections"
       />
 
       <Footer />
@@ -100,6 +131,29 @@ function LunaCart() {
 }
 
 export default LunaCart;
+
+const lunacartNavItems = [
+  {
+    label: "Discovery",
+    href: "#discovery",
+  },
+  {
+    label: "Key Insight",
+    href: "#key-insight",
+  },
+  {
+    label: "Approach",
+    href: "#approach",
+  },
+  {
+    label: "Design",
+    href: "#design",
+  },
+  {
+    label: "Reflections",
+    href: "#reflections",
+  },
+];
 
 const reflectionsContent: ReflectionsContent = {
   intro: [

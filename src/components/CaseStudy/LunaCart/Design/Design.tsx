@@ -20,13 +20,12 @@ import g3s3 from "@/assets/images/lunacart/screens/dark-mode.png";
 import iphone from "@/assets/images/iphone.svg";
 import iphoneNoCamera from "@/assets/images/iphone-no-camera.svg";
 
-function Design() {
+function Design({ id }: { id: string }) {
   return (
-    <Section innerWidth={1200} className="lunacart-design">
+    <Section innerWidth={1200} className="lunacart-design" id={id}>
       <SectionHeader
         title="Design"
-        tagline="daytime planning."
-        subSectionTagline="So late-night eating had to depend on"
+        tagline="So late-night eating had to depend on daytime planning."
       />
       <TextBlock text={textContent.firstParagraph} />
       <div className="design-model-container">
@@ -39,19 +38,17 @@ function Design() {
           <img src={wireflow} />
         </div>
       </div>
-      <Screens screens={screensContent.firstGroup} label="Final Screens"/>
+      <Screens screens={screensContent.firstGroup} label="Final Screens" />
       <SectionHeader
         tagline="Reflections made them personal."
         subSectionTagline="Pre-commitment made choices intentional."
       />
-      <Screens screens={screensContent.secondGroup}/>
+      <Screens screens={screensContent.secondGroup} />
       <SectionHeader
         tagline="room for change."
         subSectionTagline="Intentional choices also needed"
       />
-      <TextBlock
-        text={textContent.secondParagraph}
-      />
+      <TextBlock text={textContent.secondParagraph} />
       <Screens screens={screensContent.thirdGroup} />
     </Section>
   );

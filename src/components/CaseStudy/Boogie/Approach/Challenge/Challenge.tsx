@@ -6,9 +6,9 @@ import TextBlock, {
 } from "@/components/TextBlock/TextBlock";
 import ChatConversation, { type ChatItem } from "./ChatConversation/ChatConversation";
 
-function Challenge() {
+function Challenge({ id }: { id: string }) {
   return (
-    <section className="boogie-challenge">
+    <section className="boogie-challenge" id={id}>
       <SectionHeader
         title="Challenge"
         tagline="human ambiguity."

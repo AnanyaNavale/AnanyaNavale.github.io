@@ -7,9 +7,9 @@ import TextBlock, { type TextBlockItem } from "@/components/TextBlock/TextBlock"
 import gradientBorder from "@/assets/images/boogie/gradient-border.svg";
 import { BsArrowDown } from "react-icons/bs";
 
-function KeyInsight() {
+function KeyInsight({ id }: { id: string }) {
   return (
-    <Section innerWidth={1140} className="boogie-key-insight">
+    <Section innerWidth={1140} className="boogie-key-insight" id={id}>
       <SectionHeader
         title="Key Insight"
         tagline={"The problem wasn’t visibility.\nIt was translation."}

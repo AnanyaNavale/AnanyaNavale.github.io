@@ -15,17 +15,20 @@ type ReflectionsProps = {
   tagline: string;
   content: ReflectionsContent;
   questions: Omit<QuestionProps, "number">[];
+  id: string;
 };
 
 function Reflections({
   tagline,
   content,
   questions,
+  id,
 }: ReflectionsProps) {
   return (
     <Section
       innerWidth={1140}
       className="reflections"
+      id={id}
     >
       <SectionHeader
         title="Reflections"

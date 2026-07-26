@@ -10,9 +10,9 @@ import pyramid from "@/assets/images/lunacart/food-pyramid.png";
 import lateNight from "@/assets/images/lunacart/late-night-labeled.png";
 import tap from "@/assets/images/lunacart/tap-menu-labeled.png";
 
-function KeyInsight() {
+function KeyInsight({ id }: { id: string }) {
   return (
-    <Section innerWidth={1140} className="lunacart-key-insight">
+    <Section innerWidth={1140} className="lunacart-key-insight" id={id}>
       <SectionHeader
         title="Key Insight"
         tagline={

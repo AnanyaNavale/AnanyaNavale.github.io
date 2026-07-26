@@ -11,9 +11,9 @@ import videoContainer from "@/assets/images/theo/video-container.svg"
 import theo from "@/assets/images/theo/theo.png"
 import theoLogo from "@/assets/images/theo/theo-logo.png"
 
-function Vision() {
+function Vision({ id }: { id: string }) {
   return (
-    <Section innerWidth={1140} className="theo-vision">
+    <Section innerWidth={1140} className="theo-vision" id={id}>
       <SectionHeader
         title="Vision"
         tagline={"But the feeling had to take root\nbefore the form."}
@@ -54,8 +54,8 @@ function Vision() {
           </p>
           <p className="case-study-body-text">
             <p className="case-study-large-text">Classic. Kind. Calm.</p>
-            That’s <img src={theoLogo} alt=""/>. Everyone’s new friend who’s always
-            down to study together.
+            That’s <img src={theoLogo} alt="" />. Everyone’s new friend who’s
+            always down to study together.
           </p>
         </div>
       </div>

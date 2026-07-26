@@ -1,6 +1,9 @@
 import "./Theo.css";
+import { useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-import Navbar from "../../components/CaseStudy/NavBar";
+import NavBar from "@/components/NavBar/NavBar";
+import BackButton from "@/components/BackButton/BackButton";
 import Hero from "../../components/CaseStudy/Hero/Hero";
 import Overview from "../../components/CaseStudy/Overview/Overview";
 import Discovery from "../../components/CaseStudy/Theo/Discovery/Discovery";
@@ -16,54 +19,82 @@ import heroRightScreen from "../../assets/images/theo/hero-screen-2.png";
 
 import { BsLink45Deg, BsGithub } from "react-icons/bs";
 
+
 function Theo() {
+  const navigate = useNavigate();
+  const heroRef = useRef<HTMLDivElement>(null);
+  const [showNavbar, setShowNavbar] = useState(false);
+
+  useEffect(() => {
+    if (!heroRef.current) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        console.log("Hero visible:", entry.isIntersecting);
+        setShowNavbar(!entry.isIntersecting);
+      },
+      {
+        threshold: 0,
+      },
+    );
+
+    observer.observe(heroRef.current);
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <main className="theo-case-study">
-      <Navbar />
+      {/* <BackButton to="/" label="Back to Work" /> */}
+      <div className={`navbar-wrapper ${showNavbar ? "visible" : ""}`}>
+        <NavBar items={theoNavItems} />
+      </div>
 
       {/* Hero */}
-      <Hero
-        title="Theo"
-        valueProp="Gentle nudges. Real progress."
-        headline={
-          <>
-            <span>Most productivity tools assume focus comes easy.</span>
-            <span>This one doesn’t.</span>
-          </>
-        }
-        backgroundImage={heroBackground}
-        foregroundImages={[heroLeftScreen, heroRightScreen]}
-        metadata={[
-          {
-            label: "Role",
-            value: "Lead UI/UX designer & developer",
-          },
-          {
-            label: "Team",
-            value: "Stanford CS 147\nTeam of 4",
-          },
-          {
-            label: "Tools",
-            value: "Figma · Expo · React Native\nSupabase · Github",
-          },
-          {
-            label: "Timeline",
-            value: "Sep–Dec 2025\n10 weeks",
-          },
-        ]}
-        links={[
-          {
-            icon: BsLink45Deg,
-            label: "Full Project Site",
-            href: "https://web.stanford.edu/class/cs147/projects/EmpoweringLearnerswithAI/Theo/",
-          },
-          {
-            icon: BsGithub,
-            label: "GitHub Codebase",
-            href: "https://github.com/AnanyaNavale/CS147-Theo",
-          },
-        ]}
-      />
+      <div ref={heroRef}>
+        <Hero
+          title="Theo"
+          valueProp="Gentle nudges. Real progress."
+          headline={
+            <>
+              <span>Most productivity tools assume focus comes easy.</span>
+              <span>This one doesn’t.</span>
+            </>
+          }
+          backgroundImage={heroBackground}
+          foregroundImages={[heroLeftScreen, heroRightScreen]}
+          metadata={[
+            {
+              label: "Role",
+              value: "Lead UI/UX designer & developer",
+            },
+            {
+              label: "Team",
+              value: "Stanford CS 147\nTeam of 4",
+            },
+            {
+              label: "Tools",
+              value: "Figma · Expo · React Native\nSupabase · Github",
+            },
+            {
+              label: "Timeline",
+              value: "Sep–Dec 2025\n10 weeks",
+            },
+          ]}
+          links={[
+            {
+              icon: BsLink45Deg,
+              label: "Full Project Site",
+              href: "https://web.stanford.edu/class/cs147/projects/EmpoweringLearnerswithAI/Theo/",
+            },
+            {
+              icon: BsGithub,
+              label: "GitHub Codebase",
+              href: "https://github.com/AnanyaNavale/CS147-Theo",
+            },
+          ]}
+        />
+      </div>
 
       {/* Overview */}
       <Overview
@@ -80,22 +111,23 @@ function Theo() {
       />
 
       {/* Discovery */}
-      <Discovery />
+      <Discovery id="discovery" />
 
       {/* Approach */}
-      <Approach />
+      <Approach id="approach" />
 
       {/* Vision */}
-      <Vision />
+      <Vision id="vision" />
 
       {/* Design */}
-      <Design />
+      <Design id="design" />
 
       {/* Reflections */}
       <Reflections
         tagline="Good design makes progress feel possible."
         content={reflectionsContent}
         questions={reflectionQuestions}
+        id="reflections"
       />
 
       <Footer />
@@ -104,6 +136,29 @@ function Theo() {
 }
 
 export default Theo;
+
+const theoNavItems = [
+  {
+    label: "Discovery",
+    href: "#discovery",
+  },
+  {
+    label: "Approach",
+    href: "#approach",
+  },
+  {
+    label: "Vision",
+    href: "#vision",
+  },
+  {
+    label: "Design",
+    href: "#design",
+  },
+  {
+    label: "Reflections",
+    href: "#reflections",
+  },
+];
 
 const reflectionsContent: ReflectionsContent = {
   intro: [

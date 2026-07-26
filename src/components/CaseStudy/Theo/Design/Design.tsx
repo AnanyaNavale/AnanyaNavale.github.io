@@ -7,22 +7,25 @@ import TextBlock, { type TextBlockItem } from "@/components/TextBlock/TextBlock"
 import evolutionDiagram from "@/assets/images/theo/goal-breakdown-evolution.png";
 import finalScreens from "@/assets/images/theo/final-screens.png";
 
-function Design() {
+function Design({ id }: { id: string }) {
   return (
-    <Section innerWidth={1140} className="theo-design">
-      <SectionHeader title="Design" tagline={"The interface had to feel like\nthe friend it promise to be."}/>
+    <Section innerWidth={1140} className="theo-design" id={id}>
+      <SectionHeader
+        title="Design"
+        tagline={"The interface had to feel like\nthe friend it promise to be."}
+      />
 
-      <TextBlock text={textContent.firstParagraph}/>
+      <TextBlock text={textContent.firstParagraph} />
 
       <section className="design-evolution">
-        <img src={evolutionDiagram} alt=""/>
+        <img src={evolutionDiagram} alt="" />
       </section>
 
       <section className="design-final-screens">
-        <img src={finalScreens} alt=""/>
+        <img src={finalScreens} alt="" />
       </section>
     </Section>
-  )
+  );
 }
 
 export default Design;

@@ -12,9 +12,9 @@ import list from "@/assets/images/boogie/list-scroll.mp4";
 import line1 from "@/assets/images/boogie/line-1.svg";
 import line2 from "@/assets/images/boogie/line-2.svg";
 
-function Discovery() {
+function Discovery({ id }: { id: string }) {
   return (
-    <Section innerWidth={1200} className="boogie-discovery">
+    <Section innerWidth={1200} className="boogie-discovery" id={id}>
       <SectionHeader
         title="Discovery"
         tagline="The system wasn’t accessible to the people it was built for."

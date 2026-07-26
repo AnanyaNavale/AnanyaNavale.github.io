@@ -1,5 +1,5 @@
-import type { IconType } from "react-icons";
 import "./Hero.css";
+import type { IconType } from "react-icons";
 
 type MetadataItem = {
   label: string;
@@ -33,6 +33,7 @@ function Hero({
   metadata,
   links,
 }: HeroProps) {
+  
   return (
     <section className="case-study-hero">
       <section className="case-study-hero-above-fold">

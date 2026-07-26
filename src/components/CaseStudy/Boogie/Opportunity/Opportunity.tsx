@@ -6,9 +6,9 @@ import TextBlock, { type TextBlockItem } from "@/components/TextBlock/TextBlock"
 import before from "@/assets/images/boogie/flexigo-list.png";
 import after from "@/assets/images/boogie/hero-screen.png";
 
-function Opportunity() {
+function Opportunity({ id }: { id: string }) {
   return (
-    <Section innerWidth={1140} className="boogie-opportunity">
+    <Section innerWidth={1140} className="boogie-opportunity" id={id}>
       <SectionHeader
         title="Opportunity"
         tagline={"Booking had to align with\nusers’ lived spatial perception."}

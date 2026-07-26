@@ -10,9 +10,9 @@ import iphone from "@/assets/images/iphone-no-camera.svg";
 import mode from "@/assets/images/boogie/mode-toggle.mov";
 import form from "@/assets/images/boogie/google-form.png";
 
-function ProductThinking() {
+function ProductThinking({ id }: { id: string }) {
   return (
-    <section className="boogie-product-thinking">
+    <section className="boogie-product-thinking" id={id}>
       <SectionHeader
         title="Product Thinking"
         tagline="more than one way of seeing."

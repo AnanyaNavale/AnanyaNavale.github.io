@@ -8,9 +8,9 @@ import Quote from "../../Quote/Quote";
 import circleDiagram from "@/assets/images/lunacart/circle-diagram.svg";
 import affinityMap from "@/assets/images/lunacart/affinity-map.jpg";
 
-function Discovery() {
+function Discovery({ id }: { id: string }) {
   return (
-    <Section innerWidth={1140} className="lunacart-discovery">
+    <Section innerWidth={1140} className="lunacart-discovery" id={id}>
       <SectionHeader
         title="Discovery"
         tagline="Late-night eating by itself wasn't the real problem."
@@ -35,12 +35,12 @@ function Discovery() {
 
       <TextBlock text={textContent.secondParagraph} />
 
-      <img className="discovery-diagram" src={circleDiagram} alt=""/>
+      <img className="discovery-diagram" src={circleDiagram} alt="" />
 
       <TextBlock text={textContent.thirdParagraph} />
 
       <div className="discovery-affinity-map">
-        <img src={affinityMap} alt=""/>
+        <img src={affinityMap} alt="" />
       </div>
     </Section>
   );

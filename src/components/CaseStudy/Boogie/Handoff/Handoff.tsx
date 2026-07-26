@@ -7,9 +7,9 @@ import TextBlock, { type TextBlockItem } from "@/components/TextBlock/TextBlock"
 import firstSlide from "@/assets/images/boogie/first-slide.png";
 import secondSlide from "@/assets/images/boogie/second-slide.png";
 
-function Handoff() {
+function Handoff({ id }: { id: string }) {
   return (
-    <Section innerWidth={1140} className="boogie-handoff">
+    <Section innerWidth={1140} className="boogie-handoff" id={id}>
       <SectionHeader
         title="Handoff"
         tagline={"Boogie made its way to\nStanford's DisGo Task Force."}
@@ -18,8 +18,8 @@ function Handoff() {
       <TextBlock text={textContent.firstParagraph} />
 
       <div className="handoff-slides">
-        <img src={firstSlide} alt=""/>
-        <img src={secondSlide} alt=""/>
+        <img src={firstSlide} alt="" />
+        <img src={secondSlide} alt="" />
       </div>
 
       <TextBlock text={textContent.secondParagraph} />

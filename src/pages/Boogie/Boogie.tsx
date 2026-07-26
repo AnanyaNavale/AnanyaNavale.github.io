@@ -1,6 +1,7 @@
 import "./Boogie.css";
+import { useEffect, useRef, useState } from "react";
 
-import Navbar from "../../components/CaseStudy/NavBar";
+import NavBar from "@/components/NavBar/NavBar";
 import Hero from "../../components/CaseStudy/Hero/Hero";
 import Overview from "../../components/CaseStudy/Overview/Overview";
 import Discovery from "@/components/CaseStudy/Boogie/Discovery/Discovery";
@@ -20,47 +21,71 @@ import { BsGithub } from "react-icons/bs";
 
 
 function Boogie() {
+  const heroRef = useRef<HTMLDivElement>(null);
+  const [showNavbar, setShowNavbar] = useState(false);
+
+  useEffect(() => {
+    if (!heroRef.current) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        console.log("Hero visible:", entry.isIntersecting);
+        setShowNavbar(!entry.isIntersecting);
+      },
+      {
+        threshold: 0,
+      },
+    );
+
+    observer.observe(heroRef.current);
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <main className="boogie-case-study">
-      <Navbar />
-
-      <Hero
-        title="Boogie"
-        valueProp="Places, Not Pins"
-        headline={
-          <>
-            <span>An accessible ride service that left people behind.</span>
-            <span>A redesign that met them where they were.</span>
-          </>
-        }
-        backgroundImage={heroBackground}
-        foregroundImages={[heroScreen]}
-        metadata={[
-          {
-            label: "Role",
-            value: "UI/UX Researcher\nLead Designer & Developer",
-          },
-          {
-            label: "Team",
-            value: "Stanford CS 377Q\nTeam of 5",
-          },
-          {
-            label: "Tools",
-            value: "Figma · Expo · React Native\nGithub",
-          },
-          {
-            label: "Timeline",
-            value: "Jan–Mar 2026\n10 weeks",
-          },
-        ]}
-        links={[
-          {
-            icon: BsGithub,
-            label: "GitHub Codebase",
-            href: "https://github.com/AnanyaNavale/CS377Q-Boogie",
-          },
-        ]}
-      />
+      <div className={`navbar-wrapper ${showNavbar ? "visible" : ""}`}>
+        <NavBar items={boogieNavItems} />
+      </div>
+      <div ref={heroRef}>
+        <Hero
+          title="Boogie"
+          valueProp="Places, Not Pins"
+          headline={
+            <>
+              <span>An accessible ride service that left people behind.</span>
+              <span>A redesign that met them where they were.</span>
+            </>
+          }
+          backgroundImage={heroBackground}
+          foregroundImages={[heroScreen]}
+          metadata={[
+            {
+              label: "Role",
+              value: "UI/UX Researcher\nLead Designer & Developer",
+            },
+            {
+              label: "Team",
+              value: "Stanford CS 377Q\nTeam of 5",
+            },
+            {
+              label: "Tools",
+              value: "Figma · Expo · React Native\nGithub",
+            },
+            {
+              label: "Timeline",
+              value: "Jan–Mar 2026\n10 weeks",
+            },
+          ]}
+          links={[
+            {
+              icon: BsGithub,
+              label: "GitHub Codebase",
+              href: "https://github.com/AnanyaNavale/CS377Q-Boogie",
+            },
+          ]}
+        />
+      </div>
 
       <Overview
         firstParagraph={
@@ -91,24 +116,25 @@ function Boogie() {
       />
 
       {/* Discovery */}
-      <Discovery />
+      <Discovery id="discovery" />
 
       {/* Key Insight */}
-      <KeyInsight />
+      <KeyInsight id="key-insight" />
 
       {/* Opportunity */}
-      <Opportunity />
+      <Opportunity id="opportunity" />
 
       {/* Approach, Challenge, Product Thinking */}
-      <Approach />
+      <Approach id="approach" />
 
       {/* Handoff */}
-      <Handoff />
+      <Handoff id="handoff" />
 
       <Reflections
         tagline={"Accessibility isn't an add-on.\nIt reshapes the system."}
         content={reflectionsContent}
         questions={reflectionQuestions}
+        id="reflections"
       />
 
       <Footer />
@@ -117,6 +143,43 @@ function Boogie() {
 }
 
 export default Boogie;
+
+const boogieNavItems = [
+  {
+    label: "Discovery",
+    href: "#discovery",
+  },
+  {
+    label: "Key Insight",
+    href: "#key-insight",
+  },
+  {
+    label: "Opportunity",
+    href: "#opportunity",
+  },
+  {
+    label: "Approach",
+    href: "#approach",
+    children: [
+      {
+        label: "Challenge",
+        href: "#challenge",
+      },
+      {
+        label: "Product Thinking",
+        href: "#product-thinking",
+      },
+    ],
+  },
+  {
+    label: "Handoff",
+    href: "#handoff",
+  },
+  {
+    label: "Reflections",
+    href: "#reflections",
+  },
+];
 
 const reflectionsContent: ReflectionsContent = {
   intro: [

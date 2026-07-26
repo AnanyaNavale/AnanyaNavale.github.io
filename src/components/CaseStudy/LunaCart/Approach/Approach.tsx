@@ -57,9 +57,9 @@ function InterventionCard({type, title, description, image, highlighted, number,
   );
 }
 
-function Approach() {
+function Approach({ id }: { id: string }) {
   return (
-    <Section innerWidth={1200} className="lunacart-approach">
+    <Section innerWidth={1200} className="lunacart-approach" id={id}>
       <SectionHeader
         title="Approach"
         tagline={

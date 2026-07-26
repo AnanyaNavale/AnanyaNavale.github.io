@@ -7,17 +7,15 @@ import QuoteCards from "./QuoteCards/QuoteCards";
 
 import interviewDiagram from "../../../../assets/images/theo/interview-diagram.png";
 
-function Discovery() {
+function Discovery({ id }: { id: string }) {
   return (
-    <Section innerWidth={1140} className="theo-discovery">
+    <Section innerWidth={1140} className="theo-discovery" id={id}>
       <SectionHeader
         title="Discovery"
         tagline={"Focus is a lot more nuanced\nthan you think."}
       />
 
-      <TextBlock
-        text={textContent.firstParagraph}
-      />
+      <TextBlock text={textContent.firstParagraph} />
 
       <div className="discovery-interview-diagram-container">
         <img
@@ -27,11 +25,12 @@ function Discovery() {
         />
       </div>
 
-      <TextBlock
-        text={textContent.secondParagraph}
-      />
+      <TextBlock text={textContent.secondParagraph} />
 
-      <QuoteCards firstRow={quoteCardContent.firstRow} secondRow={quoteCardContent.secondRow}/>
+      <QuoteCards
+        firstRow={quoteCardContent.firstRow}
+        secondRow={quoteCardContent.secondRow}
+      />
 
       <TextBlock
         text={[

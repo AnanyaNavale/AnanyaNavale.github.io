@@ -1,12 +1,12 @@
 .boogie-approach {
-  padding: 100px 120px;
+  padding: 100px 120px 100px;
   
   background: var(--color-background-gray-frame);
 }
 
 .boogie-approach .section-inner {
   align-items: center;
-  gap: 50px;
+  gap: 100px;
 }
 
 .boogie-approach .section-header {

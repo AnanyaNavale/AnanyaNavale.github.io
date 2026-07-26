@@ -10,3 +10,7 @@ body {
   font-size: 17px;
   font-weight: 350;
 }
+
+html {
+  scroll-behavior: smooth;
+}

@@ -5,19 +5,19 @@ import SectionHeader from "../../../Section/SectionHeader/SectionHeader"
 import TextBlock, { type TextBlockItem } from "../../../TextBlock/TextBlock"
 import ExperiencePrototypes from "./ExperiencePrototypes/ExperiencePrototypes"
 
-function Approach() {
+function Approach({ id }: { id: string }) {
   return (
-    <Section innerWidth={1200} className="theo-approach">
+    <Section innerWidth={1200} className="theo-approach" id={id}>
       <SectionHeader
         title="Approach"
         tagline={"So a single form of support was\nnever going to be enough."}
       />
 
-      <TextBlock text={textContent.firstParagraph}/>
+      <TextBlock text={textContent.firstParagraph} />
 
       <ExperiencePrototypes />
 
-      <TextBlock text={textContent.secondParagraph}/>
+      <TextBlock text={textContent.secondParagraph} />
     </Section>
   );
 }

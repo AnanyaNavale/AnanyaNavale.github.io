@@ -10,9 +10,9 @@ import boogieBot from "@/assets/images/boogie/boogiebot.png";
 import pickupLocation from "@/assets/images/boogie/pickup-location.png";
 import pickupEntrance from "@/assets/images/boogie/pickup-entrance.png";
 
-function Approach() {
+function Approach({ id }: { id: string }) {
   return (
-    <Section innerWidth={1200} className="boogie-approach">
+    <Section innerWidth={1200} className="boogie-approach" id={id}>
       <SectionHeader
         title="Approach"
         tagline={
@@ -23,10 +23,20 @@ function Approach() {
 
       <div className="approach-screens">
         <div className="approach-screens-first-col">
-          <p>Coordinate pickup & dropoff <br/> with chatbot dispatch</p>
+          <p>
+            Coordinate pickup & dropoff <br /> with chatbot dispatch
+          </p>
           <img src={boogieBot} />
         </div>
-        <p style={{ fontFamily: "var(--font-label)", fontWeight: 600, color: "var(--color-text-header)"}}>OR</p>
+        <p
+          style={{
+            fontFamily: "var(--font-label)",
+            fontWeight: 600,
+            color: "var(--color-text-header)",
+          }}
+        >
+          OR
+        </p>
         <div className="approach-screens-second-col">
           <div className="approach-screens-second-col-screen">
             <p>
@@ -43,9 +53,9 @@ function Approach() {
         </div>
       </div>
 
-      <Challenge />
+      <Challenge id="challenge"/>
 
-      <ProductThinking />
+      <ProductThinking id="product-thinking"/>
     </Section>
   );
 }
