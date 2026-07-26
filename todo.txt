@@ -1,3 +1,4 @@
 - [] Finding out how to include large images (Theo final screens) - blurriness
 - [] Adjust images in LunaCart Key Insight section bento
 - [] Sometimes on loading, videos don't show - screens just show blank (LunaCart, Boogie) - even on repeated reloads
+- [x] Shift ref for menu visibility to after Overview, not Hero

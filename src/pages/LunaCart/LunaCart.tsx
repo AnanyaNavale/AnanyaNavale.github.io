@@ -2,6 +2,7 @@ import "./LunaCart.css";
 import { useEffect, useRef, useState } from "react";
 
 import NavBar from "../../components/NavBar/NavBar";
+import BackButton from "@/components/BackButton/BackButton";
 import Hero from "../../components/CaseStudy/Hero/Hero";
 import Overview from "../../components/CaseStudy/Overview/Overview";
 import Discovery from "@/components/CaseStudy/LunaCart/Discovery/Discovery";
@@ -42,6 +43,7 @@ function LunaCart() {
 
   return (
     <main className="lunacart-case-study">
+      <BackButton to="/" />
       <div className={`navbar-wrapper ${showNavbar ? "visible" : ""}`}>
         <NavBar items={lunacartNavItems} />
       </div>
@@ -91,20 +93,20 @@ function LunaCart() {
             },
           ]}
         />
-      </div>
 
-      <Overview
-        firstParagraph="Stanford students often pack a week's worth of academics and social engagements into a single day, leaving little time to work and even less time to eat until after dark. When the dining halls close, healthy meals become nonexistent, making students default to the greasy fast food options available at late-night spots on campus."
-        secondParagraph={
-          <>
-            <strong>LunaCart</strong> helps students decide earlier—securing
-            convenient, healthy, and tasty options before nighttime scarcity and
-            hunger take over. By shifting meal planning to the daytime, this
-            project explores how small changes in timing can lead to healthier
-            nocturnal eating habits.
-          </>
-        }
-      />
+        <Overview
+          firstParagraph="Stanford students often pack a week's worth of academics and social engagements into a single day, leaving little time to work and even less time to eat until after dark. When the dining halls close, healthy meals become nonexistent, making students default to the greasy fast food options available at late-night spots on campus."
+          secondParagraph={
+            <>
+              <strong>LunaCart</strong> helps students decide earlier—securing
+              convenient, healthy, and tasty options before nighttime scarcity
+              and hunger take over. By shifting meal planning to the daytime,
+              this project explores how small changes in timing can lead to
+              healthier nocturnal eating habits.
+            </>
+          }
+        />
+      </div>
 
       {/* Discovery */}
       <Discovery id="discovery" />

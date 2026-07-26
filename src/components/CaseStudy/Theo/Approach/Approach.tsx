@@ -17,7 +17,7 @@ function Approach({ id }: { id: string }) {
 
       <ExperiencePrototypes />
 
-      <TextBlock text={textContent.secondParagraph} />
+      <TextBlock text={textContent.secondParagraph} contentAlignment="center" />
     </Section>
   );
 }
@@ -49,12 +49,12 @@ const textContent: {
           prototypes.
         </>
       ),
-      alignment: "center",
+      textAlignment: "center",
     },
     {
       size: "large",
       content: <>We carried these forward into developing our solution.</>,
-      alignment: "center",
+      textAlignment: "center",
     },
   ],
 };

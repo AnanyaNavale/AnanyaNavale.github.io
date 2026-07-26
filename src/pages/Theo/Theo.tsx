@@ -1,6 +1,5 @@
 import "./Theo.css";
 import { useEffect, useRef, useState } from "react";
-import { useNavigate } from "react-router-dom";
 
 import NavBar from "@/components/NavBar/NavBar";
 import BackButton from "@/components/BackButton/BackButton";
@@ -21,7 +20,6 @@ import { BsLink45Deg, BsGithub } from "react-icons/bs";
 
 
 function Theo() {
-  const navigate = useNavigate();
   const heroRef = useRef<HTMLDivElement>(null);
   const [showNavbar, setShowNavbar] = useState(false);
 
@@ -45,7 +43,7 @@ function Theo() {
 
   return (
     <main className="theo-case-study">
-      {/* <BackButton to="/" label="Back to Work" /> */}
+      <BackButton to="/" />
       <div className={`navbar-wrapper ${showNavbar ? "visible" : ""}`}>
         <NavBar items={theoNavItems} />
       </div>
@@ -94,21 +92,22 @@ function Theo() {
             },
           ]}
         />
-      </div>
 
-      {/* Overview */}
-      <Overview
-        firstParagraph="Learners with ADHD (Attention-Deficit/Hyperactivity Disorder) often struggle to regulate their focus when working on tasks. They shift between distraction and hyperfocus, even when they know exactly what they need to do."
-        secondParagraph={
-          <>
-            <strong>Theo</strong> is an AI-powered study companion designed to
-            support its users through this challenge in three ways: breaking
-            down large tasks, fostering self-accountability, and offering
-            encouragement. This project explores how interaction design can help
-            people direct their attention more intentionally toward their goals.
-          </>
-        }
-      />
+        {/* Overview */}
+        <Overview
+          firstParagraph="Learners with ADHD (Attention-Deficit/Hyperactivity Disorder) often struggle to regulate their focus when working on tasks. They shift between distraction and hyperfocus, even when they know exactly what they need to do."
+          secondParagraph={
+            <>
+              <strong>Theo</strong> is an AI-powered study companion designed to
+              support its users through this challenge in three ways: breaking
+              down large tasks, fostering self-accountability, and offering
+              encouragement. This project explores how interaction design can
+              help people direct their attention more intentionally toward their
+              goals.
+            </>
+          }
+        />
+      </div>
 
       {/* Discovery */}
       <Discovery id="discovery" />

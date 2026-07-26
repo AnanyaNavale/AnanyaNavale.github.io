@@ -2,6 +2,7 @@ import "./Boogie.css";
 import { useEffect, useRef, useState } from "react";
 
 import NavBar from "@/components/NavBar/NavBar";
+import BackButton from "@/components/BackButton/BackButton";
 import Hero from "../../components/CaseStudy/Hero/Hero";
 import Overview from "../../components/CaseStudy/Overview/Overview";
 import Discovery from "@/components/CaseStudy/Boogie/Discovery/Discovery";
@@ -44,6 +45,7 @@ function Boogie() {
 
   return (
     <main className="boogie-case-study">
+      <BackButton to="/" />
       <div className={`navbar-wrapper ${showNavbar ? "visible" : ""}`}>
         <NavBar items={boogieNavItems} />
       </div>
@@ -85,35 +87,35 @@ function Boogie() {
             },
           ]}
         />
-      </div>
 
-      <Overview
-        firstParagraph={
-          <>
-            Stanford offers an on-demand <u>dis</u>ability <u>go</u>lf (DisGo)
-            cart service for students, but its ride-booking experience leaves
-            blind and low-vision (BLV) riders relying on an interface that
-            wasn't designed with them in mind.
-          </>
-        }
-        secondParagraph={
-          <>
-            Working with a multidisciplinary team, I redesigned this booking
-            experience in <strong>Boogie</strong>, a system based on how BLV
-            riders actually describe and search for locations—replacing
-            inaccessible location selection with a more intuitive, screen
-            reader-friendly workflow.
-          </>
-        }
-        thirdParagraph={
-          <>
-            Completed in collaboration with Stanford's DisGo Task Force as part
-            of
-            <br />
-            CS 377Q: Designing for Accessibility.
-          </>
-        }
-      />
+        <Overview
+          firstParagraph={
+            <>
+              Stanford offers an on-demand <u>dis</u>ability <u>go</u>lf (DisGo)
+              cart service for students, but its ride-booking experience leaves
+              blind and low-vision (BLV) riders relying on an interface that
+              wasn't designed with them in mind.
+            </>
+          }
+          secondParagraph={
+            <>
+              Working with a multidisciplinary team, I redesigned this booking
+              experience in <strong>Boogie</strong>, a system based on how BLV
+              riders actually describe and search for locations—replacing
+              inaccessible location selection with a more intuitive, screen
+              reader-friendly workflow.
+            </>
+          }
+          thirdParagraph={
+            <>
+              Completed in collaboration with Stanford's DisGo Task Force as
+              part of
+              <br />
+              CS 377Q: Designing for Accessibility.
+            </>
+          }
+        />
+      </div>
 
       {/* Discovery */}
       <Discovery id="discovery" />
