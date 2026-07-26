@@ -28,13 +28,127 @@
 
 .design-final-screens {
   width: 100%;
+  display: flex;
+  flex-direction: column;
 
-  padding: 20px;
+  align-items: center;
+  gap: 30px;
+  padding: 20px 0;
 
   background: var(--color-background-light-frame);
   border-radius: 30px;
 }
 
-.design-final-screens img {
+.design-final-screens-label {
+  width: fit-content;
+
+  padding: 10px 20px;
+
+  border-radius: 100px;
+  background: #ECE5E2;
+  box-shadow: 0px 4px 4px rgba(47, 27, 12, 0.35);
+
+  font-family: var(--font-label);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-text-header);
+
+}
+
+.design-final-screens-block {
   width: 1098px;
+  /* height: 2146px; */
+  display: flex;
+  position: relative;
+
+  padding: 2017px 0 0;
+
+  /* border-style: solid;
+  border-width: 1px; */
+}
+
+.design-final-screen {
+  height: 600px;
+}
+
+.design-final-screen.card-1 {
+  /* width: 819px; */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.design-final-screen.line-1 {
+  width: 462px;
+  position: absolute;
+  top: 90px;
+  left: 420px;
+}
+
+.design-final-screen.card-2 {
+  /* width: 855px; */
+  position: absolute;
+  top: 461px;
+  right: 0;
+}
+
+.design-final-screen.line-2 {
+  width: 520px;
+  position: absolute;
+  top: 500px;
+  left: 215px;
+}
+
+.design-final-screen.card-3 {
+  /* width: 1011px; */
+  position: absolute;
+  top: 923px;
+  left: 0;
+}
+
+.design-final-screen.line-3 {
+  width: 457px;
+  position: absolute;
+  bottom: 400px;
+  right: 215px;
+}
+
+.design-final-screen.card-4 {
+  /* width: 812px; */
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.design-final-screens-award {
+  /* width: 100%; */
+  display: flex;
+  flex-direction: column;
+
+  padding: 10px 15px;
+  /* align-items: flex-end; */
+  
+  border-radius: 10px;
+  box-shadow: 0px 0px 4px rgba(47, 27, 12, 0.35);
+
+}
+
+.design-final-screens-award-text-first-line {
+  font-family: var(--font-label);
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-text-header);
+}
+
+.design-final-screens-award-text-second-line {
+  font-family: var(--font-label);
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-text-body);
 }

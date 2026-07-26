@@ -25,21 +25,14 @@ function Reflections({
   id,
 }: ReflectionsProps) {
   return (
-    <Section
-      innerWidth={1140}
-      className="reflections"
-      id={id}
-    >
-      <SectionHeader
-        title="Reflections"
-        tagline={tagline}
-      />
+    <Section innerWidth={1140} className="reflections" id={id}>
+      <SectionHeader title="Reflections" tagline={tagline} />
 
-      <TextBlock text={content.intro} />
+      <TextBlock text={content.intro} width="100%" />
 
-      <Questions questions={questions}/>
+      <Questions questions={questions} />
 
-      <TextBlock text={content.conclusion} />
+      <TextBlock text={content.conclusion} width="100%" />
     </Section>
   );
 }

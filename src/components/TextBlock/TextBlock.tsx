@@ -9,9 +9,10 @@ export type TextBlockItem = {
 type TextBlockProps = {
   text: TextBlockItem[];
   contentAlignment?: React.CSSProperties["alignItems"];
+  width?: React.CSSProperties["width"];
 };
 
-function TextBlock({ text, contentAlignment }: TextBlockProps) {
+function TextBlock({ text, contentAlignment, width }: TextBlockProps) {
   console.log(contentAlignment);
   
   return (
@@ -20,7 +21,7 @@ function TextBlock({ text, contentAlignment }: TextBlockProps) {
         <p
           key={index}
           className={item.size}
-          style={{ textAlign: item.textAlignment }}
+          style={{ textAlign: item.textAlignment, width: width }}
         >
           {item.content}
         </p>
