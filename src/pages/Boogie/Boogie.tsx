@@ -14,7 +14,7 @@ import Handoff from "@/components/CaseStudy/Boogie/Handoff/Handoff";
 import Reflections, {
   type ReflectionsContent,
 } from "../../components/CaseStudy/Reflections/Reflections";
-import Footer from "../../components/CaseStudy/Footer";
+import Footer from "../../components/CaseStudy/Footer/Footer";
 
 import heroBackground from "../../assets/images/boogie/hero-background.jpg";
 import heroScreen from "../../assets/images/boogie/hero-screen.png";
@@ -141,7 +141,7 @@ function Boogie() {
         id="reflections"
       />
 
-      <Footer />
+      <Footer currentProjectId="boogie" />
     </main>
   );
 }

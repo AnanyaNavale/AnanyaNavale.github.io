@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 
 import NavBar from "@/components/NavBar/NavBar";
 import BackButton from "@/components/BackButton/BackButton";
+import BackToTopButton from "@/components/BackToTopButton/BackToTopButton";
 import Hero from "../../components/CaseStudy/Hero/Hero";
 import Overview from "../../components/CaseStudy/Overview/Overview";
 import Discovery from "../../components/CaseStudy/Theo/Discovery/Discovery";
@@ -10,7 +11,7 @@ import Approach from "../../components/CaseStudy/Theo/Approach/Approach";
 import Vision from "@/components/CaseStudy/Theo/Vision/Vision";
 import Design from "@/components/CaseStudy/Theo/Design/Design";
 import Reflections, { type ReflectionsContent } from "../../components/CaseStudy/Reflections/Reflections";
-import Footer from "../../components/CaseStudy/Footer";
+import Footer from "../../components/CaseStudy/Footer/Footer";
 
 import heroBackground from "../../assets/images/theo/hero-background.jpg";
 import heroLeftScreen from "../../assets/images/theo/hero-screen-1.png";
@@ -47,6 +48,7 @@ function Theo() {
       <div className={`navbar-wrapper ${showNavbar ? "visible" : ""}`}>
         <NavBar items={theoNavItems} />
       </div>
+      <BackToTopButton isVisible={showNavbar} />
 
       {/* Hero */}
       <div ref={heroRef}>
@@ -129,7 +131,7 @@ function Theo() {
         id="reflections"
       />
 
-      <Footer />
+      <Footer currentProjectId="theo"/>
     </main>
   );
 }

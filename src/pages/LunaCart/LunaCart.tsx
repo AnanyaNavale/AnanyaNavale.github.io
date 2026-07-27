@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 
 import NavBar from "../../components/NavBar/NavBar";
 import BackButton from "@/components/BackButton/BackButton";
+import BackToTopButton from "@/components/BackToTopButton/BackToTopButton";
 import Hero from "../../components/CaseStudy/Hero/Hero";
 import Overview from "../../components/CaseStudy/Overview/Overview";
 import Discovery from "@/components/CaseStudy/LunaCart/Discovery/Discovery";
@@ -12,7 +13,7 @@ import Design from "@/components/CaseStudy/LunaCart/Design/Design";
 import Reflections, {
   type ReflectionsContent,
 } from "../../components/CaseStudy/Reflections/Reflections";
-import Footer from "../../components/CaseStudy/Footer";
+import Footer from "../../components/CaseStudy/Footer/Footer";
 
 import heroBackground from "../../assets/images/lunacart/hero-background.jpg";
 import heroScreen from "../../assets/images/lunacart/hero-screen.png";
@@ -47,6 +48,7 @@ function LunaCart() {
       <div className={`navbar-wrapper ${showNavbar ? "visible" : ""}`}>
         <NavBar items={lunacartNavItems} />
       </div>
+      <BackToTopButton isVisible={showNavbar} />
 
       <div ref={heroRef}>
         <Hero
@@ -127,7 +129,7 @@ function LunaCart() {
         id="reflections"
       />
 
-      <Footer />
+      <Footer currentProjectId="lunacart"/>
     </main>
   );
 }

@@ -44,13 +44,13 @@ function KeyInsight({ id }: { id: string }) {
       <div className="key-insight-bento">
         <div className="key-insight-bento-first-col">
           <div className="key-insight-bento-pyramid-wrapper">
-            <img src={pyramid} alt="" style={{ height: 564 }} />
+            <img src={pyramid} alt="" />
           </div>
           <img src={lateNight} alt="" />
         </div>
         <div className="key-insight-bento-second-col">
-          <img src={arrillaga} alt="" style={{ height: 421 }} />
-          <img src={tap} alt="" style={{ height: 525 }} />
+          <img src={arrillaga} alt="" />
+          <img src={tap} alt="" />
         </div>
       </div>
     </Section>

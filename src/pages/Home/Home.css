@@ -2,6 +2,6 @@
   display: flex;
   flex-direction: column;
 
-  padding: 250px 50px 0;
+  padding-top: 250px;
   gap: 250px;
 }

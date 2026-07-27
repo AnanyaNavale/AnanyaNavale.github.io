@@ -17,7 +17,7 @@
 
 .project-card-text {
   width: 50%;
-  height: 746px;
+  height: 700px;
   position: relative;
   display: flex;
   align-items: center;
@@ -82,7 +82,7 @@
 .project-card-image {
   position: relative;
   width: 50%;
-  height: 746px;
+  height: 700px;
   overflow: hidden;
   border-radius: 30px;
 }
@@ -121,6 +121,6 @@
 }
 
 .project-card-image-foreground {
-  height: 600px;
+  height: 550px;
   width: auto;
 }
