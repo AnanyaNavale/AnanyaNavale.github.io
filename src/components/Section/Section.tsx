@@ -5,6 +5,7 @@ type SectionProps = {
   children: React.ReactNode;
   className: string;
   id: string;
+  dataTheme?: "dark" | "light";
 };
 
 function Section({
@@ -12,10 +13,11 @@ function Section({
   children,
   className,
   id,
+  dataTheme,
 }: SectionProps) {
   return (
     <section
-      className={`section ${className ?? ""}`} id={id}
+      className={`section ${className ?? ""}`} id={id} data-theme={dataTheme}
     >
       <section
         className="section-inner"
