@@ -60,3 +60,36 @@
 
   pointer-events: none;
 }
+
+/* Add this to your glass.css */
+
+/* Enhanced glass with better color bleeding */
+.glass-tinted {
+  /* --glass-tint-color: rgba(255, 200, 180, 0.15); */
+  
+  background: 
+    /* Tint gradient from the image side */
+    linear-gradient(
+      90deg,
+      transparent 80%,
+      var(--glass-tint-color) 100%
+    ),
+    /* Original glass background */
+    var(--glass-bg);
+  
+  /* Add a subtle border on the image side with the tint color */
+  border-right: 1px solid var(--glass-tint-color);
+}
+
+.glass-tinted.reverse {
+  background: 
+    linear-gradient(
+      270deg,
+      transparent 80%,
+      var(--glass-tint-color) 100%
+    ),
+    var(--glass-bg);
+  
+  border-right: none;
+  border-left: 1px solid var(--glass-tint-color);
+}

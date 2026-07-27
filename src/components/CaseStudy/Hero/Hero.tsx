@@ -108,7 +108,7 @@ function Hero({
             return (
               <div className="case-study-hero-link" key={link.label}>
                 <a
-                  className="case-study-hero-link-icon-button"
+                  className="case-study-hero-link-icon-button glass"
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"

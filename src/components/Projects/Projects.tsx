@@ -36,6 +36,7 @@ export default function Projects() {
         backgroundImage={lunacartBackground}
         foregroundImages={[lunacartForeground]}
         link="/lunacart"
+        glassTint="rgb(219, 214, 234)"
       />
       <ProjectCard
         title="Boogie"
@@ -61,6 +62,7 @@ export default function Projects() {
         foregroundImages={[boogieForeground]}
         reverse
         link="/boogie"
+        glassTint="rgb(214, 231, 235)"
       />
       <ProjectCard
         title="Theo"
@@ -85,6 +87,7 @@ export default function Projects() {
         backgroundImage={theoBackground}
         foregroundImages={[theoForeground1, theoForeground2]}
         link="/theo"
+        glassTint="rgb(223, 208, 208)"
       />
     </section>
   );

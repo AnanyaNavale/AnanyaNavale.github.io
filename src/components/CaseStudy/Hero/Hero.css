@@ -230,9 +230,13 @@
   justify-content: center;
 
   border-radius: 100%;
-  border-style: solid;
+  /* border-style: solid;
   border-color: black;
-  border-width: 1px;
+  border-width: 1px; */
+}
+
+.case-study-hero-link-icon-button:hover {
+  transform: scale(1.08);
 }
 
 .case-study-hero-link-icon {

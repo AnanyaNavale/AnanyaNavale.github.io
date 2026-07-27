@@ -19,6 +19,7 @@ type ProjectCardProps = {
   link: string;
 
   reverse?: boolean;
+  glassTint?: string;
 };
 
 export default function ProjectCard({
@@ -31,10 +32,14 @@ export default function ProjectCard({
   foregroundImages,
   link,
   reverse = false,
+  glassTint,
 }: ProjectCardProps) {
   return (
     <article className={`project-card ${reverse ? "reverse" : ""}`}>
-      <div className="project-card-text">
+      <div
+        className={`project-card-text glass glass-tinted ${reverse ? "reverse" : ""}`}
+        style={{ "--glass-tint-color": glassTint } as React.CSSProperties}
+      >
         <div className="project-card-content">
           <h2 className="project-card-title">{title}</h2>
 
@@ -58,7 +63,7 @@ export default function ProjectCard({
           </div>
         </div>
 
-        <ViewCaseStudyButton link={link}/>
+        <ViewCaseStudyButton link={link} />
       </div>
 
       <div className="project-card-image">
