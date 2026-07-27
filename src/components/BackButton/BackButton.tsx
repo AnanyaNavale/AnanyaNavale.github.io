@@ -9,7 +9,7 @@ type BackButtonProps = {
 
 export default function BackButton({ to, label = "Back" }: BackButtonProps) {
   return (
-    <Link to={to} className="back-button" aria-label="Back to home">
+    <Link to={to} className="back-button glass" aria-label="Back to home">
       <BsArrowLeft color="var(--color-icon)"/>
     </Link>
   );

@@ -13,7 +13,6 @@ type TextBlockProps = {
 };
 
 function TextBlock({ text, contentAlignment, width }: TextBlockProps) {
-  console.log(contentAlignment);
   
   return (
     <div className="text-block" style={{ alignItems: contentAlignment }}>

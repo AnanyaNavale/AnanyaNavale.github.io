@@ -1,4 +1,8 @@
-- [] Finding out how to include large images (Theo final screens) - blurriness
+- [x] Finding out how to include large images (Theo final screens) - blurriness
 - [] Adjust images in LunaCart Key Insight section bento
 - [] Sometimes on loading, videos don't show - screens just show blank (LunaCart, Boogie) - even on repeated reloads
 - [x] Shift ref for menu visibility to after Overview, not Hero
+- [] Make submenu open on hover, not on click
+- [] Make submenu items materialize like bubbles, not just appear instantaneously
+- [] Make navbar slightly less frosty, and slightly darker glass to stand out a tiny bit from the background
+- [] Add dark/light mode toggle to Boogie
