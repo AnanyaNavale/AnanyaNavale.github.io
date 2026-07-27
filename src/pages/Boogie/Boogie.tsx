@@ -1,8 +1,9 @@
 import "./Boogie.css";
 import { useEffect, useRef, useState } from "react";
 
-import NavBar from "@/components/NavBar/NavBar";
 import BackButton from "@/components/BackButton/BackButton";
+import NavBar from "@/components/NavBar/NavBar";
+import BackToTopButton from "@/components/BackToTopButton/BackToTopButton";
 import Hero from "../../components/CaseStudy/Hero/Hero";
 import Overview from "../../components/CaseStudy/Overview/Overview";
 import Discovery from "@/components/CaseStudy/Boogie/Discovery/Discovery";
@@ -49,6 +50,7 @@ function Boogie() {
       <div className={`navbar-wrapper ${showNavbar ? "visible" : ""}`}>
         <NavBar items={boogieNavItems} />
       </div>
+      <BackToTopButton isVisible={showNavbar} />
       <div ref={heroRef}>
         <Hero
           title="Boogie"

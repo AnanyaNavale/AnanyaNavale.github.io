@@ -10,7 +10,7 @@
 - [] Try to shrink project card height to fit more comfortable in single screen view
 
 
-MISCELLANEOUS/NOTEPAD:
+MISCELLANEOUS/NOTEPAD/CODE DUMP:
 
 BRUSHED STEEL BUTTON EFFECT
 .view-case-study-button:hover {

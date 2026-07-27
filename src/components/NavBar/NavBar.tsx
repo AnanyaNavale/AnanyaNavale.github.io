@@ -175,7 +175,9 @@ function NavBar({ items }: NavBarProps) {
         }
       },
       {
-        threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1], // Multiple thresholds for better tracking
+        // threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1], // Multiple thresholds for better tracking
+        threshold: [0, 0.2, 0.5, 0.8], // Multiple thresholds
+        rootMargin: "-100px 0px -50% 0px",
       },
     );
 
