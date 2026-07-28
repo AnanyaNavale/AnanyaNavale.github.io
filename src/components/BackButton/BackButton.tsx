@@ -5,10 +5,9 @@ import { useState } from "react";
 
 type BackButtonProps = {
   to: string;
-  label?: string;
 };
 
-export default function BackButton({ to, label = "Back" }: BackButtonProps) {
+export default function BackButton({ to }: BackButtonProps) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (

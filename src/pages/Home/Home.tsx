@@ -1,6 +1,6 @@
 import "./Home.css";
 
-import NavBar, { type MainNavItem } from "@/components/NavBar/MainNavBar";
+import NavBar from "@/components/NavBar/MainNavBar";
 import Logo from "@/components/Logo/Logo";
 import Hero from "../../components/Hero/Hero";
 import Projects from "../../components/Projects/Projects";

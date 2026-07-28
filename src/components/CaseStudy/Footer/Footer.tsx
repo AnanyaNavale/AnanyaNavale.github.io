@@ -1,6 +1,6 @@
 import "./Footer.css";
 import { Link } from "react-router-dom";
-import { PROJECTS, type Project } from "@/config/projects";
+import { PROJECTS } from "@/config/projects";
 
 type FooterProps = {
   currentProjectId: string;
