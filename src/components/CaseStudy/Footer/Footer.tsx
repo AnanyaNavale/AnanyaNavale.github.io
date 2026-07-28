@@ -41,7 +41,7 @@ export default function Footer({
           Want to chat about this project?
         </p>
         <a
-          href="mailto:your.email@example.com"
+          href="mailto:ananya.navale@gmail.com"
           className="case-study-footer-cta-button glass"
         >
           Get in Touch

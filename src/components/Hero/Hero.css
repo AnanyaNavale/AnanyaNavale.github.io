@@ -17,3 +17,7 @@
 .hero-name {
   transform: translateX(0.05em);
 }
+
+.hero-role {
+  text-align: center;
+}

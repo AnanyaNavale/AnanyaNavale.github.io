@@ -12,7 +12,7 @@ export default function Hero() {
       </div>
 
       <p className="hero-role">
-        Stanford HCI student & designer passionate about uncovering the human
+        Stanford CS/HCI student, UX designer, and UI developer passionate about <br />uncovering the human
         stories that shape thoughtful design
       </p>
     </section>
