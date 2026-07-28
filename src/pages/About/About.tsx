@@ -6,9 +6,7 @@ import GlobalFooter from "@/components/GlobalFooter/GlobalFooter";
 
 import AboutHero from "@/components/About/AboutHero/AboutHero";
 // import Motivation from "@/components/About/Motivation/Motivation";
-// import SkillsBento from "@/components/About/SkillsBento/SkillsBento";
 // import PersonalTouch from "@/components/About/PersonalTouch/PersonalTouch";
-// import AboutCTA from "@/components/About/AboutCTA/AboutCTA";
 import InfiniteCarousel, { type CarouselCard } from "@/components/About/InfiniteCarousel/InfiniteCarousel";
 import { MAIN_NAV_ITEMS } from "@/config/navigation";
 
@@ -29,9 +27,7 @@ function About() {
 
       <InfiniteCarousel cards={skillCards}/>
       {/* <Motivation /> */}
-      {/* <SkillsBento /> */}
       {/* <PersonalTouch /> */}
-      {/* <AboutCTA /> */}
 
       <GlobalFooter />
     </main>
