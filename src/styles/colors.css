@@ -1,0 +1,38 @@
+:root {
+    /* TEXT */
+    --color-text-header: #111111;
+    --color-text-body: #666666;
+    --color-text-dark: #B6B6B6;
+    --color-text-light: #FDFDFF;
+
+    /* BACKGROUND */
+    --color-background-default: #FFFFFF;
+    --color-background-gray-frame: #F5F5F7;
+    --color-background-light-frame: #FDFDFF;
+
+    /* THEO */
+    --color-theo-primary: #8A5E3C;
+    --color-theo-secondary: #CF9841;
+    --color-theo-tertiary: #7C3030;
+    --color-theo-reflection-background: #13100E;
+    --color-theo-labels: rgba(138, 94, 60, 0.25);
+
+    /* LUNACART */
+    --color-lunacart-primary: #FDB74E;
+    --color-lunacart-secondary: #C07300;
+    --color-lunacart-tertiary: #7D56A3;
+    --color-lunacart-quaternary: #141E48;
+    --color-lunacart-reflection-background: #0B1028;
+    --color-lunacart-labels: #FDE8CA;
+
+    /* BOOGIE */
+    --color-boogie-primary: #09A6B8;
+    --color-boogie-secondary: #8A38F5;
+    --color-boogie-tertiary: #077581;
+    --color-boogie-quaternary: #4E6CD9;
+    --color-boogie-reflection-background: #13151F;
+    --color-boogie-labels: rgba(9,166,184,0.25);
+
+    /* OTHER */
+    --color-icon: #111111;
+}

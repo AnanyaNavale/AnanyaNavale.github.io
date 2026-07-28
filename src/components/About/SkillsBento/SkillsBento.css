@@ -1,0 +1,81 @@
+/* SkillsBento.css */
+
+.skills-bento {
+  width: 100%;
+  padding: 100px 50px;
+  background: #fafafa;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+}
+
+.skills-bento-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--color-text-header);
+  text-align: center;
+}
+
+.skills-bento-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.skills-card {
+  padding: 40px;
+  border-radius: 30px;
+  
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.skills-card:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.15),
+    var(--glass-shadow);
+}
+
+.skills-card-large {
+  grid-column: span 1;
+}
+
+.skills-card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-text-header);
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.skills-list li {
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.7);
+  padding-left: 20px;
+  position: relative;
+}
+
+.skills-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: rgba(0, 0, 0, 0.4);
+}

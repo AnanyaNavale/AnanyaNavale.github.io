@@ -1,0 +1,201 @@
+.lunacart-approach {
+  padding: 100px 120px 200px;
+}
+
+.lunacart-approach .section-inner {
+  gap: 50px;
+}
+
+.lunacart-approach img {
+  width: 100%;
+}
+
+.approach-intervention-diagram {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  gap: 50px;
+}
+
+.intervention-diagram-row {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  gap: 30px;
+}
+
+.intervention-diagram-row h4 {
+  font-family: var(--font-label);
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-text-header);
+}
+
+.intervention-diagram-row h5 {
+  font-family: var(--font-label);
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-text-header);
+}
+
+.intervention-diagram-row.title-container {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  gap: 5px;
+
+  text-align: center;
+}
+
+.intervention-cards {
+  width: 100%;
+  display: flex;
+
+  gap: 30px;
+}
+
+.intervention-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+
+  align-items: center;
+  gap: 10px;
+
+  background: #E0E0E0;
+  border-radius: 30px;
+  text-align: center;
+
+  color: var(--color-text-body);
+}
+
+.intervention-card.highlighted{
+  background: var(--color-background-light-frame);
+  box-shadow: 0px 0px 4px rgba(47, 27, 12, 0.35);
+  color: var(--color-text-header);
+}
+
+.intervention-card.food-ecosystem {
+  padding: 30px 25px;
+
+  font-size: 17px;
+  font-weight: 350;
+}
+
+.intervention-card.food-ecosystem img {
+  height: 75px;
+  width: auto;
+  opacity: 50%;
+}
+
+.intervention-card.food-ecosystem.highlighted img {
+  opacity: 100%;
+}
+
+.intervention-card.behavior {
+  padding: 20px;
+}
+
+.intervention-card.behavior h6 {
+  font-size: 17px;
+  font-weight: 450;
+}
+
+.intervention-card.behavior p {
+  font-size: 12px;
+  font-weight: 350;
+}
+
+.intervention-card.behavior img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  opacity: 50%;
+}
+
+.intervention-card.behavior.highlighted img {
+  opacity: 100%;
+}
+
+.intervention-card.design-implications {
+  background: var(--color-background-light-frame);
+  padding: 30px;
+  box-shadow: 0px 0px 4px rgba(47, 27, 12, 0.35);
+
+  text-align: start;
+}
+
+.intervention-card.design-implications h5 {
+  font-family: var(--font-body);
+  font-size: 40px;
+  font-weight: 650;
+  letter-spacing: 0;
+
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.intervention-card-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+.intervention-card-content h6 {
+  font-family: var(--font-body);
+  font-size: 17px;
+  font-weight: 450;
+  color: var(--color-text-header);
+}
+
+.intervention-card-content p {
+  font-family: var(--font-body);
+  font-size: 17px;
+  font-weight: 350;
+  color: var(--color-text-body);
+}
+
+.intervention-diagram-first-row-connector {
+  position: absolute;
+  top: 285px;
+  right: 400px;
+  z-index: 1;
+}
+
+.intervention-diagram-second-row-connector {
+  position: absolute;
+  height: 160px;
+  bottom: 250px;
+  z-index: 1;
+}
+
+.intervention-diagram-second-row-connector.pale-orange {
+  left: -310px;
+}
+
+.intervention-diagram-second-row-connector.orange {
+  left: -190px;
+}
+
+.intervention-diagram-second-row-connector.purple {
+  left: 190px;
+}
+
+.intervention-diagram-second-row-connector.blue {
+  left: 310px;
+}

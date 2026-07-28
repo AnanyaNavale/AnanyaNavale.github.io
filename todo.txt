@@ -1,0 +1,67 @@
+- [x] Finding out how to include large images (Theo final screens) - blurriness
+- [x] Adjust images in LunaCart Key Insight section bento
+- [] Sometimes on loading, videos don't show - screens just show blank (LunaCart, Boogie) - even on repeated reloads
+- [x] Shift ref for menu visibility to after Overview, not Hero
+- [x] Make submenu open on hover, not on click
+- [x] Make submenu items materialize like bubbles, not just appear instantaneously
+- [x] Make navbar slightly less frosty, and slightly darker glass to stand out a tiny bit from the background
+- [] Add dark/light mode toggle to Boogie
+- [x] Make link buttons scale slightly on hover
+- [x] Try to shrink project card height to fit more comfortable in single screen view
+- [] Footer project cards flickering between inactive and hover states if touched on the bottom with mouse (not on top or sides)
+- [] Add thumbnails to case study footer cards
+
+
+MISCELLANEOUS/NOTEPAD/CODE DUMP:
+
+BRUSHED STEEL BUTTON EFFECT
+.view-case-study-button:hover {
+  background: 
+    radial-gradient(
+      circle at 30% 30%,
+      rgba(50, 50, 50, 1) 0%,
+      rgba(10, 10, 10, 1) 50%,
+      rgba(0, 0, 0, 1) 100%
+    );
+  
+  border: 1px solid rgba(80, 80, 80, 0.6);
+  
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(255, 255, 255, 0.05) inset,
+    inset 0 2px 4px rgba(255, 255, 255, 0.15),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.8);
+  
+  color: var(--color-text-light);
+  transform: scale(1.08);
+}
+
+/* Hide glass shine on hover */
+.view-case-study-button:hover::before {
+  opacity: 0;
+}
+
+/* Show obsidian shine on hover */
+.view-case-study-button:hover::after {
+  opacity: 1;
+  animation: shine-sweep 1.5s ease-out;
+}
+
+@keyframes shine-sweep {
+  0% {
+    transform: translateX(-50%) translateY(-50%);
+  }
+  100% {
+    transform: translateX(50%) translateY(50%);
+  }
+}
+
+.view-case-study-text {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+
+

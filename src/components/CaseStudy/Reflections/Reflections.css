@@ -1,0 +1,19 @@
+.reflections {
+  padding: 100px 150px 150px;
+}
+
+.reflections .section-inner {
+  gap: 40px;
+}
+
+.reflections .section-heading {
+  color: var(--color-text-light);
+}
+
+.reflections .text-block .body {
+  color: var(--color-text-dark);
+}
+
+.reflections .text-block .large {
+  color: var(--color-text-light);
+}

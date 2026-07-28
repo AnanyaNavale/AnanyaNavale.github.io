@@ -1,0 +1,123 @@
+/* BackToTopButton.css */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 50px;
+  
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  border: none;
+  cursor: pointer;
+  
+  z-index: 10;
+  
+  /* Default: Glass (for light sections) */
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  box-shadow: var(--glass-shadow);
+  
+  color: var(--color-text-header);
+  
+  /* Hidden by default */
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20px);
+  
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease,
+    background 0.4s ease,
+    border 0.4s ease,
+    box-shadow 0.4s ease,
+    color 0.4s ease;
+  
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+/* ===== LIGHT SECTION (default glass → obsidian hover) ===== */
+
+.back-to-top-theme-light:hover {
+  background: linear-gradient(
+    145deg,
+    rgba(30, 30, 30, 1) 0%,
+    rgba(0, 0, 0, 1) 40%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  
+  border: 1px solid rgba(40, 40, 40, 1);
+  backdrop-filter: blur(0);
+  -webkit-backdrop-filter: blur(0);
+  
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.8),
+    0 0 0 1px rgba(255, 255, 255, 0.1) inset,
+    inset 0 3px 6px rgba(255, 255, 255, 0.25);
+  
+  color: var(--color-text-light);
+  transform: translateY(-2px);
+}
+
+/* ===== DARK SECTION (obsidian default → bright glass hover) ===== */
+
+.back-to-top-theme-dark {
+  /* Default: Obsidian (visible on dark backgrounds) */
+  background: linear-gradient(
+    145deg,
+    rgba(30, 30, 30, 1) 0%,
+    rgba(0, 0, 0, 1) 40%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  
+  border: 1px solid rgba(80, 80, 80, 0.8);
+  backdrop-filter: blur(0);
+  -webkit-backdrop-filter: blur(0);
+  
+  box-shadow:
+    0 4px 16px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(255, 255, 255, 0.1) inset,
+    inset 0 2px 4px rgba(255, 255, 255, 0.2);
+  
+  color: var(--color-text-light);
+}
+
+.back-to-top-theme-dark:hover {
+  /* Hover: Bright glass (glows against dark background) */
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(240, 240, 240, 0.4) 100%
+  );
+  
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  
+  box-shadow:
+    0 8px 32px rgba(255, 255, 255, 0.2),
+    0 0 0 1px rgba(255, 255, 255, 0.4) inset,
+    inset 0 2px 6px rgba(255, 255, 255, 0.6);
+  
+  color: #000;
+  transform: translateY(-2px);
+}
+
+/* Press down effect */
+.back-to-top:active {
+  transform: translateY(0) !important;
+}

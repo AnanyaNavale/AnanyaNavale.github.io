@@ -1,0 +1,167 @@
+.view-case-study-button {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  
+  /* GLASS EFFECT - visible even without backdrop blur */
+  background: 
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.4) 0%,
+      rgba(255, 255, 255, 0.1) 50%,
+      rgba(200, 200, 200, 0.3) 100%
+    );
+  
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+  
+  color: var(--color-text-header);
+
+  transition:
+    background 400ms ease,
+    border 400ms ease,
+    box-shadow 400ms ease,
+    color 400ms ease,
+    transform 400ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  
+  isolation: isolate;
+  overflow: hidden;
+}
+
+/* Glass shine highlight */
+.view-case-study-button::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(255, 255, 255, 0.2) 20%,
+    transparent 60%
+  );
+  
+  pointer-events: none;
+  border-radius: inherit;
+  
+  transition: opacity 400ms ease;
+}
+
+/* Obsidian shine streak (hidden initially) */
+.view-case-study-button::after {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 300%;
+  height: 300%;
+  
+  background: linear-gradient(
+    45deg,
+    transparent 0%,
+    transparent 40%,
+    rgba(255, 255, 255, 0.15) 45%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0.15) 55%,
+    transparent 60%,
+    transparent 100%
+  );
+  
+  pointer-events: none;
+  opacity: 0;
+  
+  transition: opacity 400ms ease;
+}
+
+/* HOVER STATE - OBSIDIAN */
+.view-case-study-button:hover {
+  /* Pure black with subtle depth */
+  background: 
+    linear-gradient(
+      145deg,
+      rgba(30, 30, 30, 1) 0%,
+      rgba(0, 0, 0, 1) 40%,
+      rgba(0, 0, 0, 1) 100%
+    );
+  
+  border: 1px solid rgba(40, 40, 40, 1);
+  
+  /* Obsidian is GLOSSY - sharp highlights, deep shadows */
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.8),
+    0 0 0 1px rgba(255, 255, 255, 0.1) inset,
+    inset 0 3px 6px rgba(255, 255, 255, 0.25),
+    inset 0 -3px 6px rgba(0, 0, 0, 0.9);
+  
+  color: var(--color-text-light);
+  transform: scale(1.08);
+}
+
+/* Obsidian shine - tighter, more controlled */
+.view-case-study-button::after {
+  content: "";
+  position: absolute;
+  inset: 0; /* Changed from negative positioning */
+  
+  background: linear-gradient(
+    135deg,
+    transparent 20%,
+    rgba(255, 255, 255, 0.2) 45%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0.2) 55%,
+    transparent 80%
+  );
+  
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  
+  /* Start off-screen, sweep across */
+  transform: translateX(-150%) translateY(-150%);
+  
+  transition: opacity 200ms ease;
+}
+
+.view-case-study-button:hover::after {
+  opacity: 1;
+  animation: obsidian-shine 1s ease-out forwards;
+}
+
+@keyframes obsidian-shine {
+  0% {
+    transform: translateX(-150%) translateY(-150%);
+  }
+  100% {
+    transform: translateX(150%) translateY(150%);
+  }
+}
+
+.view-case-study-button:hover .view-case-study-text {
+  animation: rotate-text 10s linear infinite;
+}
+
+@keyframes rotate-text {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

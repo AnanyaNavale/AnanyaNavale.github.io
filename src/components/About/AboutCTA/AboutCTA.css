@@ -1,0 +1,109 @@
+/* AboutCTA.css */
+
+.about-cta {
+  width: 100%;
+  padding: 100px 50px 150px;
+  background: linear-gradient(180deg, #ffffff 0%, #f5f5f5 100%);
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.about-cta-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--color-text-header);
+  text-align: center;
+}
+
+.about-cta-text {
+  font-size: 1.125rem;
+  color: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  max-width: 600px;
+}
+
+.about-cta-buttons {
+  margin-top: 20px;
+}
+
+.about-cta-button {
+  padding: 18px 40px;
+  border-radius: 100px;
+  
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--color-text-header);
+  
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  box-shadow: var(--glass-shadow);
+  
+  transition:
+    transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+    background 0.4s ease,
+    border 0.4s ease,
+    box-shadow 0.4s ease,
+    color 0.4s ease;
+}
+
+.about-cta-button:hover {
+  transform: scale(1.05);
+  
+  background: linear-gradient(
+    145deg,
+    rgba(30, 30, 30, 1) 0%,
+    rgba(0, 0, 0, 1) 40%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  
+  border: 1px solid rgba(40, 40, 40, 1);
+  backdrop-filter: blur(0);
+  -webkit-backdrop-filter: blur(0);
+  
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.8),
+    0 0 0 1px rgba(255, 255, 255, 0.1) inset,
+    inset 0 3px 6px rgba(255, 255, 255, 0.25);
+  
+  color: var(--color-text-light);
+}
+
+.about-cta-links {
+  margin-top: 20px;
+  display: flex;
+  gap: 24px;
+}
+
+.about-cta-link {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  color: var(--color-text-header);
+  background: rgba(0, 0, 0, 0.05);
+  
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.2s ease;
+}
+
+.about-cta-link:hover {
+  background: rgba(0, 0, 0, 0.9);
+  color: var(--color-text-light);
+  transform: translateY(-3px);
+}

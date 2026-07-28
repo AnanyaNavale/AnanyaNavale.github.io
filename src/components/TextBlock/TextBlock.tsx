@@ -1,0 +1,32 @@
+import "./TextBlock.css";
+
+export type TextBlockItem = {
+  size: "body" | "large";
+  content: React.ReactNode;
+  textAlignment?: React.CSSProperties["textAlign"];
+};
+
+type TextBlockProps = {
+  text: TextBlockItem[];
+  contentAlignment?: React.CSSProperties["alignItems"];
+  width?: React.CSSProperties["width"];
+};
+
+function TextBlock({ text, contentAlignment, width }: TextBlockProps) {
+  
+  return (
+    <div className="text-block" style={{ alignItems: contentAlignment }}>
+      {text.map((item, index) => (
+        <p
+          key={index}
+          className={item.size}
+          style={{ textAlign: item.textAlignment, width: width }}
+        >
+          {item.content}
+        </p>
+      ))}
+    </div>
+  );
+}
+
+export default TextBlock;

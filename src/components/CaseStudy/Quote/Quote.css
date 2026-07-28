@@ -1,0 +1,33 @@
+.quote {
+  width: 100%;
+  display: flex;
+
+  padding: 5px 0 5px 30px;
+
+  border-left-style: solid;
+  border-left-width: 5px;
+  border-left-color: #3048AD;
+}
+
+.quote-text {
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+.quote-content {
+  font-weight: 500;
+  font-style: italic;
+  color: var(--color-text-header);
+}
+
+.quote-attr {
+  font-family: var(--font-label);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-text-body);
+}
