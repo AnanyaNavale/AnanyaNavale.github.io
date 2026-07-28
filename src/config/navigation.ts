@@ -1,7 +1,7 @@
 export const MAIN_NAV_ITEMS = [
   { label: "Work", href: "/" },
   { label: "About", href: "/about" },
-  { label: "Resume", href: "/resume.pdf", isExternal: true },
+  // { label: "Resume", href: "/resume.pdf", isExternal: true },
 ];
 
 export const lunacartNavItems = [

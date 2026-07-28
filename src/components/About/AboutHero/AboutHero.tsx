@@ -8,24 +8,21 @@ function AboutHero() {
       <div className="about-hero-content">
         <div className="about-hero-text">
           <h4 className="about-hero-opening">
-            Programmer by trade. <br /> Musician & photographer by hobby. <br />{" "}
-            Storyteller at heart.
+            Programmer by day. <br /> Musician & photographer by night. <br />{" "}
+            Storyteller 24/7.
           </h4>
           {/* <p className="about-hero-title">UX Designer & HCI Undergrad</p> */}
           <p className="about-hero-bio">
             Hi, I’m Ananya, an undergrad at Stanford pursuing my Bachelor’s in
             Computer Science with experience in Human-Computer Interaction and
-            Operating Systems. There’s always more to a product than meets the
-            eye. Decisions and magic happen behind the scenes of a product, and
-            I’m there to be the mastermind, cleverly constructing the messages
-            that interfaces and tools send their users.
+            Operating Systems.
           </p>
           <p className="about-hero-bio emphasized">
             There’s always more to a product than meets the
             eye.
           </p>
           <p className="about-hero-bio">
-            Decisions and magic happen behind the scenes of a product, and
+            Decisions and magic happen behind the scenes, and
             I’m there to be the mastermind, cleverly constructing the messages
             that interfaces and tools send their users.
           </p>

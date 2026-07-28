@@ -1,9 +1,7 @@
 import "./About.css";
-// import { useEffect, useRef, useState } from "react";
 
-// import BackButton from "@/components/BackButton/BackButton";
 import MainNavBar from "@/components/NavBar/MainNavBar";
-// import BackToTopButton from "@/components/BackToTopButton/BackToTopButton";
+import Logo from "@/components/Logo/Logo";
 import GlobalFooter from "@/components/GlobalFooter/GlobalFooter";
 
 import AboutHero from "@/components/About/AboutHero/AboutHero";
@@ -15,33 +13,25 @@ import InfiniteCarousel, { type CarouselCard } from "@/components/About/Infinite
 import { MAIN_NAV_ITEMS } from "@/config/navigation";
 
 
-// Placeholder nav items - adjust as needed
-const aboutNavItems = [
-  { label: "About", href: "about" },
-  { label: "Resume", href: "#resume" },
-];
-
 function About() {
 
   return (
     <main className="about-page">
-      {/* <BackButton to="/" /> */}
 
+      <Logo />
       <div className="navbar-wrapper visible">
         <MainNavBar items={MAIN_NAV_ITEMS} />
       </div>
-
-      {/* <BackToTopButton /> */}
 
       <div>
         <AboutHero />
       </div>
 
       <InfiniteCarousel cards={skillCards}/>
-      <Motivation />
+      {/* <Motivation /> */}
       {/* <SkillsBento /> */}
-      <PersonalTouch />
-      <AboutCTA />
+      {/* <PersonalTouch /> */}
+      {/* <AboutCTA /> */}
 
       <GlobalFooter />
     </main>
@@ -79,7 +69,7 @@ const skillCards: CarouselCard[] = [
       "HTML5",
       "CSS3",
       "React Router / Expo Router",
-      "Git/GitHub",
+      "Git / GitHub",
       "VSCode",
       "Expo",
       "CSS Animations",
