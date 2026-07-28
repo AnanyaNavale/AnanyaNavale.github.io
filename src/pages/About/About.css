@@ -1,5 +1,42 @@
+/* About.css */
+
 .about-page {
   width: 100%;
   min-height: 100vh;
   background: white;
+}
+
+.about-placeholder {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 50px;
+}
+
+.about-placeholder-content {
+  max-width: 600px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-placeholder-content h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--color-text-header);
+}
+
+.about-coming-soon {
+  font-size: 1.5rem;
+  color: rgba(0, 0, 0, 0.6);
+  font-style: italic;
+}
+
+.about-teaser {
+  font-size: 1.125rem;
+  color: rgba(0, 0, 0, 0.7);
+  line-height: 1.6;
 }

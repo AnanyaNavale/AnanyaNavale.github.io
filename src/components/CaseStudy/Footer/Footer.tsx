@@ -1,14 +1,16 @@
+// src/components/CaseStudy/CaseStudyFooter/CaseStudyFooter.tsx
+
 import "./Footer.css";
 import { Link } from "react-router-dom";
 import { PROJECTS } from "@/config/projects";
 
-type FooterProps = {
+type CaseStudyFooterProps = {
   currentProjectId: string;
 };
 
-function Footer({
+export default function Footer({
   currentProjectId,
-}: FooterProps) {
+}: CaseStudyFooterProps) {
   const otherProjects = PROJECTS.filter(
     (project) => project.id !== currentProjectId,
   );
@@ -23,18 +25,12 @@ function Footer({
             <Link
               key={project.id}
               to={project.path}
-              className="case-study-footer-card glass"
+              className="case-study-footer-card-simple glass"
             >
-              <div className="case-study-footer-card-image">
-                <img src={project.thumbnail} alt="" />
-              </div>
-
-              <div className="case-study-footer-card-content">
-                <h3 className="case-study-footer-card-name">{project.name}</h3>
-                <p className="case-study-footer-card-headline">
-                  {project.headline}
-                </p>
-              </div>
+              <h3 className="case-study-footer-card-name">{project.name}</h3>
+              <p className="case-study-footer-card-headline">
+                {project.headline}
+              </p>
             </Link>
           ))}
         </div>
@@ -45,14 +41,12 @@ function Footer({
           Want to chat about this project?
         </p>
         <a
-          href="mailto:ananya.navale@gmail.com"
+          href="mailto:your.email@example.com"
           className="case-study-footer-cta-button glass"
         >
-          Drop me a line
+          Get in Touch
         </a>
       </div>
     </footer>
   );
 }
-
-export default Footer;
