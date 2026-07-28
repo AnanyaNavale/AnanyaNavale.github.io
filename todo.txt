@@ -9,6 +9,7 @@
 - [x] Make link buttons scale slightly on hover
 - [x] Try to shrink project card height to fit more comfortable in single screen view
 - [] Footer project cards flickering between inactive and hover states if touched on the bottom with mouse (not on top or sides)
+- [] Add thumbnails to case study footer cards
 
 
 MISCELLANEOUS/NOTEPAD/CODE DUMP:

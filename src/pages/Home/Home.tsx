@@ -1,15 +1,16 @@
 import "./Home.css";
 
-import NavBar, { type NavItem } from "@/components/NavBar/NavBar";
+import NavBar, { type MainNavItem } from "@/components/NavBar/MainNavBar";
 import Hero from "../../components/Hero/Hero";
 import Projects from "../../components/Projects/Projects";
 import GlobalFooter from "../../components/GlobalFooter/GlobalFooter";
+import { MAIN_NAV_ITEMS } from "@/config/navigation";
 
 export default function Home() {
   return (
     <main className="home">
       <div className="navbar-wrapper visible">
-        <NavBar items={navItems} />
+        <NavBar items={MAIN_NAV_ITEMS} />
       </div>
       <Hero />
       <Projects />
@@ -17,10 +18,4 @@ export default function Home() {
     </main>
   );
 }
-
-const navItems: NavItem[] = [
-  { label: "About", href: "#about" },
-  { label: "Resume", href: "#resume" },
-  // { label: "Contact", href: "#contact" },
-];
 

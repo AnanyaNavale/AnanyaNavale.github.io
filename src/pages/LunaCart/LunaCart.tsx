@@ -1,7 +1,7 @@
 import "./LunaCart.css";
 import { useEffect, useRef, useState } from "react";
 
-import NavBar from "../../components/NavBar/NavBar";
+import NavBar from "../../components/NavBar/CaseStudyNavBar";
 import BackButton from "@/components/BackButton/BackButton";
 import BackToTopButton from "@/components/BackToTopButton/BackToTopButton";
 import Hero from "../../components/CaseStudy/Hero/Hero";
@@ -18,6 +18,7 @@ import Footer from "../../components/CaseStudy/Footer/Footer";
 import heroBackground from "../../assets/images/lunacart/hero-background.jpg";
 import heroScreen from "../../assets/images/lunacart/hero-screen.png";
 import { BsLink45Deg, BsWordpress } from "react-icons/bs";
+import { lunacartNavItems } from "@/config/navigation";
 
 function LunaCart() {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -135,29 +136,6 @@ function LunaCart() {
 }
 
 export default LunaCart;
-
-const lunacartNavItems = [
-  {
-    label: "Discovery",
-    href: "#discovery",
-  },
-  {
-    label: "Key Insight",
-    href: "#key-insight",
-  },
-  {
-    label: "Approach",
-    href: "#approach",
-  },
-  {
-    label: "Design",
-    href: "#design",
-  },
-  {
-    label: "Reflections",
-    href: "#reflections",
-  },
-];
 
 const reflectionsContent: ReflectionsContent = {
   intro: [

@@ -1,0 +1,41 @@
+/* PersonalTouch.css */
+
+.personal-touch {
+  width: 100%;
+  padding: 100px 50px;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+}
+
+.personal-touch-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--color-text-header);
+  text-align: center;
+}
+
+.personal-touch-content {
+  max-width: 700px;
+  width: 100%;
+  padding: 50px 60px;
+  border-radius: 30px;
+}
+
+.personal-touch-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.personal-touch-item {
+  font-size: 1.25rem;
+  color: rgba(0, 0, 0, 0.8);
+  line-height: 1.6;
+}

@@ -2,7 +2,7 @@ import "./Boogie.css";
 import { useEffect, useRef, useState } from "react";
 
 import BackButton from "@/components/BackButton/BackButton";
-import NavBar from "@/components/NavBar/NavBar";
+import NavBar from "@/components/NavBar/CaseStudyNavBar";
 import BackToTopButton from "@/components/BackToTopButton/BackToTopButton";
 import Hero from "../../components/CaseStudy/Hero/Hero";
 import Overview from "../../components/CaseStudy/Overview/Overview";
@@ -20,6 +20,7 @@ import heroBackground from "../../assets/images/boogie/hero-background.jpg";
 import heroScreen from "../../assets/images/boogie/hero-screen.png";
 
 import { BsGithub } from "react-icons/bs";
+import { boogieNavItems } from "@/config/navigation";
 
 
 function Boogie() {
@@ -147,43 +148,6 @@ function Boogie() {
 }
 
 export default Boogie;
-
-const boogieNavItems = [
-  {
-    label: "Discovery",
-    href: "#discovery",
-  },
-  {
-    label: "Key Insight",
-    href: "#key-insight",
-  },
-  {
-    label: "Opportunity",
-    href: "#opportunity",
-  },
-  {
-    label: "Approach",
-    href: "#approach",
-    children: [
-      {
-        label: "Challenge",
-        href: "#challenge",
-      },
-      {
-        label: "Product Thinking",
-        href: "#product-thinking",
-      },
-    ],
-  },
-  {
-    label: "Handoff",
-    href: "#handoff",
-  },
-  {
-    label: "Reflections",
-    href: "#reflections",
-  },
-];
 
 const reflectionsContent: ReflectionsContent = {
   intro: [

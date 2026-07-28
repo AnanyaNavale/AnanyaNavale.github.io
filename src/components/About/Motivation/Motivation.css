@@ -1,0 +1,92 @@
+.motivation {
+  width: 100%;
+  padding: 100px 50px;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+}
+
+.motivation-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--color-text-header);
+  text-align: center;
+}
+
+.motivation-grid {
+  display: flex;
+  gap: 40px;
+  max-width: 1200px;
+  width: 100%;
+  justify-content: center;
+}
+
+.drive-card {
+  flex: 1;
+  max-width: 350px;
+  
+  padding: 40px 30px;
+  border-radius: 30px;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  
+  text-align: center;
+  
+  transition:
+    transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+    background 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.drive-card:hover {
+  transform: translateY(-8px);
+  
+  background: linear-gradient(
+    145deg,
+    rgba(30, 30, 30, 1) 0%,
+    rgba(0, 0, 0, 1) 40%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  
+  box-shadow:
+    0 12px 40px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+}
+
+.drive-card-icon {
+  font-size: 3rem;
+  transition: transform 0.3s ease;
+}
+
+.drive-card:hover .drive-card-icon {
+  transform: scale(1.1);
+}
+
+.drive-card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-text-header);
+  
+  transition: color 0.4s ease;
+}
+
+.drive-card:hover .drive-card-title {
+  color: var(--color-text-light);
+}
+
+.drive-card-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(0, 0, 0, 0.7);
+  
+  transition: color 0.4s ease;
+}
+
+.drive-card:hover .drive-card-description {
+  color: var(--color-text-light);
+}

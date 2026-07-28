@@ -1,7 +1,7 @@
 import "./Theo.css";
 import { useEffect, useRef, useState } from "react";
 
-import NavBar from "@/components/NavBar/NavBar";
+import NavBar from "@/components/NavBar/CaseStudyNavBar";
 import BackButton from "@/components/BackButton/BackButton";
 import BackToTopButton from "@/components/BackToTopButton/BackToTopButton";
 import Hero from "../../components/CaseStudy/Hero/Hero";
@@ -18,6 +18,7 @@ import heroLeftScreen from "../../assets/images/theo/hero-screen-1.png";
 import heroRightScreen from "../../assets/images/theo/hero-screen-2.png";
 
 import { BsLink45Deg, BsGithub } from "react-icons/bs";
+import { theoNavItems } from "@/config/navigation";
 
 
 function Theo() {
@@ -137,29 +138,6 @@ function Theo() {
 }
 
 export default Theo;
-
-const theoNavItems = [
-  {
-    label: "Discovery",
-    href: "#discovery",
-  },
-  {
-    label: "Approach",
-    href: "#approach",
-  },
-  {
-    label: "Vision",
-    href: "#vision",
-  },
-  {
-    label: "Design",
-    href: "#design",
-  },
-  {
-    label: "Reflections",
-    href: "#reflections",
-  },
-];
 
 const reflectionsContent: ReflectionsContent = {
   intro: [
