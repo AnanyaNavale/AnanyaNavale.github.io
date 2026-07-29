@@ -35,3 +35,11 @@
   align-items: center;
   justify-content: center;
 }
+
+/* MOBILE STYLES */
+/* Hide logo on mobile */
+@media (max-width: 767px) {
+  .logo {
+    display: none;
+  }
+}

@@ -68,6 +68,13 @@
   -webkit-text-fill-color: transparent;
   
   transition: background-position 0.4s ease;
+
+  font-family: var(--font-label);
+  font-weight: 500;
+  font-size: clamp(9px, 0.7vw, 11px); /* Scales 9px → 11px */
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-text-body);
 }
 
 .navbar-theme-dark .navbar-link {
@@ -167,4 +174,29 @@
 .navbar-link.submenu.active {
   color: #000;
   font-weight: 700;
+}
+
+/* MOBILE STYLES */
+
+/* Mobile hamburger positioning */
+.mobile-hamburger-wrapper {
+  display: none; /* Hidden on desktop */
+  position: fixed;
+  top: clamp(20px, 2vw, 30px);
+  right: clamp(20px, 2vw, 30px);
+  z-index: 100;
+}
+
+/* Hide desktop nav on mobile, show hamburger */
+@media (max-width: 767px) {
+  /* Hide desktop nav */
+  .navbar-wrapper,
+  .navbar-wrapper.visible {
+    display: none !important;
+  }
+  
+  /* Show hamburger */
+  .mobile-hamburger-wrapper {
+    display: block;
+  }
 }

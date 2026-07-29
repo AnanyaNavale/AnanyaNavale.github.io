@@ -20,7 +20,7 @@ export default function MainNavBar({ items }: MainNavBarProps) {
   const [navbarTheme, setNavbarTheme] = useState<"light" | "dark">("light");
   const navbarRef = useRef<HTMLElement | null>(null);
 
-  // Theme detection (same as your case study navbar)
+  // Theme detection
   useLayoutEffect(() => {
     const navbar = navbarRef.current;
     if (!navbar) return;

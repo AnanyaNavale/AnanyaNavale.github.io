@@ -129,6 +129,16 @@
   }
 }
 
+/* TEXT STYLING */
+
+.view-case-study-text text {
+  font-family: var(--font-label);
+  font-size: clamp(13px, 0.9vw, 11px); /* REVERSED: 13px at small, 11px at large */
+  font-weight: 400;
+  letter-spacing: clamp(0.15em, 0.12em, 0.1em); /* REVERSED: more spacing at small */
+  fill: currentColor;
+}
+
 .view-case-study-button:hover .view-case-study-text {
   animation: rotate-text 10s linear infinite;
 }

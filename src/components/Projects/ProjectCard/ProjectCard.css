@@ -158,3 +158,45 @@
    - Scales proportionally with card
    - At 1440px: 38vw = 547px (your design)
 */
+
+/* TEXT STYLING */
+
+.project-card-title {
+  font-family: var(--font-label);
+  font-weight: 500;
+  font-size: clamp(1.125rem, 2.2vw, 2rem); /* Changed min from 1.25rem (20px) → 1.125rem (18px) */
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-text-header);
+}
+
+.project-card-tag {
+  font-family: var(--font-label);
+  font-weight: 400;
+  font-size: clamp(7px, 0.7vw, 10px); /* Changed min from 8px → 7px */
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-text-header);
+}
+
+.project-card-description {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-weight: 350;
+  font-size: clamp(0.75rem, 1.1vw, 1rem); /* Changed min from 0.8125rem (13px) → 0.75rem (12px) */
+  color: var(--color-text-body);
+}
+
+.project-card-metadata-label {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: clamp(0.75rem, 1.1vw, 1rem); /* Changed min from 0.8125rem (13px) → 0.75rem (12px) */
+  color: var(--color-text-header);
+}
+
+.project-card-metadata-value {
+  font-family: var(--font-body);
+  font-weight: 350;
+  font-size: clamp(0.75rem, 1.1vw, 1rem); /* Changed min from 0.8125rem (13px) → 0.75rem (12px) */
+  color: var(--color-text-header);
+}
