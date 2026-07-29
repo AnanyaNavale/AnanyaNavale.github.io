@@ -123,4 +123,66 @@
 .project-card-image-foreground {
   height: 550px;
   width: auto;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* More aggressive scaling for two-column layout */
+.project-card-image-content-theo .project-card-image-foreground {
+  /* Each image in two-column needs to be smaller */
+  height: clamp(280px, 32vw, 480px);
+  max-height: 85%; /* Leave room for padding */
+}
+
+/* Breakdown of key values:
+   Card height: clamp(550px, 48vw, 700px)
+   - At 1024px: 48vw = 491px, uses 550px minimum
+   - At 1440px: 48vw = 691px (close to 700px design)
+   - At 1920px: capped at 700px
+   
+   Foreground image: clamp(420px, 38vw, 550px)
+   - Scales proportionally with card
+   - At 1440px: 38vw = 547px (your design)
+*/
+
+/* TEXT STYLING */
+
+.project-card-title {
+  font-family: var(--font-label);
+  font-weight: 500;
+  font-size: clamp(1.125rem, 2.2vw, 2rem); /* Changed min from 1.25rem (20px) → 1.125rem (18px) */
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-text-header);
+}
+
+.project-card-tag {
+  font-family: var(--font-label);
+  font-weight: 400;
+  font-size: clamp(7px, 0.7vw, 10px); /* Changed min from 8px → 7px */
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-text-header);
+}
+
+.project-card-description {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-weight: 350;
+  font-size: clamp(0.75rem, 1.1vw, 1rem); /* Changed min from 0.8125rem (13px) → 0.75rem (12px) */
+  color: var(--color-text-body);
+}
+
+.project-card-metadata-label {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: clamp(0.75rem, 1.1vw, 1rem); /* Changed min from 0.8125rem (13px) → 0.75rem (12px) */
+  color: var(--color-text-header);
+}
+
+.project-card-metadata-value {
+  font-family: var(--font-body);
+  font-weight: 350;
+  font-size: clamp(0.75rem, 1.1vw, 1rem); /* Changed min from 0.8125rem (13px) → 0.75rem (12px) */
+  color: var(--color-text-header);
 }

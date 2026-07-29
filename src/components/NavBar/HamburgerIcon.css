@@ -1,0 +1,50 @@
+.hamburger-button {
+  width: clamp(44px, 3.5vw, 50px);
+  height: clamp(44px, 3.5vw, 50px);
+  
+  border: none;
+  border-radius: 100px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  cursor: pointer;
+  
+  color: var(--color-text-header);
+  
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.2s ease;
+}
+
+.hamburger-button:hover {
+  transform: scale(1.05);
+}
+
+.hamburger-button:active {
+  transform: scale(0.98);
+}
+
+/* Obsidian state when open */
+.hamburger-button.open {
+  background: linear-gradient(
+    145deg,
+    rgba(30, 30, 30, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  
+  color: var(--color-text-light);
+  
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Mobile only */
+@media (min-width: 768px) {
+  .hamburger-button {
+    display: none;
+  }
+}
