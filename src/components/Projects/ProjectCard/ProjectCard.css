@@ -200,3 +200,102 @@
   font-size: clamp(0.75rem, 1.1vw, 1rem); /* Changed min from 0.8125rem (13px) → 0.75rem (12px) */
   color: var(--color-text-header);
 }
+
+/* Mobile */
+
+@media (max-width: 767px) {
+  .project-card {
+    flex-direction: column-reverse;
+  }
+  
+  .project-card.reverse {
+    flex-direction: column-reverse;
+  }
+  
+  .project-card-text {
+    width: 100%;
+    height: auto;
+    min-height: clamp(400px, 60vh, 550px);
+    padding: clamp(2rem, 6vw, 3rem) clamp(1.5rem, 5vw, 2rem);
+    border-radius: 20px;
+  }
+  
+  .project-card-content {
+    width: 100%;
+    max-width: 500px;
+    gap: clamp(12px, 2vw, 16px);
+    
+    /* Center the content block */
+    margin: 0 auto;
+    
+    /* Center-align items within the block */
+    align-items: center;
+  }
+  
+  .project-card-image {
+    width: 100%;
+    height: clamp(350px, 50vh, 500px);
+    border-radius: 20px;
+  }
+  
+  .project-card-image-foreground {
+    height: clamp(280px, 40vh, 400px);
+  }
+  
+  .project-card-image-content-theo .project-card-image-foreground {
+    height: clamp(220px, 35vh, 350px);
+  }
+  
+  /* Typography adjustments */
+  .project-card-title {
+    font-size: clamp(1.25rem, 5vw, 1.75rem);
+    text-align: center; /* Center the title text */
+  }
+  
+  .project-card-tag-frame {
+    /* Center the tag */
+    align-self: center;
+  }
+  
+  .project-card-tag {
+    font-size: clamp(9px, 2vw, 11px);
+    text-align: center; /* Center the tag text */
+  }
+  
+  .project-card-description {
+    font-size: clamp(0.9375rem, 3.5vw, 1.0625rem);
+    line-height: 1.5;
+    /* Description stays left-aligned for readability */
+  }
+  
+  .project-card-metadata {
+    /* Center the metadata block */
+    align-self: center;
+    width: 100%;
+  }
+  
+  .project-card-metadata-label {
+    font-size: clamp(0.875rem, 3vw, 1rem);
+    width: 80px;
+  }
+  
+  .project-card-metadata-value {
+    font-size: clamp(0.875rem, 3vw, 1rem);
+  }
+  
+  .view-case-study-button {
+    bottom: clamp(20px, 4vw, 30px);
+    left: 0 !important; /* Override desktop left: 30px */
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Reverse cards - same centering */
+  .project-card.reverse .view-case-study-button {
+    right: 0;
+    left: 0 !important; /* Override the auto */
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

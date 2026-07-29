@@ -24,3 +24,14 @@
    - At 1920px: capped at 150px
    - Container is centered, so extra space goes to margins
 */
+
+/* Mobile */
+@media (max-width: 767px) {
+  .projects {
+    /* Tighter spacing between cards on mobile */
+    gap: clamp(60px, 10vh, 100px);
+    
+    /* More breathing room on sides */
+    padding: 0 clamp(2rem, 6vw, 2.5rem);
+  }
+}
