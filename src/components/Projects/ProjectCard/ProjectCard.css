@@ -2,6 +2,7 @@
   width: 100%;
   display: flex;
   flex-direction: row;
+  gap: 0; /* No gap - cards are touching */
 }
 
 .project-card.reverse {
@@ -17,25 +18,32 @@
 
 .project-card-text {
   width: 50%;
-  height: 700px;
+  
+  /* Flexible height */
+  height: clamp(450px, 48vw, 700px);
+  
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 30px;
-
-  /* background: #FFFFFF; */
+  border-radius: clamp(20px, 2vw, 30px);
 }
 
 .project-card-content {
-  width: 325px;
-  height: 325px;
+  /* Make it smaller at 1024px */
+  width: min(clamp(240px, 22vw, 325px), 90%);
+  /* Changed min from 280px → 240px */
+  
+  /* min-height: 325px; */
+  
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 10px;
-}
+  gap: clamp(8px, 1vw, 10px);
 
+  /* border-style: solid;
+  border-width: 1px; */
+}
 
 /* Tag */
 
@@ -45,7 +53,6 @@
   padding: 5px 15px;
   border-radius: 100px;
 }
-
 
 /* Metadata */
 
@@ -76,15 +83,17 @@
   white-space: pre-line;
 }
 
-
 /* Image side */
 
 .project-card-image {
   position: relative;
   width: 50%;
-  height: 700px;
+  
+  /* Match text side height */
+  height: clamp(450px, 48vw, 700px);
+  
   overflow: hidden;
-  border-radius: 30px;
+  border-radius: clamp(20px, 2vw, 30px);
 }
 
 .project-card-image-background {
@@ -102,8 +111,12 @@
 }
 
 .project-card-image-content-theo {
-  padding: 50px 0;
-  gap: 24px;
+  /* More breathing room at small sizes */
+  padding: clamp(40px, 5vw, 50px) clamp(10px, 2vw, 20px);
+  gap: clamp(12px, 1.5vw, 24px);
+  
+  /* Ensure content fits */
+  overflow: hidden;
 }
 
 .project-card-image-column {
@@ -121,6 +134,27 @@
 }
 
 .project-card-image-foreground {
-  height: 550px;
+  /* Base sizing */
+  height: clamp(350px, 38vw, 550px);
   width: auto;
+  max-height: 100%;
+  object-fit: contain;
 }
+
+/* More aggressive scaling for two-column layout */
+.project-card-image-content-theo .project-card-image-foreground {
+  /* Each image in two-column needs to be smaller */
+  height: clamp(280px, 32vw, 480px);
+  max-height: 85%; /* Leave room for padding */
+}
+
+/* Breakdown of key values:
+   Card height: clamp(550px, 48vw, 700px)
+   - At 1024px: 48vw = 491px, uses 550px minimum
+   - At 1440px: 48vw = 691px (close to 700px design)
+   - At 1920px: capped at 700px
+   
+   Foreground image: clamp(420px, 38vw, 550px)
+   - Scales proportionally with card
+   - At 1440px: 38vw = 547px (your design)
+*/
