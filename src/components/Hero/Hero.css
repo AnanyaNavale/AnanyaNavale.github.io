@@ -2,9 +2,19 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-
   align-items: center;
-  gap: 75px;
+  
+  /* Viewport-relative spacing */
+  gap: clamp(3rem, 5vh, 4.75rem); /* 48px → 75px */
+  
+  /* Take consistent portion of viewport height */
+  min-height: clamp(360px, 45vh, 580px);
+  
+  /* Center content vertically within that height */
+  justify-content: center;
+  
+  /* Prevent overflow */
+  padding: 0 1.5rem;
 }
 
 /* TEXT STYLING */
@@ -42,4 +52,5 @@
   color: var(--color-text-header);
 
   text-align: center;
+  max-width: 50rem; /* Prevent line from getting too long on ultra-wide screens */
 }

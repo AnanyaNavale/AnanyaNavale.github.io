@@ -1,10 +1,14 @@
 .view-case-study-button {
   position: absolute;
-  bottom: 30px;
-  left: 30px;
+  
+  /* Responsive positioning */
+  bottom: clamp(20px, 2vw, 30px);
+  left: clamp(20px, 2vw, 30px);
 
-  width: 60px;
-  height: 60px;
+  /* Responsive size */
+  width: clamp(50px, 4vw, 60px);
+  height: clamp(50px, 4vw, 60px);
+  
   border-radius: 100%;
 
   display: flex;
@@ -13,7 +17,7 @@
 
   cursor: pointer;
   
-  /* GLASS EFFECT - visible even without backdrop blur */
+  /* GLASS EFFECT */
   background: 
     linear-gradient(
       135deg,
@@ -64,61 +68,11 @@
   transition: opacity 400ms ease;
 }
 
-/* Obsidian shine streak (hidden initially) */
+/* Obsidian shine streak */
 .view-case-study-button::after {
   content: "";
   position: absolute;
-  top: -100%;
-  left: -100%;
-  width: 300%;
-  height: 300%;
-  
-  background: linear-gradient(
-    45deg,
-    transparent 0%,
-    transparent 40%,
-    rgba(255, 255, 255, 0.15) 45%,
-    rgba(255, 255, 255, 0.4) 50%,
-    rgba(255, 255, 255, 0.15) 55%,
-    transparent 60%,
-    transparent 100%
-  );
-  
-  pointer-events: none;
-  opacity: 0;
-  
-  transition: opacity 400ms ease;
-}
-
-/* HOVER STATE - OBSIDIAN */
-.view-case-study-button:hover {
-  /* Pure black with subtle depth */
-  background: 
-    linear-gradient(
-      145deg,
-      rgba(30, 30, 30, 1) 0%,
-      rgba(0, 0, 0, 1) 40%,
-      rgba(0, 0, 0, 1) 100%
-    );
-  
-  border: 1px solid rgba(40, 40, 40, 1);
-  
-  /* Obsidian is GLOSSY - sharp highlights, deep shadows */
-  box-shadow:
-    0 8px 24px rgba(0, 0, 0, 0.8),
-    0 0 0 1px rgba(255, 255, 255, 0.1) inset,
-    inset 0 3px 6px rgba(255, 255, 255, 0.25),
-    inset 0 -3px 6px rgba(0, 0, 0, 0.9);
-  
-  color: var(--color-text-light);
-  transform: scale(1.08);
-}
-
-/* Obsidian shine - tighter, more controlled */
-.view-case-study-button::after {
-  content: "";
-  position: absolute;
-  inset: 0; /* Changed from negative positioning */
+  inset: 0;
   
   background: linear-gradient(
     135deg,
@@ -133,10 +87,32 @@
   pointer-events: none;
   opacity: 0;
   
-  /* Start off-screen, sweep across */
+  /* Start off-screen, sweep across on hover */
   transform: translateX(-150%) translateY(-150%);
   
   transition: opacity 200ms ease;
+}
+
+/* HOVER STATE - OBSIDIAN */
+.view-case-study-button:hover {
+  background: 
+    linear-gradient(
+      145deg,
+      rgba(30, 30, 30, 1) 0%,
+      rgba(0, 0, 0, 1) 40%,
+      rgba(0, 0, 0, 1) 100%
+    );
+  
+  border: 1px solid rgba(40, 40, 40, 1);
+  
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.8),
+    0 0 0 1px rgba(255, 255, 255, 0.1) inset,
+    inset 0 3px 6px rgba(255, 255, 255, 0.25),
+    inset 0 -3px 6px rgba(0, 0, 0, 0.9);
+  
+  color: var(--color-text-light); /* ← Text color changes via currentColor */
+  transform: scale(1.08);
 }
 
 .view-case-study-button:hover::after {

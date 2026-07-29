@@ -2,6 +2,25 @@
   display: flex;
   flex-direction: column;
 
-  gap: 150px;
-  padding: 0 150px;
+  gap: clamp(80px, 10vw, 150px);
+  
+  /* More aggressive reduction at small screens */
+  padding: 0 clamp(1.5rem, 10vw, 150px); /* Changed min from 2rem (32px) → 1.5rem (24px) */
+  
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
 }
+
+/* Breakdown:
+   gap: clamp(80px, 10vw, 150px)
+   - At 1024px: 10vw = 102px
+   - At 1440px: 10vw = 144px (close to your 150px design)
+   - At 1920px: capped at 150px
+   
+   padding: clamp(2rem, 10vw, 150px)
+   - At 1024px: 10vw = 102px (breathing room)
+   - At 1440px: 10vw = 144px (your design)
+   - At 1920px: capped at 150px
+   - Container is centered, so extra space goes to margins
+*/

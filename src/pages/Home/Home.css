@@ -2,6 +2,23 @@
   display: flex;
   flex-direction: column;
 
-  padding-top: 250px;
-  gap: 200px;
+  /* Fluid spacing that adapts to viewport */
+  padding-top: clamp(120px, 17vw, 250px);
+  gap: clamp(100px, 14vw, 200px);
+  
+  /* Prevent horizontal overflow */
+  width: 100%;
+  overflow-x: hidden;
 }
+
+/* Breakdown of clamp values:
+   padding-top: clamp(120px, 17vw, 250px)
+   - At 1024px: 17vw = 174px (comfortable)
+   - At 1440px: 17vw = 245px (close to your design)
+   - At 1920px: capped at 250px (doesn't grow forever)
+   
+   gap: clamp(100px, 14vw, 200px)
+   - At 1024px: 14vw = 143px
+   - At 1440px: 14vw = 202px (your design)
+   - At 1920px: capped at 200px
+*/
