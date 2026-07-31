@@ -75,7 +75,7 @@ function Theo() {
             },
             {
               label: "Tools",
-              value: "Figma · Expo · React Native\nSupabase · Github",
+              value: <>Figma, Expo, React&nbsp;Native, Supabase, Github</>,
             },
             {
               label: "Timeline",
@@ -132,7 +132,7 @@ function Theo() {
         id="reflections"
       />
 
-      <Footer currentProjectId="theo"/>
+      <Footer currentProjectId="theo" />
     </main>
   );
 }

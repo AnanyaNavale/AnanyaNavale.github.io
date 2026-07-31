@@ -3,7 +3,7 @@ import type { IconType } from "react-icons";
 
 type MetadataItem = {
   label: string;
-  value: string;
+  value: React.ReactNode;
 };
 
 type LinkItem = {
@@ -63,10 +63,10 @@ function Hero({
               />
             </div>
           ) : (
-            <div className="case-study-hero-image-content case-study-hero-image-content-theo">
+            <div className="case-study-hero-image-content case-study-hero-image-content-multi">
               <div className="case-study-hero-image-column case-study-hero-image-column-left">
                 <img
-                  className="case-study-hero-image-foreground"
+                  className="case-study-hero-image-foreground-multi"
                   src={foregroundImages[0]}
                   alt=""
                 />
@@ -75,14 +75,14 @@ function Hero({
               <div className="case-study-hero-image-column case-study-hero-image-column-right">
                 <div className="case-study-hero-award">
                   <h4 className="case-study-hero-award-text-first-line">
-                    Award: Best Visual Design
+                    Best Visual Design
                   </h4>
                   <h4 className="case-study-hero-award-text-second-line">
                     Stanford CS 147
                   </h4>
                 </div>
                 <img
-                  className="case-study-hero-image-foreground"
+                  className="case-study-hero-image-foreground-multi"
                   src={foregroundImages[1]}
                   alt=""
                 />
