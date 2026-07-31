@@ -20,7 +20,7 @@
   width: 50%;
   
   /* Flexible height */
-  height: clamp(450px, 48vw, 700px);
+  height: clamp(400px, 44vw, 650px);
   
   position: relative;
   display: flex;
@@ -90,7 +90,7 @@
   width: 50%;
   
   /* Match text side height */
-  height: clamp(450px, 48vw, 700px);
+  height: clamp(400px, 44vw, 650px);
   
   overflow: hidden;
   border-radius: clamp(20px, 2vw, 30px);
