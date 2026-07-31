@@ -75,7 +75,7 @@ function Boogie() {
             },
             {
               label: "Tools",
-              value: "Figma · Expo · React Native\nGithub",
+              value: <>Figma, Expo, React&nbsp;Native, Github</>,
             },
             {
               label: "Timeline",

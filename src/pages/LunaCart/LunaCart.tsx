@@ -76,7 +76,7 @@ function LunaCart() {
             },
             {
               label: "Tools",
-              value: "Figma · Miro · Replit",
+              value: "Figma, Miro, Replit",
             },
             {
               label: "Timeline",

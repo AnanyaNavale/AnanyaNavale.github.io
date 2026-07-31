@@ -67,7 +67,7 @@ function Theo() {
           metadata={[
             {
               label: "Role",
-              value: "Lead UI/UX designer & developer",
+              value: "Lead UI/UX Designer & Developer",
             },
             {
               label: "Team",
