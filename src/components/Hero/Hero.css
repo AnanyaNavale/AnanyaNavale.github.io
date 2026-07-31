@@ -17,6 +17,8 @@
   padding: 0 1.5rem;
 }
 
+/* TEXT STYLING */
+
 .hero-text {
   display: flex;
   flex-direction: column;
@@ -25,10 +27,30 @@
 }
 
 .hero-name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(3rem, 5.5vw, 5.5rem); /* Changed max from 5rem (80px) → 5.5rem (88px) */
+  letter-spacing: 0.2em;
+  color: var(--color-text-header);
+
   transform: translateX(0.05em);
 }
 
+.hero-tagline {
+  font-family: var(--font-label);
+  font-weight: 600;
+  font-size: clamp(0.875rem, 1.4vw, 1.375rem); /* Changed max from 1.25rem (20px) → 1.375rem (22px) */
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-text-header);
+}
+
 .hero-role {
+  font-family: var(--font-body);
+  font-weight: 350;
+  font-size: clamp(1rem, 1.4vw, 1.375rem); /* Changed max from 1.25rem (20px) → 1.375rem (22px) */
+  color: var(--color-text-header);
+
   text-align: center;
   max-width: 50rem; /* Prevent line from getting too long on ultra-wide screens */
 }

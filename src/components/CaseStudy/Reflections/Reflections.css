@@ -1,9 +1,9 @@
 .reflections {
-  padding: 100px 150px 150px;
+  padding: clamp(70px, 8vw, 100px) clamp(80px, 12vw, 150px) clamp(100px, 12vw, 150px);
 }
 
 .reflections .section-inner {
-  gap: 40px;
+  gap: clamp(30px, 3.2vw, 40px);
 }
 
 .reflections .section-heading {

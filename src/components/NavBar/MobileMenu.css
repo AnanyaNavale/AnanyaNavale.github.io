@@ -1,0 +1,133 @@
+/* Overlay */
+.mobile-menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 98;
+  
+  animation: overlay-fade-in 0.3s ease forwards;
+}
+
+.mobile-menu-overlay[data-closing="true"] {
+  animation: overlay-fade-out 0.3s ease forwards;
+}
+
+@keyframes overlay-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes overlay-fade-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+/* Slide-in Panel */
+.mobile-menu-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  
+  width: min(250px, 75vw);
+  
+  background: var(--color-text-header);
+  
+  z-index: 99;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1.5rem;
+  
+  animation: panel-slide-in 0.35s ease-out forwards;
+}
+
+.mobile-menu-panel[data-closing="true"] {
+  animation: panel-slide-out 0.3s ease-in forwards;
+}
+
+@keyframes panel-slide-in {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes panel-slide-out {
+  from { transform: translateX(0); }
+  to { transform: translateX(100%); }
+}
+
+/* Logo in panel */
+.mobile-menu-logo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-menu-logo img {
+  width: 50px;
+  height: 50px;
+}
+
+/* Menu items */
+.mobile-menu-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.mobile-menu-item {
+  width: 100%;
+}
+
+.mobile-menu-link {
+  display: block;
+  text-decoration: none;
+  color: var(--color-text-light);
+  
+  font-family: var(--font-label);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  
+  padding: 1rem 1.25rem;
+  
+  transition: opacity 0.2s ease;
+}
+
+.mobile-menu-link:hover {
+  opacity: 0.7;
+}
+
+/* Glass pill */
+.mobile-menu-link .active-pill {
+  display: inline-block;
+  padding: 0.875rem 1.5rem;
+  
+  border: 1.5px solid transparent;
+  border-radius: 100px;
+  
+  background: 
+    linear-gradient(#111111, #111111) padding-box,
+    linear-gradient(
+      150deg,
+      rgba(255, 255, 255, 0.75) 0%,
+      rgba(255, 255, 255, 0) 25%,
+      rgba(255, 255, 255, 0) 75%,
+      rgba(255, 255, 255, 0.75) 100%
+    ) border-box;
+  
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.15),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.05),
+    0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.mobile-menu-link:has(.active-pill) {
+  padding: 0.125rem 0;
+}
