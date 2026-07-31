@@ -1,5 +1,6 @@
 .lunacart-approach {
   padding: clamp(71px, 6.944vw + 0px, 100px) clamp(86px, 8.333vw + 0px, 120px) clamp(143px, 13.889vw + 0px, 200px);
+  overflow: hidden;
 }
 
 .lunacart-approach .section-inner {

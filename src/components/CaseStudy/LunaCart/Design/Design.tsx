@@ -27,7 +27,7 @@ function Design({ id }: { id: string }) {
         title="Design"
         tagline="So late-night eating had to depend on daytime planning."
       />
-      <TextBlock text={textContent.firstParagraph} />
+      <TextBlock text={textContent.firstParagraph} contentAlignment="center" />
       <div className="design-model-container">
         <div className="design-story-map">
           <h5>Story Map</h5>
@@ -48,7 +48,7 @@ function Design({ id }: { id: string }) {
         tagline="room for change."
         subSectionTagline="Intentional choices also needed"
       />
-      <TextBlock text={textContent.secondParagraph} />
+      <TextBlock text={textContent.secondParagraph} contentAlignment="center" />
       <Screens screens={screensContent.thirdGroup} />
     </Section>
   );
