@@ -3,18 +3,18 @@
   display: flex;
   flex-direction: column;
 
-  gap: 30px;
+  gap: clamp(24px, 2.5vw, 30px);
 }
 
 .text-block .body {
   width: 80%;
-  font-size: 17px;
+  font-size: clamp(16px, 1.35vw, 17px);
   color: var(--color-text-body);
 }
 
 .text-block .large {
   width: 80%;
-  font-size: 21px;
+  font-size: clamp(18px, 1.7vw, 21px);
   font-weight: 400;
   color: var(--color-text-header);
 }
