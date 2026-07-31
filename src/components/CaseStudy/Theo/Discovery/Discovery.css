@@ -1,9 +1,9 @@
 .theo-discovery {
-  padding: 100px 150px 100px;
+  padding: clamp(71px, 6.944vw + 0px, 100px) clamp(107px, 10.417vw + 0px, 150px) clamp(71px, 6.944vw + 0px, 100px);
 }
 
 .theo-discovery .section-inner {
-  gap: 50px;
+  gap: clamp(36px, 3.472vw + 0px, 50px);
 }
 
 .discovery-interview-diagram-container {
@@ -11,16 +11,16 @@
   height: auto;
   display: flex;
 
-  padding: 20px;
+  padding: clamp(14px, 1.389vw + 0px, 20px);
   align-items: center;
   justify-content: center;
   align-self: center;
 
-  border-radius: 30px;
+  border-radius: clamp(21px, 2.083vw + 0px, 30px);
   background: var(--color-background-gray-frame);
 }
 
 .discovery-interview-diagram {
-  width: 845px;
+  width: clamp(602px, 58.854vw + 0px, 845px);
   height: auto;
 }

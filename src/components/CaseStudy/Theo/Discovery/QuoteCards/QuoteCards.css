@@ -3,20 +3,20 @@
   display: flex;
   flex-direction: column;
 
-  gap: 20px;
+  gap: clamp(14px, 1.389vw + 0px, 20px);
 }
 
 .quote-cards-first-row {
   width: 100%;
   display: flex;
 
-  gap: 175px;
+  gap: clamp(125px, 12.153vw + 0px, 175px);
 }
 
 .quote-cards-second-row {
   width: 100%;
   display: flex;
 
-  gap: 175px;
+  gap: clamp(125px, 12.153vw + 0px, 175px);
   justify-content: flex-end;
 }
