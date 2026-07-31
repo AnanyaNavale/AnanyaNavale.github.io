@@ -1,8 +1,8 @@
 /* BackToTopButton.css */
 .back-to-top {
   position: fixed;
-  bottom: 30px;
-  right: 50px;
+  bottom: clamp(20px, 2vw, 30px);
+  right: clamp(20px, 2vw, 30px);
   
   width: clamp(38.4375px, 3.75vw, 42px);
   height: clamp(38.4375px, 3.75vw, 42px);
