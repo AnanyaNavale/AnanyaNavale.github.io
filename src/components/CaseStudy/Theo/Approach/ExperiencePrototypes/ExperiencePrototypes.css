@@ -2,5 +2,5 @@
   width: 100%;
   display: flex;
 
-  gap: 30px;
+  gap: clamp(21px, 2.083vw + 0px, 30px);
 }

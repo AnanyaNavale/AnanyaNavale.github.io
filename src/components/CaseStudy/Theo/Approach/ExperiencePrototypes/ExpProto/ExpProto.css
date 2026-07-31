@@ -5,7 +5,7 @@
 
   align-items: center;
   
-  gap: 10px;
+  gap: clamp(7px, 0.694vw + 0px, 10px);
 }
 
 .exp-proto-card {
@@ -13,13 +13,13 @@
   display: flex;
   flex-direction: column;
 
-  padding: 0 0 20px 0;
-  gap: 20px;
+  padding: 0 0 clamp(14px, 1.389vw + 0px, 20px) 0;
+  gap: clamp(14px, 1.389vw + 0px, 20px);
   align-items: center;
   overflow: hidden;
 
   background: var(--color-background-gray-frame);
-  border-radius: 30px;
+  border-radius: clamp(21px, 2.083vw + 0px, 30px);
 }
 
 .exp-proto-header {
@@ -28,10 +28,10 @@
 
   align-items: center;
   justify-content: center;
-  padding: 10px 0;
+  padding: clamp(7px, 0.694vw + 0px, 10px) 0;
 
   font-family: var(--font-label);
-  font-size: 12px;
+  font-size: clamp(9px, 0.833vw + 0px, 12px);
   font-weight: 400;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -43,8 +43,8 @@
   flex-direction: column;
 
   align-items: center;
-  padding: 0 30px;
-  gap: 15px;
+  padding: 0 clamp(21px, 2.083vw + 0px, 30px);
+  gap: clamp(11px, 1.042vw + 0px, 15px);
 }
 
 .exp-proto-title-container {
@@ -53,13 +53,13 @@
   flex-direction: column;
 
   align-items: center;
-  gap: 5px;
+  gap: clamp(4px, 0.347vw + 0px, 5px);
   text-align: center;
 }
 
 .exp-proto-title {
   font-family: var(--font-label);
-  font-size: 14px;
+  font-size: clamp(10px, 0.972vw + 0px, 14px);
   font-weight: 400;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -67,33 +67,33 @@
 }
 
 .exp-proto-description {
-  font-size: 12px;
-  line-height: 14px;
+  font-size: clamp(9px, 0.833vw + 0px, 12px);
+  line-height: clamp(10px, 0.972vw + 0px, 14px);
   color: var(--color-text-body);
   white-space: pre-line;
 }
 
 .exp-proto-img-container {
-  height: 275px;
+  height: clamp(196px, 19.097vw + 0px, 275px);
   display: flex;
   flex-direction: column;
 
-  gap: 5px;
+  gap: clamp(4px, 0.347vw + 0px, 5px);
 }
 
 .exp-proto-img-container img {
-  width: 205px;
+  width: clamp(146px, 14.236vw + 0px, 205px);
   height: auto;
   object-fit: contain;
 
-  border-radius: 5px;
+  border-radius: clamp(4px, 0.347vw + 0px, 5px);
 }
 
 .exp-proto-img {
   width: auto;
-  height: 275px;
+  height: clamp(196px, 19.097vw + 0px, 275px);
 
-  border-radius: 5px;
+  border-radius: clamp(4px, 0.347vw + 0px, 5px);
 }
 
 .exp-proto-text {
@@ -101,7 +101,7 @@
   display: flex;
   flex-direction: column;
 
-  gap: 15px;
+  gap: clamp(11px, 1.042vw + 0px, 15px);
 }
 
 .exp-proto-text-section {
@@ -109,34 +109,33 @@
   display: flex;
   flex-direction: column;
 
-  gap: 5px;
+  gap: clamp(4px, 0.347vw + 0px, 5px);
 }
 
 .exp-proto-text-title {
-  font-size: 14px;
+  font-size: clamp(10px, 0.972vw + 0px, 14px);
   font-weight: 550;
   color: var(--color-text-header);
 }
 
 .exp-proto-text-content {
-  font-size: 14px;
+  font-size: clamp(10px, 0.972vw + 0px, 14px);
   color: var(--color-text-body);
 }
 
 .exp-proto-icon-frame {
   width: fit-content;
   display: flex;
-  
 
   align-items: center;
   justify-content: center;
-  padding: 15px;
+  padding: clamp(11px, 1.042vw + 0px, 15px);
 
   border-radius: 50%;
-  filter: drop-shadow(0px 4px 4px rgba(47, 27, 12, 0.35)) ;
+  box-shadow: 0px 4px 4px rgba(47, 27, 12, 0.35);
 }
 
 .exp-proto-icon {
-  width: 28px;
-  height: 28px;
+  width: clamp(20px, 1.944vw + 0px, 28px);
+  height: clamp(20px, 1.944vw + 0px, 28px);
 }
