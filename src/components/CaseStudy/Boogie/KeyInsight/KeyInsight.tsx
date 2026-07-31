@@ -31,7 +31,7 @@ function KeyInsight({ id }: { id: string }) {
             spot outside my class.”
           </p>
         </div>
-        <BsArrowDown size={48} color="var(--color-boogie-tertiary)" />
+        <BsArrowDown color="var(--color-boogie-tertiary)" />
         <div className="key-insight-diagram-pov middle">
           <img src={gradientBorder} />
           <h6 style={{ color: "var(--color-text-header)" }}>Flexigo</h6>
@@ -39,7 +39,7 @@ function KeyInsight({ id }: { id: string }) {
             “<u>Memorial Auditorium</u>” → <i>Chain of context broken</i>
           </p>
         </div>
-        <BsArrowDown size={48} color="#4870D6" />
+        <BsArrowDown color="#4870D6" />
         <div
           className="key-insight-diagram-pov"
           style={{
