@@ -13,49 +13,51 @@ import pickupEntrance from "@/assets/images/boogie/pickup-entrance.png";
 function Approach({ id }: { id: string }) {
   return (
     <Section innerWidth={1200} className="boogie-approach" id={id}>
-      <SectionHeader
-        title="Approach"
-        tagline={
-          "Addresses became landmarks.\nHuman dispatchers became digital."
-        }
-      />
-      <TextBlock text={textContent.firstParagraph} />
+      <div className="boogie-approach-inner">
+        <SectionHeader
+          title="Approach"
+          tagline={
+            "Addresses became landmarks.\nHuman dispatchers became digital."
+          }
+        />
+        <TextBlock text={textContent.firstParagraph} />
 
-      <div className="approach-screens">
-        <div className="approach-screens-first-col">
-          <p>
-            Coordinate pickup & dropoff <br /> with chatbot dispatch
-          </p>
-          <img src={boogieBot} />
-        </div>
-        <p
-          style={{
-            fontFamily: "var(--font-label)",
-            fontWeight: 600,
-            color: "var(--color-text-header)",
-          }}
-        >
-          OR
-        </p>
-        <div className="approach-screens-second-col">
-          <div className="approach-screens-second-col-screen">
+        <div className="approach-screens">
+          <div className="approach-screens-first-col">
             <p>
-              Select location <br /> by name & image
+              Coordinate pickup & dropoff <br /> with chatbot dispatch
             </p>
-            <img src={pickupLocation} />
+            <img src={boogieBot} />
           </div>
-          <div className="approach-screens-second-col-screen">
-            <p>
-              Select entrance <br /> by cardinal direction & landmarks
-            </p>
-            <img src={pickupEntrance} />
+          <p
+            style={{
+              fontFamily: "var(--font-label)",
+              fontWeight: 600,
+              color: "var(--color-text-header)",
+            }}
+          >
+            OR
+          </p>
+          <div className="approach-screens-second-col">
+            <div className="approach-screens-second-col-screen">
+              <p>
+                Select location <br /> by name & image
+              </p>
+              <img src={pickupLocation} />
+            </div>
+            <div className="approach-screens-second-col-screen">
+              <p>
+                Select entrance <br /> by cardinal direction & landmarks
+              </p>
+              <img src={pickupEntrance} />
+            </div>
           </div>
         </div>
       </div>
 
-      <Challenge id="challenge"/>
+      <Challenge id="challenge" />
 
-      <ProductThinking id="product-thinking"/>
+      <ProductThinking id="product-thinking" />
     </Section>
   );
 }
