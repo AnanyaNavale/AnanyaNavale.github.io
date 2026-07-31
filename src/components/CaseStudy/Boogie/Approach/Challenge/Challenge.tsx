@@ -72,13 +72,13 @@ const chatContent: {
           by Coupa Cafe.
         </>
       ),
-      maxWidth: 223,
+      maxWidth: "clamp(159px, 15.486vw, 223px)",
     },
     {
       sender: "BoogieBot",
       message: (
         <>
-          I’ve set your pickup at{" "}
+          I've set your pickup at{" "}
           <strong className="chat-highlight">
             Green <br /> Library
           </strong>
@@ -87,7 +87,7 @@ const chatContent: {
           up from?
         </>
       ),
-      maxWidth: 223,
+      maxWidth: "clamp(159px, 15.486vw, 223px)",
     },
   ],
   secondConvo: [
@@ -95,23 +95,23 @@ const chatContent: {
       sender: "BoogieBot",
       message: (
         <>
-          I’ve confirmed your pickup <br /> and dropoff locations. To <br />
+          I've confirmed your pickup <br /> and dropoff locations. To <br />
           continue to finalizing your <br />
-          booking, say “That’s it!”
+          booking, say "That's it!"
         </>
       ),
-      maxWidth: 223,
+      maxWidth: "clamp(159px, 15.486vw, 223px)",
     },
     {
       sender: "You",
-      message: <>That’s it!</>,
-      maxWidth: 86,
+      message: <>That's it!</>,
+      maxWidth: "clamp(61px, 5.972vw, 86px)",
     },
     {
       sender: "BoogieBot",
       message: (
         <>
-          I’ve set your dropoff at the{" "}
+          I've set your dropoff at the{" "}
           <strong className="chat-highlight">
             IT <br />
             Building
@@ -121,7 +121,7 @@ const chatContent: {
           up from?
         </>
       ),
-      maxWidth: 223,
+      maxWidth: "clamp(159px, 15.486vw, 223px)",
     },
   ],
   thirdConvo: [
@@ -134,7 +134,7 @@ const chatContent: {
           Building?
         </>
       ),
-      maxWidth: 188,
+      maxWidth: "clamp(134px, 13.056vw, 188px)",
     },
     {
       sender: "BoogieBot",
@@ -147,7 +147,7 @@ const chatContent: {
           like to be picked up from?
         </>
       ),
-      maxWidth: 200,
+      maxWidth: "clamp(143px, 13.889vw, 200px)",
     },
   ],
 };

@@ -1,13 +1,13 @@
 .chat-conversation {
-  width: 330px;
+  width: clamp(235px, 22.917vw + 0px, 330px);
   height: fit-content;
   display: flex;
   flex-direction: column;
 
-  gap: 30px;
-  padding-bottom: 20px;
+  gap: clamp(21px, 2.083vw + 0px, 30px);
+  padding-bottom: clamp(14px, 1.389vw + 0px, 20px);
 
-  border-radius: 30px;
+  border-radius: clamp(21px, 2.083vw + 0px, 30px);
   background: var(--color-background-light-frame);
   box-shadow: 0px 4px 4px rgba(47, 27, 12, 0.35);
   overflow: hidden;
@@ -18,9 +18,9 @@
   display: flex;
 
   justify-content: center;
-  padding: 10px 0;
+  padding: clamp(7px, 0.694vw + 0px, 10px) 0;
 
-  font-size: 17px;
+  font-size: clamp(12px, 1.181vw + 0px, 17px);
   font-weight: 350;
   color: var(--color-text-light);
 }
@@ -31,8 +31,8 @@
   display: flex;
   flex-direction: column;
 
-  padding: 0 20px;
-  gap: 10px;
+  padding: 0 clamp(14px, 1.389vw + 0px, 20px);
+  gap: clamp(7px, 0.694vw + 0px, 10px);
 }
 
 .chat-row {
@@ -44,9 +44,9 @@
   display: flex;
   flex-direction: column;
 
-  padding: 15px;
-  gap: 10px;
-  border-radius: 20px;
+  padding: clamp(11px, 1.042vw + 0px, 15px);
+  gap: clamp(7px, 0.694vw + 0px, 10px);
+  border-radius: clamp(14px, 1.389vw + 0px, 20px);
 }
 
 .chat-msg.boogiebot {
@@ -64,12 +64,12 @@
 
 .chat-msg h6 {
   font-family: var(--font-chat);
-  font-size: 14px;
+  font-size: clamp(10px, 0.972vw + 0px, 14px);
   font-weight: 650;
 }
 
 .chat-msg p {
   font-family: var(--font-chat);
-  font-size: 14px;
+  font-size: clamp(10px, 0.972vw + 0px, 14px);
   font-weight: 350;
 }
