@@ -4,8 +4,6 @@ import Section from "@/components/Section/Section";
 import SectionHeader from "@/components/Section/SectionHeader/SectionHeader";
 import TextBlock, { type TextBlockItem } from "@/components/TextBlock/TextBlock";
 
-// import interventions from "@/assets/images/lunacart/intervention-diagram.png";
-
 import rde from "@/assets/images/lunacart/interventions/rde.png";
 import popUp from "@/assets/images/lunacart/interventions/pop-up.png";
 import stepOne from "@/assets/images/lunacart/interventions/step-one-foods.png";
@@ -68,8 +66,6 @@ function Approach({ id }: { id: string }) {
       />
 
       <TextBlock text={textContent.firstParagraph} />
-
-      {/* <img src={interventions} alt=""/> */}
 
       <div className="approach-intervention-diagram">
         <div className="intervention-diagram-row food-ecosystem">

@@ -1,9 +1,10 @@
 .lunacart-approach {
-  padding: 100px 120px 200px;
+  padding: clamp(71px, 6.944vw + 0px, 100px) clamp(86px, 8.333vw + 0px, 120px) clamp(143px, 13.889vw + 0px, 200px);
+  overflow: hidden;
 }
 
 .lunacart-approach .section-inner {
-  gap: 50px;
+  gap: clamp(36px, 3.472vw + 0px, 50px);
 }
 
 .lunacart-approach img {
@@ -16,7 +17,7 @@
   flex-direction: column;
   position: relative;
 
-  gap: 50px;
+  gap: clamp(36px, 3.472vw + 0px, 50px);
 }
 
 .intervention-diagram-row {
@@ -25,12 +26,12 @@
   flex-direction: column;
 
   align-items: center;
-  gap: 30px;
+  gap: clamp(21px, 2.083vw + 0px, 30px);
 }
 
 .intervention-diagram-row h4 {
   font-family: var(--font-label);
-  font-size: 17px;
+  font-size: clamp(12px, 1.181vw + 0px, 17px);
   font-weight: 400;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -39,7 +40,7 @@
 
 .intervention-diagram-row h5 {
   font-family: var(--font-label);
-  font-size: 14px;
+  font-size: clamp(10px, 0.972vw + 0px, 14px);
   font-weight: 400;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -51,7 +52,7 @@
   flex-direction: column;
 
   align-items: center;
-  gap: 5px;
+  gap: clamp(4px, 0.347vw + 0px, 5px);
 
   text-align: center;
 }
@@ -60,7 +61,7 @@
   width: 100%;
   display: flex;
 
-  gap: 30px;
+  gap: clamp(21px, 2.083vw + 0px, 30px);
 }
 
 .intervention-card {
@@ -70,10 +71,10 @@
   z-index: 2;
 
   align-items: center;
-  gap: 10px;
+  gap: clamp(7px, 0.694vw + 0px, 10px);
 
   background: #E0E0E0;
-  border-radius: 30px;
+  border-radius: clamp(21px, 2.083vw + 0px, 30px);
   text-align: center;
 
   color: var(--color-text-body);
@@ -86,14 +87,14 @@
 }
 
 .intervention-card.food-ecosystem {
-  padding: 30px 25px;
+  padding: clamp(21px, 2.083vw + 0px, 30px) clamp(18px, 1.736vw + 0px, 25px);
 
-  font-size: 17px;
+  font-size: clamp(12px, 1.181vw + 0px, 17px);
   font-weight: 350;
 }
 
 .intervention-card.food-ecosystem img {
-  height: 75px;
+  height: clamp(53px, 5.208vw + 0px, 75px);
   width: auto;
   opacity: 50%;
 }
@@ -103,23 +104,23 @@
 }
 
 .intervention-card.behavior {
-  padding: 20px;
+  padding: clamp(14px, 1.389vw + 0px, 20px);
 }
 
 .intervention-card.behavior h6 {
-  font-size: 17px;
+  font-size: clamp(12px, 1.181vw + 0px, 17px);
   font-weight: 450;
 }
 
 .intervention-card.behavior p {
-  font-size: 12px;
+  font-size: clamp(9px, 0.833vw + 0px, 12px);
   font-weight: 350;
 }
 
 .intervention-card.behavior img {
   width: 100%;
   height: auto;
-  border-radius: 20px;
+  border-radius: clamp(14px, 1.389vw + 0px, 20px);
   opacity: 50%;
 }
 
@@ -129,7 +130,7 @@
 
 .intervention-card.design-implications {
   background: var(--color-background-light-frame);
-  padding: 30px;
+  padding: clamp(21px, 2.083vw + 0px, 30px);
   box-shadow: 0px 0px 4px rgba(47, 27, 12, 0.35);
 
   text-align: start;
@@ -137,7 +138,7 @@
 
 .intervention-card.design-implications h5 {
   font-family: var(--font-body);
-  font-size: 40px;
+  font-size: clamp(29px, 2.778vw + 0px, 40px);
   font-weight: 650;
   letter-spacing: 0;
 
@@ -153,49 +154,49 @@
   display: flex;
   flex-direction: column;
 
-  gap: 10px;
+  gap: clamp(7px, 0.694vw + 0px, 10px);
 }
 
 .intervention-card-content h6 {
   font-family: var(--font-body);
-  font-size: 17px;
+  font-size: clamp(12px, 1.181vw + 0px, 17px);
   font-weight: 450;
   color: var(--color-text-header);
 }
 
 .intervention-card-content p {
   font-family: var(--font-body);
-  font-size: 17px;
+  font-size: clamp(12px, 1.181vw + 0px, 17px);
   font-weight: 350;
   color: var(--color-text-body);
 }
 
 .intervention-diagram-first-row-connector {
   position: absolute;
-  top: 285px;
-  right: 400px;
+  top: clamp(203px, 19.792vw + 0px, 285px);
+  right: clamp(285px, 27.778vw + 0px, 400px);
   z-index: 1;
 }
 
 .intervention-diagram-second-row-connector {
   position: absolute;
-  height: 160px;
-  bottom: 250px;
+  height: clamp(114px, 11.111vw + 0px, 160px);
+  bottom: clamp(178px, 17.361vw + 0px, 250px);
   z-index: 1;
 }
 
 .intervention-diagram-second-row-connector.pale-orange {
-  left: -310px;
+  left: clamp(-310px, -21.615vw + 1.4px, -220px);
 }
 
 .intervention-diagram-second-row-connector.orange {
-  left: -190px;
+  left: clamp(-190px, -13.221vw + 0.3px, -135px);
 }
 
 .intervention-diagram-second-row-connector.purple {
-  left: 190px;
+  left: clamp(135px, 13.221vw - 0.3px, 190px);
 }
 
 .intervention-diagram-second-row-connector.blue {
-  left: 310px;
+  left: clamp(220px, 21.615vw - 1.4px, 310px);
 }

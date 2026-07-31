@@ -2,19 +2,18 @@
   width: 100%;
   display: flex;
 
-  padding: 5px 0 5px 30px;
+  padding: clamp(4px, 0.347vw + 0px, 5px) 0 clamp(4px, 0.347vw + 0px, 5px) clamp(21px, 2.083vw + 0px, 30px);
 
   border-left-style: solid;
-  border-left-width: 5px;
-  border-left-color: #3048AD;
+  border-left-width: clamp(4px, 0.347vw + 0px, 5px);
 }
 
 .quote-text {
-  max-width: 800px;
+  max-width: clamp(570px, 55.556vw + 0px, 800px);
   display: flex;
   flex-direction: column;
 
-  gap: 20px;
+  gap: clamp(14px, 1.389vw + 0px, 20px);
 }
 
 .quote-content {
@@ -25,7 +24,7 @@
 
 .quote-attr {
   font-family: var(--font-label);
-  font-size: 12px;
+  font-size: clamp(9px, 0.833vw + 0px, 12px);
   font-weight: 400;
   letter-spacing: 0.05em;
   text-transform: uppercase;

@@ -4,8 +4,8 @@
   bottom: 30px;
   right: 50px;
   
-  width: 50px;
-  height: 50px;
+  width: clamp(38.4375px, 3.75vw, 42px);
+  height: clamp(38.4375px, 3.75vw, 42px);
   border-radius: 50%;
   
   display: flex;
@@ -41,6 +41,12 @@
   
   isolation: isolate;
   overflow: hidden;
+}
+
+.back-to-top svg {
+  /* Scale icon proportionally */
+  width: clamp(18px, 1.5vw, 20px);
+  height: clamp(18px, 1.5vw, 20px);
 }
 
 .back-to-top.visible {

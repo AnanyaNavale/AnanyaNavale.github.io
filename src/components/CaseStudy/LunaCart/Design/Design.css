@@ -1,10 +1,10 @@
 .lunacart-design {
-  padding: 100px 120px 200px;
+  padding: clamp(71px, 6.944vw + 0px, 100px) clamp(86px, 8.333vw + 0px, 120px) clamp(143px, 13.889vw + 0px, 200px);
   background: var(--color-background-gray-frame);
 }
 
 .lunacart-design .section-inner {
-  gap: 50px;
+  gap: clamp(36px, 3.472vw + 0px, 50px);
   align-items: center;
 }
 
@@ -32,7 +32,7 @@
   display: flex;
 
   justify-content: center;
-  gap: 30px;
+  gap: clamp(21px, 2.083vw + 0px, 30px);
 }
 
 .design-story-map {
@@ -41,16 +41,16 @@
   flex-direction: column;
 
   align-items: center;
-  padding: 20px;
-  gap: 20px;
+  padding: clamp(14px, 1.389vw + 0px, 20px);
+  gap: clamp(14px, 1.389vw + 0px, 20px);
 
-  border-radius: 30px;
+  border-radius: clamp(21px, 2.083vw + 0px, 30px);
   background: var(--color-background-light-frame);
 }
 
 .design-story-map h5 {
   font-family: var(--font-label);
-  font-size: 14px;
+  font-size: clamp(10px, 0.972vw + 0px, 14px);
   font-weight: 400;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -58,7 +58,7 @@
 }
 
 .design-story-map img {
-  max-height: 495px;
+  max-height: clamp(353px, 34.375vw + 0px, 495px);
 }
 
 .design-wireflow {
@@ -67,16 +67,16 @@
   flex-direction: column;
 
   align-items: center;
-  padding: 20px;
+  padding: clamp(14px, 1.389vw + 0px, 20px);
   gap: 15%;
 
-  border-radius: 30px;
+  border-radius: clamp(21px, 2.083vw + 0px, 30px);
   background: var(--color-background-light-frame);
 }
 
 .design-wireflow h5 {
   font-family: var(--font-label);
-  font-size: 14px;
+  font-size: clamp(10px, 0.972vw + 0px, 14px);
   font-weight: 400;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -84,7 +84,7 @@
 }
 
 .design-wireflow img {
-  max-width: 458px;
+  max-width: clamp(326px, 31.806vw + 0px, 458px);
   justify-self: center;
 }
 

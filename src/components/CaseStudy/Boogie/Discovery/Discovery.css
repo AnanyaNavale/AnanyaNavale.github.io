@@ -151,3 +151,7 @@
   z-index: 1;
   /* inset: 0; */
 }
+
+.boogie-discovery .discovery-quotes .quote {
+  border-left-color: var(--color-boogie-primary);
+}

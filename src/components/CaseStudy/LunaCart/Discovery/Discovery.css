@@ -1,9 +1,9 @@
 .lunacart-discovery {
-  padding: 100px 150px 100px;
+  padding: clamp(71px, 6.944vw + 0px, 100px) clamp(107px, 10.417vw + 0px, 150px) clamp(71px, 6.944vw + 0px, 100px);
 }
 
 .lunacart-discovery .section-inner {
-  gap: 50px;
+  gap: clamp(36px, 3.472vw + 0px, 50px);
 }
 
 .discovery-quotes {
@@ -11,12 +11,16 @@
   display: flex;
   flex-direction: column;
 
-  padding: 0 50px;
-  gap: 30px;
+  padding: 0 clamp(36px, 3.472vw + 0px, 50px);
+  gap: clamp(21px, 2.083vw + 0px, 30px);
+}
+
+.lunacart-discovery .discovery-quotes .quote {
+  border-left-color: #3048AD;
 }
 
 .discovery-diagram {
-  width: 932px;
+  width: clamp(664px, 64.722vw + 0px, 932px);
 
   align-self: center;
 }
@@ -24,14 +28,14 @@
 .discovery-affinity-map {
   width: 100%;
 
-  padding: 30px;
+  padding: clamp(21px, 2.083vw + 0px, 30px);
 
-  border-radius: 30px;
+  border-radius: clamp(21px, 2.083vw + 0px, 30px);
   background: var(--color-background-gray-frame);
 }
 
 .discovery-affinity-map img {
-  width: 1080px;
+  width: clamp(769px, 75vw + 0px, 1080px);
 
-  border-radius: 15px;
+  border-radius: clamp(11px, 1.042vw + 0px, 15px);
 }
