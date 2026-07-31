@@ -75,7 +75,7 @@ function Boogie() {
             },
             {
               label: "Tools",
-              value: "Figma · Expo · React Native\nGithub",
+              value: <>Figma, Expo, React&nbsp;Native, Github</>,
             },
             {
               label: "Timeline",
@@ -211,38 +211,29 @@ const reflectionsContent: ReflectionsContent = {
 
 const reflectionQuestions = [
   {
-    theme: "Free Will",
+    theme: "Scaling Applicability",
     content: (
       <>
-        If access wasn’t a problem, would students voluntarily choose healthy—or
-        at least healthier—options?
+        How dependent is this experience on users' familiarity with their
+        surroundings?
       </>
     ),
   },
   {
-    theme: "Novelty",
+    theme: "AI Integration",
     content: (
       <>
-        Will this be something that students will only try once or is it
-        sustainable? Will the reward system be enough to keep them engaged?
+        Can AI establish the same shared understanding of place as a human
+        conversation?
       </>
     ),
   },
   {
-    theme: "Quality",
+    theme: "Interaction",
     content: (
       <>
-        Which is more important: freshness of food or nutritional value? Do
-        students prefer hot + unhealthy food or packaged + healthy food?
-      </>
-    ),
-  },
-  {
-    theme: "Business Model",
-    content: (
-      <>
-        What sort of operational system would be most profitable for both the
-        university and the student community?
+        When is text sufficient for communicating precise locations, and when
+        are richer modalities, such as haptic feedback, necessary?
       </>
     ),
   },

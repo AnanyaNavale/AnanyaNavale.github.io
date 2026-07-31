@@ -2,13 +2,13 @@
   width: 100%;
   display: flex;
 
-  gap: 20px;
+  gap: clamp(16px, 1.7vw, 20px);
   align-content: center;
 }
 
 .question-number-outer {
-  width: 100px;
-  height: 100px;
+  width: clamp(80px, 8vw, 100px);
+  height: clamp(80px, 8vw, 100px);
   display: flex;
   flex-shrink: 0;
 
@@ -32,7 +32,7 @@
 
 .question-number {
   font-family: var(--font-body);
-  font-size: 40px;
+  font-size: clamp(32px, 3.2vw, 40px);
   font-weight: 700;
 }
 
@@ -47,7 +47,7 @@
 
 .question-theme {
   font-family: var(--font-label);
-  font-size: 17px;
+  font-size: clamp(15px, 1.35vw, 17px);
   font-weight: 400;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -55,6 +55,7 @@
 }
 
 .question-content {
+  font-size: clamp(16px, 1.35vw, 17px);
   font-weight: 400;
   color: var(--color-text-light);
 }

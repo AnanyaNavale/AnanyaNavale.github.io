@@ -5,12 +5,12 @@
   display: flex;
   justify-content: flex-end;
   /* Responsive padding */
-  padding: 0 clamp(2rem, 5vw, 3.125rem); /* 32px → 50px */
+  padding: 0 clamp(20px, 2vw, 30px); /* Now matches top value */
 
   position: fixed;
   
   /* Responsive top position */
-  top: clamp(20px, 2vw, 30px);
+  top: clamp(20px, 2vw, 30px); /* Same as right padding */
 
   left: 0;
   right: 0;
@@ -91,6 +91,7 @@
   text-decoration: none;
   
   /* Theme-aware color (will be overridden by .navbar-theme-dark) */
+  white-space: nowrap;
   color: var(--color-text-header);
   
   display: flex;
@@ -129,6 +130,8 @@
   flex-direction: column;
   align-items: center;
   gap: 5px;
+
+  min-width: clamp(140px, 15vw, 180px); /* Prevent squishing */
   
   /* Animation no longer conflicts with positioning */
   animation: submenu-appear 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);

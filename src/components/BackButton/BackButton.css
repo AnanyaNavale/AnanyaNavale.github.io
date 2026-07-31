@@ -1,14 +1,17 @@
 .back-button {
-  position: fixed; /* Changed from absolute so it stays visible on scroll */
-  top: 30px;
-  left: 50px;
+  position: fixed;
+  
+  top: clamp(20px, 2vw, 30px);
+  left: clamp(20px, 2vw, 30px);
   
   display: flex;
   align-items: center;
   justify-content: center;
   
-  width: 44px; /* Explicit size for consistency */
-  height: 44px;
+  /* 🆕 CHANGED: Match actual navbar measurements */
+  /* 1024px: 38.4375px → 1280px+: 42px */
+  width: clamp(38.4375px, 3.75vw, 42px);
+  height: clamp(38.4375px, 3.75vw, 42px);
   
   border-radius: 50%;
   
@@ -29,8 +32,9 @@
 }
 
 .back-button svg {
-  width: 20px;
-  height: 20px;
+  /* Scale icon proportionally */
+  width: clamp(18px, 1.5vw, 20px);
+  height: clamp(18px, 1.5vw, 20px);
   
   transition: color 0.4s ease;
 }
