@@ -1,11 +1,11 @@
 .theo-design {
-  padding: 100px 150px 200px;
+  padding: clamp(71px, 6.944vw + 0px, 100px) clamp(107px, 10.417vw + 0px, 150px) clamp(143px, 13.889vw + 0px, 200px);
 
   background: var(--color-background-gray-frame);
 }
 
 .theo-design .section-inner {
-  gap: 75px;
+  gap: clamp(53px, 5.208vw + 0px, 75px);
 }
 
 .theo-design .section-header {
@@ -15,14 +15,14 @@
 .design-evolution {
   width: 100%;
 
-  padding: 20px;
+  padding: clamp(14px, 1.389vw + 0px, 20px);
 
   background: var(--color-background-light-frame);
-  border-radius: 30px;
+  border-radius: clamp(21px, 2.083vw + 0px, 30px);
 }
 
 .design-evolution img {
-  width: 1100px; 
+  width: clamp(783px, 76.389vw + 0px, 1100px); 
   object-fit: contain;
 }
 
@@ -32,112 +32,100 @@
   flex-direction: column;
 
   align-items: center;
-  gap: 30px;
-  padding: 20px 0;
+  gap: clamp(21px, 2.083vw + 0px, 30px);
+  padding: clamp(14px, 1.389vw + 0px, 20px) 0;
 
   background: var(--color-background-light-frame);
-  border-radius: 30px;
+  border-radius: clamp(21px, 2.083vw + 0px, 30px);
 }
 
 .design-final-screens-label {
   width: fit-content;
 
-  padding: 10px 20px;
+  padding: clamp(7px, 0.694vw + 0px, 10px) clamp(14px, 1.389vw + 0px, 20px);
 
   border-radius: 100px;
   background: #ECE5E2;
   box-shadow: 0px 4px 4px rgba(47, 27, 12, 0.35);
 
   font-family: var(--font-label);
-  font-size: 14px;
+  font-size: clamp(10px, 0.972vw + 0px, 14px);
   font-weight: 500;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--color-text-header);
-
 }
 
 .design-final-screens-block {
-  width: 1098px;
-  /* height: 2146px; */
+  width: clamp(782px, 76.25vw + 0px, 1098px);
   display: flex;
   position: relative;
 
-  padding: 2017px 0 0;
-
-  /* border-style: solid;
-  border-width: 1px; */
+  padding: clamp(1437px, 140.069vw + 0px, 2017px) 0 0;
 }
 
 .design-final-screen {
-  height: 600px;
+  height: clamp(427px, 41.667vw + 0px, 600px);
 }
 
 .design-final-screen.card-1 {
-  /* width: 819px; */
   position: absolute;
   top: 0;
   left: 0;
 }
 
 .design-final-screen.line-1 {
-  width: 462px;
+  width: clamp(329px, 32.083vw + 0px, 462px);
   position: absolute;
-  top: 90px;
-  left: 420px;
+  top: clamp(64px, 6.25vw + 0px, 90px);
+  left: clamp(299px, 29.167vw + 0px, 420px);
 }
 
 .design-final-screen.card-2 {
-  /* width: 855px; */
   position: absolute;
-  top: 461px;
+  top: clamp(328px, 32.014vw + 0px, 461px);
   right: 0;
 }
 
 .design-final-screen.line-2 {
-  width: 520px;
+  width: clamp(370px, 36.111vw + 0px, 520px);
   position: absolute;
-  top: 500px;
-  left: 215px;
+  top: clamp(356px, 34.722vw + 0px, 500px);
+  left: clamp(153px, 14.931vw + 0px, 215px);
 }
 
 .design-final-screen.card-3 {
-  /* width: 1011px; */
   position: absolute;
-  top: 923px;
+  top: clamp(657px, 64.097vw + 0px, 923px);
   left: 0;
 }
 
 .design-final-screen.line-3 {
-  width: 457px;
+  width: clamp(325px, 31.736vw + 0px, 457px);
   position: absolute;
-  bottom: 400px;
-  right: 215px;
+  bottom: clamp(285px, 27.778vw + 0px, 400px);
+  right: clamp(153px, 14.931vw + 0px, 215px);
 }
 
 .design-final-screen.card-4 {
-  /* width: 812px; */
   position: absolute;
   bottom: 0;
   right: 0;
 }
 
 .design-final-screens-award {
-  /* width: 100%; */
   display: flex;
   flex-direction: column;
 
-  padding: 10px 15px;
-  /* align-items: flex-end; */
+  padding: clamp(7px, 0.694vw + 0px, 10px) clamp(11px, 1.042vw + 0px, 15px);
   
-  border-radius: 10px;
+  border-radius: clamp(7px, 0.694vw + 0px, 10px);
   box-shadow: 0px 0px 4px rgba(47, 27, 12, 0.35);
-
 }
 
 .design-final-screens-award-text-first-line {
   font-family: var(--font-label);
-  font-size: 17px;
+  font-size: clamp(12px, 1.181vw + 0px, 17px);
   font-weight: 500;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -146,7 +134,7 @@
 
 .design-final-screens-award-text-second-line {
   font-family: var(--font-label);
-  font-size: 17px;
+  font-size: clamp(12px, 1.181vw + 0px, 17px);
   font-weight: 400;
   letter-spacing: 0.15em;
   text-transform: uppercase;
