@@ -1,9 +1,9 @@
 .theo-vision {
-  padding: 100px 150px 200px;
+  padding: clamp(71px, 6.944vw + 0px, 100px) clamp(107px, 10.417vw + 0px, 150px) clamp(143px, 13.889vw + 0px, 200px);
 }
 
 .theo-vision .section-inner {
-  gap: 50px;
+  gap: clamp(36px, 3.472vw + 0px, 50px);
 }
 
 .vision-storyboard {
@@ -14,26 +14,26 @@
   align-items: center;
   justify-content: center;
   align-self: center;
-  padding: 30px;
-  gap: 20px;
+  padding: clamp(21px, 2.083vw + 0px, 30px);
+  gap: clamp(14px, 1.389vw + 0px, 20px);
 
   background: var(--color-background-gray-frame);
-  border-radius: 30px;
+  border-radius: clamp(21px, 2.083vw + 0px, 30px);
 }
 
 .vision-storyboard h5 {
   font-family: var(--font-label);
-  font-size: 14px;
+  font-size: clamp(10px, 0.972vw + 0px, 14px);
   font-weight: 400;
   letter-spacing: 0.15em;
   text-transform: uppercase;
 }
 
 .vision-storyboard img {
-  width: 600px;
-  height: 700px;
+  width: clamp(427px, 41.667vw + 0px, 600px);
+  height: clamp(498px, 48.611vw + 0px, 700px);
 
-  border-radius: 10px;
+  border-radius: clamp(7px, 0.694vw + 0px, 10px);
 }
 
 .vision-video-container {
@@ -43,7 +43,7 @@
 
 .vision-video-container img {
   width: 100%;
-  height: 598px;
+  height: clamp(426px, 41.528vw + 0px, 598px);
   position: relative;
 
   z-index: 2;
@@ -51,12 +51,12 @@
 }
 
 .vision-video {
-  width: 747px;
-  height: 493px;
+  width: clamp(564px, 52.05vw + 0px, 748px);
+  height: clamp(374px, 34.236vw + 0px, 493px);
   position: absolute;
 
-  left: 116px;
-  top: 26px;
+  left: clamp(80px, 8vw + 0px, 116px);
+  top: clamp(18px, 1.79vw + 0px, 26px);
   z-index: 1;
 }
 
@@ -64,33 +64,33 @@
   width: 100%;
   display: flex;
 
-  padding: 30px;
-  gap: 50px;
+  padding: clamp(21px, 2.083vw + 0px, 30px);
+  gap: clamp(36px, 3.472vw + 0px, 50px);
 
-  border-radius: 30px;
+  border-radius: clamp(21px, 2.083vw + 0px, 30px);
   background: var(--color-background-gray-frame);
 }
 
 .vision-backstory-img {
-  width: 320px;
+  width: clamp(228px, 22.222vw + 0px, 320px);
   display: flex;
 
   justify-content: center;
 }
 
 .vision-backstory-img img {
-  width: 185px;
+  width: clamp(132px, 12.847vw + 0px, 185px);
   object-fit: contain;
 }
 
 .vision-backstory-text-block {
-  width: 570px;
+  width: clamp(406px, 39.583vw + 0px, 570px);
   display: flex;
   flex-direction: column;
 
-  gap: 20px;
+  gap: clamp(14px, 1.389vw + 0px, 20px);
 }
 
 .vision-backstory-text-block img {
-  width: 60px;
+  width: clamp(43px, 4.167vw + 0px, 60px);
 }
