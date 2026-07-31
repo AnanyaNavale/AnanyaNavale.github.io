@@ -4,8 +4,6 @@
   flex-direction: column;
 
   gap: clamp(24px, 2.5vw, 30px);
-
-  border-style: solid;
 }
 
 .text-block .body {
