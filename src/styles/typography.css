@@ -2,13 +2,13 @@
 
 .case-study-body-text {
   font-family: var(--font-body);
-  font-size: 17px;
+  font-size: clamp(12px, 1.181vw + 0px, 17px);
   font-weight: 350;
 }
 
 .case-study-large-text {
   font-family: var(--font-body);
-  font-size: 21px;
+  font-size: clamp(15px, 1.458vw + 0px, 21px);
   font-weight: 400;
 }
 

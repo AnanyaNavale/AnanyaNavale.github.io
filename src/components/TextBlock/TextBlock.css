@@ -8,13 +8,12 @@
 
 .text-block .body {
   width: 80%;
-  font-size: clamp(16px, 1.35vw, 17px);
   color: var(--color-text-body);
 }
 
 .text-block .large {
   width: 80%;
-  font-size: clamp(18px, 1.7vw, 21px);
+  font-size: clamp(15px, 1.458vw + 0px, 21px);
   font-weight: 400;
   color: var(--color-text-header);
 }

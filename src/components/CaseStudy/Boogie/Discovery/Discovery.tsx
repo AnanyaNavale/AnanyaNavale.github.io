@@ -3,6 +3,7 @@ import "./Discovery.css";
 import Section from "@/components/Section/Section";
 import SectionHeader from "@/components/Section/SectionHeader/SectionHeader";
 import TextBlock, { type TextBlockItem } from "@/components/TextBlock/TextBlock";
+import Quote from "../../Quote/Quote";
 
 import map from "@/assets/images/boogie/flexigo-map.png";
 import center from "@/assets/images/boogie/flexigo-center-pin.png";
@@ -67,6 +68,24 @@ function Discovery({ id }: { id: string }) {
             </div>
           </div>
         </div>
+      </div>
+      <div className="discovery-quotes">
+        <Quote
+          content={
+            <>
+              "Instead of being able to input a search keyword… I kind of have
+              this mental model of where my preferred locations are. Around 80% of
+              the scroll bar is where 'O' appears, so 2 above that will get me to…
+              where I live…"
+            </>
+          }
+          attr={
+            <>
+              — <strong>Disgo</strong> user & master’s student identifying as
+              blind
+            </>
+          }
+        />
       </div>
       <TextBlock text={textContent.secondParagraph} />
     </Section>
