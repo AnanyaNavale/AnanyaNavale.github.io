@@ -62,7 +62,7 @@ export default function Projects() {
         foregroundImages={[boogieForeground]}
         reverse
         link="/boogie"
-        glassTint="rgb(214, 231, 235)"
+        glassTint="rgb(197, 228, 235)"
       />
       <ProjectCard
         title="Theo"

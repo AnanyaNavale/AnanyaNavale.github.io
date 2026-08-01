@@ -266,3 +266,172 @@
   color: var(--color-text-header);
   text-align: center;
 }
+
+/* ============================================
+   MOBILE RESPONSIVE (≤767px)
+   ============================================ */
+
+@media (max-width: 767px) {
+  .case-study-hero {
+    /* Mobile: Tighter horizontal padding, adjust vertical spacing */
+    padding: clamp(90px, 22.5vw, 160px) clamp(20px, 5.1vw, 40px) 0;
+    gap: clamp(40px, 10.3vw, 80px);
+  }
+
+  .case-study-hero-above-fold {
+    /* Stack vertically on mobile */
+    flex-direction: column;
+    gap: clamp(32px, 8.2vw, 64px);
+  }
+
+  /* Text Section - Full Width on Mobile */
+  .case-study-header {
+    width: 100%;
+    gap: clamp(16px, 4.1vw, 32px);
+    /* align-items: center; */
+  }
+
+  .case-study-title-container {
+    gap: clamp(2px, 0.5vw, 4px);
+    /* align-items: center; */
+  }
+
+  .case-study-title {
+    /* Mobile fluid range: 320px → 767px */
+    font-size: clamp(20px, 3.75vw, 28px);
+  }
+
+  .case-study-value-prop {
+    font-size: clamp(14px, 2.5vw, 18px);
+  }
+
+  .case-study-headline {
+    width: 100%;
+    gap: clamp(12px, 3.1vw, 24px);
+    padding-bottom: 0;
+    
+    /* Mobile headline sizing */
+    font-size: clamp(32px, 8.4vw, 64px);
+    line-height: clamp(36px, 9.4vw, 72px);
+    /* text-align: center; */
+
+    /* border-style: solid;
+    border-color: black; */
+  }
+
+  /* Image Section - Full Width on Mobile */
+  .case-study-hero-image {
+    width: 100%;
+    /* Taller aspect ratio for mobile */
+    /* height: fit-content; */
+    border-radius: clamp(20px, 5.1vw, 40px);
+  }
+
+  .case-study-hero-image-content-multi {
+    /* Stack images vertically on mobile */
+    flex-direction: column;
+    padding: clamp(20px, 5.1vw, 40px) clamp(16px, 4.1vw, 32px);
+    gap: clamp(16px, 4.1vw, 32px);
+    align-items: center;
+  }
+
+  .case-study-hero-image-column {
+    /* Each column becomes full-width */
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .case-study-hero-image-column-left {
+    padding: 0;
+    order: 2; /* Award first, then left image */
+  }
+
+  .case-study-hero-image-column-right {
+    padding: 0;
+    align-items: center;
+    gap: clamp(16px, 4.1vw, 32px);
+    order: 1;
+  }
+
+  .case-study-hero-award {
+    padding: clamp(8px, 2vw, 16px) clamp(12px, 3.1vw, 24px);
+    border-radius: clamp(8px, 2vw, 16px);
+    align-items: center;
+  }
+
+  .case-study-hero-award-text-first-line,
+  .case-study-hero-award-text-second-line {
+    font-size: clamp(10px, 2.5vw, 18px);
+    letter-spacing: 0.12em;
+  }
+
+  .case-study-hero-image-foreground {
+    /* Single image: full width minus padding */
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .case-study-hero-image-foreground-multi {
+    /* Multi images: full width minus padding */
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Below Fold - Metadata & Links */
+  .case-study-hero-below-fold {
+    gap: clamp(20px, 5.1vw, 40px);
+  }
+
+  .case-study-metadata-row {
+    /* Stack metadata cards in 2x2 grid on mobile */
+    flex-wrap: wrap;
+    gap: clamp(16px, 4.1vw, 32px);
+  }
+
+  .case-study-metadata-card {
+    /* 2 cards per row: calc accounts for gap */
+    width: calc(50% - clamp(8px, 2.05vw, 16px));
+    padding: clamp(16px, 4.1vw, 32px) clamp(12px, 3.1vw, 24px);
+    gap: clamp(4px, 1vw, 8px);
+    border-radius: clamp(16px, 4.1vw, 32px);
+  }
+
+  .case-study-metadata-label {
+    font-size: clamp(14px, 3.6vw, 28px);
+  }
+
+  .case-study-metadata-value {
+    font-size: clamp(12px, 3.1vw, 24px);
+  }
+
+  /* Links Card */
+  .case-study-hero-links-card {
+    flex-direction: column;
+    padding: clamp(16px, 4.1vw, 32px);
+    gap: clamp(20px, 5.1vw, 40px);
+    border-radius: clamp(16px, 4.1vw, 32px);
+  }
+
+  .case-study-hero-link {
+    gap: clamp(12px, 3.1vw, 24px);
+  }
+
+  .case-study-hero-link-icon-button {
+    /* Touch-friendly size */
+    width: clamp(44px, 11.3vw, 88px);
+    height: clamp(44px, 11.3vw, 88px);
+  }
+
+  .case-study-hero-link-icon {
+    width: clamp(24px, 6.2vw, 48px);
+    height: clamp(24px, 6.2vw, 48px);
+  }
+
+  .case-study-hero-link-label {
+    font-size: clamp(14px, 3.6vw, 28px);
+  }
+}

@@ -115,3 +115,38 @@
     padding: 0 1rem;
   }
 }
+
+/* Mobile adjustments */
+@media (max-width: 767px) {
+  .global-footer {
+    padding: clamp(20px, 5vw, 24px) clamp(1.5rem, 6vw, 2rem); /* Reduced vertical padding */
+  }
+
+  .global-footer::after {
+    height: 100px; /* Remove extension, or use a smaller value like 50px */
+  }
+  
+  .global-footer-content {
+    gap: clamp(12px, 3vh, 16px); /* Reduced gap between icons and text */
+  }
+  
+  .global-footer-links {
+    gap: clamp(24px, 4vw, 28px); /* Slightly reduced gap between icons */
+  }
+  
+  .global-footer-link {
+    width: 44px;
+    height: 44px;
+  }
+  
+  .global-footer-link svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .global-footer-text {
+    font-size: 13px;
+    line-height: 1.4;
+    padding: 0 1rem;
+  }
+}

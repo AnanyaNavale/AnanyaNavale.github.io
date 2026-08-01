@@ -93,36 +93,3 @@
   border-right: none;
   border-left: 1px solid var(--glass-tint-color);
 }
-
-/* Mobile: Gradient always from top to bottom */
-@media (max-width: 767px) {
-  .glass-tinted {
-    background: 
-      /* Tint gradient from bottom on mobile */
-      linear-gradient(
-        0deg,
-        transparent 80%,
-        var(--glass-tint-color) 100%
-      ),
-      var(--glass-bg);
-    
-    /* Border on bottom instead of right */
-    border-right: 1px solid var(--glass-border);
-    border-top: 1px solid var(--glass-tint-color);
-  }
-  
-  .glass-tinted.reverse {
-    /* Same as non-reverse on mobile */
-    background: 
-      linear-gradient(
-        0deg,
-        transparent 80%,
-        var(--glass-tint-color) 100%
-      ),
-      var(--glass-bg);
-    
-    /* Reset left border, add bottom */
-    border-left: 1px solid var(--glass-border);
-    border-top: 1px solid var(--glass-tint-color);
-  }
-}

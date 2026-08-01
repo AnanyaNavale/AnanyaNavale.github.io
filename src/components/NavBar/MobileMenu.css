@@ -29,7 +29,7 @@
   right: 0;
   bottom: 0;
   
-  width: min(250px, 75vw);
+  width: min(225px, 75vw);
   
   background: var(--color-text-header);
   
