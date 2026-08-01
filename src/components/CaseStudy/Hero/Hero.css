@@ -13,8 +13,6 @@
   width: 100%;
   max-width: 1140px;
   display: flex;
-
-  /* border-style: solid; */
 }
 
 
@@ -96,8 +94,6 @@
 .case-study-hero-image-content-multi {
   padding: clamp(16px, 1.7vw, 20px) clamp(12px, 1.3vw, 15px);
   gap: clamp(12px, 1.3vw, 15px);
-
-  /* border-style: solid; */
 }
 
 .case-study-hero-image-column {
@@ -161,7 +157,6 @@
 
 .case-study-hero-image-foreground-multi {
   height: clamp(350px, 35vw, 540px);
-  /* width: fit-content; */
   object-fit: contain;
 
   filter: drop-shadow(0px 8px 10px rgba(47, 27, 12, 0.35));
@@ -188,15 +183,12 @@
 
 .case-study-metadata-card {
   width: 100%;
-  /* Need to think more about this */
-  /* min-height: clamp(130px, 11.5vw, 136px); */
   display: flex;
   flex-direction: column;
 
   padding: clamp(16px, 1.7vw, 20px) clamp(16px, 1.7vw, 20px);
   gap: 5px;
   align-items: center;
-  /* justify-content: center; */
 
   background-color: var(--color-background-gray-frame);
   border-radius: clamp(24px, 2.5vw, 30px);
@@ -265,4 +257,177 @@
   font-weight: 350;
   color: var(--color-text-header);
   text-align: center;
+}
+
+/* MOBILE STYLES */
+@media (max-width: 767px) {
+  .case-study-hero {
+    padding: clamp(80px, 20vw, 120px) clamp(24px, 6vw, 32px) 0;
+    gap: clamp(40px, 10vw, 60px);
+  }
+
+  /* Stack everything vertically */
+  .case-study-hero-above-fold {
+    flex-direction: column;
+    gap: clamp(32px, 8vw, 48px);
+  }
+
+  /* Text Section - Full Width, Left Aligned */
+  .case-study-header {
+    width: 100%;
+    align-items: flex-start; /* Left align */
+    text-align: left;
+    gap: clamp(16px, 4vw, 24px);
+  }
+
+  .case-study-title-container {
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .case-study-title {
+    font-size: clamp(20px, 5vw, 24px);
+  }
+
+  .case-study-value-prop {
+    font-size: clamp(14px, 3.5vw, 16px);
+  }
+
+  .case-study-headline {
+    width: 100%;
+    gap: clamp(20px, 5vw, 28px); /* Space between the two colored parts */
+    font-size: clamp(36px, 9vw, 48px);
+    line-height: clamp(38px, 9.5vw, 50px);
+  }
+
+  /* Image Section - Wrapper with relative positioning */
+  .case-study-hero-image {
+    width: 100%;
+    height: auto;
+    position: relative;
+    border-radius: clamp(20px, 5vw, 28px);
+    overflow: hidden; /* Keep rounded corners */
+  }
+
+  /* Background - absolute, covers the content area */
+  .case-study-hero-background {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Content container - relative, determines actual height */
+  .case-study-hero-image-content {
+    position: relative; /* This makes it flow in document */
+    padding: clamp(20px, 5vw, 28px) 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Single image - this determines container height */
+  .case-study-hero-image-foreground {
+    height: clamp(500px, 95vw, 650px);
+  }
+
+  /* Multi-image layout (Theo) - Stack vertically */
+  .case-study-hero-image-content-multi {
+    position: relative;
+    flex-direction: column;
+    padding: clamp(20px, 5vw, 28px) clamp(16px, 4vw, 20px);
+    gap: clamp(12px, 3vw, 16px);
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  /* Make columns display their contents inline (flattens hierarchy) */
+  .case-study-hero-image-column-left,
+  .case-study-hero-image-column-right {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    display: contents; /* THIS IS KEY - makes children act as if parent doesn't exist */
+  }
+
+  /* Now all children are siblings, so order works */
+  .case-study-hero-award {
+    order: 1; /* First */
+    padding: clamp(8px, 2vw, 10px) clamp(12px, 3vw, 16px);
+    border-radius: 10px;
+    align-items: center;
+  }
+
+  .case-study-hero-image-column-left img {
+    order: 2; /* Second - left image */
+  }
+
+  .case-study-hero-image-column-right img {
+    order: 3; /* Third - right image */
+  }
+
+  .case-study-hero-image-foreground-multi {
+    height: clamp(500px, 95vw, 650px);
+  }
+
+  .case-study-hero-award-text-first-line,
+  .case-study-hero-award-text-second-line {
+    font-size: clamp(12px, 2.25vw, 14px);
+  }
+
+  /* Below Fold Section */
+  .case-study-hero-below-fold {
+    gap: clamp(16px, 4vw, 20px);
+  }
+
+  /* Metadata - Single column stack */
+  .case-study-metadata-row {
+    flex-direction: column;
+    gap: clamp(12px, 3vw, 16px);
+  }
+
+  .case-study-metadata-card {
+    width: 100%;
+    padding: clamp(16px, 4vw, 20px) clamp(20px, 5vw, 24px);
+    border-radius: clamp(16px, 4vw, 20px);
+  }
+
+  .case-study-metadata-label {
+    font-size: clamp(15px, 3.75vw, 17px);
+    font-weight: 700;
+  }
+
+  .case-study-metadata-value {
+    font-size: clamp(14px, 3.5vw, 16px);
+  }
+
+  /* Links - Stack vertically, full width */
+  .case-study-hero-links-card {
+    flex-direction: column;
+    padding: clamp(16px, 4vw, 20px) clamp(20px, 5vw, 24px);
+    gap: clamp(12px, 3vw, 16px);
+    border-radius: clamp(16px, 4vw, 20px);
+  }
+
+  .case-study-hero-link {
+    width: 100%;
+    gap: clamp(12px, 3vw, 16px);
+    justify-content: center;
+  }
+
+  .case-study-hero-link-icon-button {
+    width: clamp(40px, 10vw, 44px);
+    height: clamp(40px, 10vw, 44px);
+    
+  }
+
+  .case-study-hero-link-icon {
+    width: clamp(20px, 5vw, 22px);
+    height: clamp(20px, 5vw, 22px);
+  }
+
+  .case-study-hero-link-label {
+    font-size: clamp(14px, 3.5vw, 16px);
+  }
 }

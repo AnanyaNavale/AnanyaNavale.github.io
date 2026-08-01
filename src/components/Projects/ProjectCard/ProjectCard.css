@@ -200,3 +200,100 @@
   font-size: clamp(0.75rem, 1.1vw, 1rem); /* Changed min from 0.8125rem (13px) → 0.75rem (12px) */
   color: var(--color-text-header);
 }
+
+/* MOBILE STYLES */
+@media (max-width: 767px) {
+  .project-card {
+    flex-direction: column-reverse; /* Text on bottom, image on top */
+    gap: 0;
+  }
+
+  /* Remove reverse layout on mobile - all cards same direction */
+  .project-card.reverse {
+    flex-direction: column-reverse;
+  }
+
+  /* Image side - TALLER on larger mobile screens */
+  .project-card-image {
+    width: 100%;
+    height: clamp(350px, 75vw, 500px);
+    border-radius: clamp(16px, 4vw, 24px);
+  }
+
+  /* Add vertical padding to image container */
+  .project-card-image-content {
+    padding: clamp(24px, 6vw, 40px) 0;
+  }
+
+  /* Single image sizing - MUCH LARGER for LunaCart/Boogie */
+  .project-card-image-foreground {
+    height: clamp(400px, 80vw, 550px);
+    max-height: 95%;
+  }
+
+  /* Theo's two-image layout - smaller at 320px, larger at 430px */
+  .project-card-image-content-theo .project-card-image-foreground {
+    height: clamp(230px, 70vw, 380px); /* Min 230px at 320px, increased vw and max */
+    max-height: 85%; /* Back to 85% */
+  }
+
+  /* Text side - now on bottom */
+  .project-card-text {
+    width: 100%;
+    height: auto; /* Let content determine height */
+    flex-direction: column;
+    padding: clamp(32px, 8vw, 48px) clamp(24px, 6vw, 32px);
+    /* gap: clamp(12px, 1vw, 20px); */
+
+    border-radius: clamp(16px, 4vw, 24px);
+  }
+
+  /* Ensure glass tint doesn't affect text opacity */
+  .glass-tinted,
+  .glass-tinted.reverse {
+    /* Mobile uses same gradient for both */
+    background: 
+      linear-gradient(
+        180deg,
+        var(--glass-tint-color) 0%,
+        transparent 20%
+      ),
+      var(--glass-bg);
+    
+    border-right: none;
+    border-left: none;
+    border-top: 1px solid var(--glass-tint-color);
+  }
+
+  /* Ensure content sits above glass effects */
+  .project-card-content {
+    position: relative;
+    z-index: 1; /* Sits above ::before and ::after pseudoelements */
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    gap: clamp(12px, 3vw, 16px);
+  }
+
+  /* Center title and tag */
+  .project-card-title,
+  .project-card-tag-frame {
+    align-self: center;
+  }
+
+  /* Description stays left-aligned for readability */
+  .project-card-description {
+    text-align: left;
+    align-self: flex-start;
+    width: 100%;
+  }
+
+  /* Metadata stays left-aligned */
+  .project-card-metadata-label {
+    text-align: start;
+  }
+
+  .project-card-metadata-value {
+    text-align: start;
+  }
+}

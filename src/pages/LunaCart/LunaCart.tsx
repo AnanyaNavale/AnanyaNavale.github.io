@@ -19,10 +19,12 @@ import heroBackground from "../../assets/images/lunacart/hero-background.jpg";
 import heroScreen from "../../assets/images/lunacart/hero-screen.png";
 import { BsLink45Deg, BsWordpress } from "react-icons/bs";
 import { lunacartNavItems } from "@/config/navigation";
+import { useIsMobile } from "@/hooks/useIsMobile";
 
 function LunaCart() {
   const heroRef = useRef<HTMLDivElement>(null);
   const [showNavbar, setShowNavbar] = useState(false);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     if (!heroRef.current) return;
@@ -72,7 +74,9 @@ function LunaCart() {
             },
             {
               label: "Team",
-              value: "Stanford CS 247B\nTeam of 5",
+              value: isMobile
+                ? "Stanford CS 247B, Team of 5"
+                : "Stanford CS 247B\nTeam of 5",
             },
             {
               label: "Tools",
@@ -80,7 +84,9 @@ function LunaCart() {
             },
             {
               label: "Timeline",
-              value: "Jan–Mar 2026\n10 weeks",
+              value: isMobile
+                ? "Jan–Mar 2026 (10 weeks)"
+                : "Jan–Mar 2026\n10 weeks",
             },
           ]}
           links={[
@@ -130,7 +136,7 @@ function LunaCart() {
         id="reflections"
       />
 
-      <Footer currentProjectId="lunacart"/>
+      <Footer currentProjectId="lunacart" />
     </main>
   );
 }

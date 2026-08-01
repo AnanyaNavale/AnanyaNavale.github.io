@@ -19,11 +19,13 @@ import heroRightScreen from "../../assets/images/theo/hero-screen-2.png";
 
 import { BsLink45Deg, BsGithub } from "react-icons/bs";
 import { theoNavItems } from "@/config/navigation";
+import { useIsMobile } from "@/hooks/useIsMobile";
 
 
 function Theo() {
   const heroRef = useRef<HTMLDivElement>(null);
   const [showNavbar, setShowNavbar] = useState(false);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     if (!heroRef.current) return;
@@ -71,7 +73,9 @@ function Theo() {
             },
             {
               label: "Team",
-              value: "Stanford CS 147\nTeam of 4",
+              value: isMobile
+                ? "Stanford CS 147, Team of 4"
+                : "Stanford CS 147\nTeam of 4",
             },
             {
               label: "Tools",
@@ -79,7 +83,9 @@ function Theo() {
             },
             {
               label: "Timeline",
-              value: "Sep–Dec 2025\n10 weeks",
+              value: isMobile
+                ? "Sep–Dec 2025 (10 weeks)"
+                : "Sep–Dec 2025\n10 weeks",
             },
           ]}
           links={[

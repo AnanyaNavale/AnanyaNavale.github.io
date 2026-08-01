@@ -151,3 +151,23 @@
     transform: rotate(360deg);
   }
 }
+
+/* MOBILE STYLES */
+@media (max-width: 767px) {
+  .view-case-study-button {
+    position: relative; /* Remove absolute positioning */
+    bottom: auto;
+    left: auto;
+    
+    /* Center in the flex column */
+    align-self: center;
+    margin-top: clamp(16px, 4vw, 24px);
+  }
+  
+  /* Remove reverse positioning on mobile */
+  .project-card.reverse .view-case-study-button {
+    position: static;
+    left: auto;
+    right: auto;
+  }
+}

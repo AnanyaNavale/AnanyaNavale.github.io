@@ -3,7 +3,7 @@ import "./Challenge.css";
 import SectionHeader from "@/components/Section/SectionHeader/SectionHeader";
 import TextBlock, {
   type TextBlockItem,
-} from "@/components/TextBlock/TextBlock";
+} from "@/components/Section/TextBlock/TextBlock";
 import ChatConversation, { type ChatItem } from "./ChatConversation/ChatConversation";
 
 function Challenge({ id }: { id: string }) {

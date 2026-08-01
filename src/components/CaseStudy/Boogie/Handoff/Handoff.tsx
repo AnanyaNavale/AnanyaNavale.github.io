@@ -2,7 +2,7 @@ import "./Handoff.css";
 
 import Section from "@/components/Section/Section";
 import SectionHeader from "@/components/Section/SectionHeader/SectionHeader";
-import TextBlock, { type TextBlockItem } from "@/components/TextBlock/TextBlock";
+import TextBlock, { type TextBlockItem } from "@/components/Section/TextBlock/TextBlock";
 
 import firstSlide from "@/assets/images/boogie/first-slide.png";
 import secondSlide from "@/assets/images/boogie/second-slide.png";

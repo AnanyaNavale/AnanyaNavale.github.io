@@ -62,6 +62,3 @@ BRUSHED STEEL BUTTON EFFECT
   position: relative;
   z-index: 1;
 }
-
-
-

@@ -21,11 +21,13 @@ import heroScreen from "../../assets/images/boogie/hero-screen.png";
 
 import { BsGithub } from "react-icons/bs";
 import { boogieNavItems } from "@/config/navigation";
+import { useIsMobile } from "@/hooks/useIsMobile";
 
 
 function Boogie() {
   const heroRef = useRef<HTMLDivElement>(null);
   const [showNavbar, setShowNavbar] = useState(false);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     if (!heroRef.current) return;
@@ -67,11 +69,15 @@ function Boogie() {
           metadata={[
             {
               label: "Role",
-              value: "UI/UX Researcher\nLead Designer & Developer",
+              value: isMobile
+                ? "UX Researcher, Lead UI Designer & Developer"
+                : "UX Researcher\nLead UI Designer & Developer",
             },
             {
               label: "Team",
-              value: "Stanford CS 377Q\nTeam of 5",
+              value: isMobile
+                ? "Stanford CS 377Q, Team of 5"
+                : "Stanford CS 377Q\nTeam of 5",
             },
             {
               label: "Tools",
@@ -79,7 +85,9 @@ function Boogie() {
             },
             {
               label: "Timeline",
-              value: "Jan–Mar 2026\n10 weeks",
+              value: isMobile
+                ? "Jan–Mar 2026 (10 weeks)"
+                : "Jan–Mar 2026\n10 weeks",
             },
           ]}
           links={[
@@ -110,12 +118,12 @@ function Boogie() {
             </>
           }
           thirdParagraph={
-            <>
-              Completed in collaboration with Stanford's DisGo Task Force as
-              part of
+            <span>
+              Completed in collaboration with
+              Stanford's&nbsp;DisGo&nbsp;Task&nbsp;Force as part of
               <br />
               CS 377Q: Designing for Accessibility.
-            </>
+            </span>
           }
         />
       </div>

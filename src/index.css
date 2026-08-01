@@ -1,16 +1,34 @@
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+  
+  /* Ensure html extends full viewport height */
+  min-height: 100vh;
+  min-height: 100dvh; /* Dynamic viewport - accounts for mobile UI */
+}
+
 body {
   font-family: "Mona Sans", sans-serif;
   font-size: clamp(12px, 1.181vw + 0px, 17px);
   font-weight: 350;
+  
+  /* Ensure body extends full viewport height */
+  min-height: 100vh;
+  min-height: 100dvh;
+  
+  /* Make body a flex container */
+  display: flex;
+  flex-direction: column;
 }
 
-html {
-  scroll-behavior: smooth;
+#root {
+  /* Root takes all available space */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }

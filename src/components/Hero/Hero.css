@@ -4,8 +4,8 @@
   flex-direction: column;
   align-items: center;
   
-  /* Viewport-relative spacing */
-  gap: clamp(3rem, 5vh, 4.75rem); /* 48px → 75px */
+  /* Viewport-relative spacing - DESKTOP VALUE (unchanged) */
+  gap: clamp(3rem, 5vh, 4.75rem);
   
   /* Take consistent portion of viewport height */
   min-height: clamp(360px, 45vh, 580px);
@@ -23,34 +23,69 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0;
+  gap: 0; /* DESKTOP VALUE (unchanged - no gap originally) */
 }
 
 .hero-name {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: clamp(3rem, 5.5vw, 5.5rem); /* Changed max from 5rem (80px) → 5.5rem (88px) */
+  font-size: clamp(3rem, 5.5vw, 5.5rem);
   letter-spacing: 0.2em;
+  line-height: 1;
   color: var(--color-text-header);
-
+  text-align: center;
+  
   transform: translateX(0.05em);
 }
 
 .hero-tagline {
   font-family: var(--font-label);
   font-weight: 600;
-  font-size: clamp(0.875rem, 1.4vw, 1.375rem); /* Changed max from 1.25rem (20px) → 1.375rem (22px) */
+  font-size: clamp(0.875rem, 1.4vw, 1.375rem);
   letter-spacing: 0.18em;
+  line-height: 1.3;
   text-transform: uppercase;
   color: var(--color-text-header);
+  text-align: center;
 }
 
 .hero-role {
   font-family: var(--font-body);
   font-weight: 350;
-  font-size: clamp(1rem, 1.4vw, 1.375rem); /* Changed max from 1.25rem (20px) → 1.375rem (22px) */
+  font-size: clamp(1rem, 1.4vw, 1.375rem);
+  line-height: 1.5;
   color: var(--color-text-header);
-
+  
   text-align: center;
-  max-width: 50rem; /* Prevent line from getting too long on ultra-wide screens */
+  max-width: 50rem;
+}
+
+/* MOBILE ONLY - All spacing adjustments here */
+@media (max-width: 767px) {
+  .hero {
+    /* Reduce gap between tagline and role on mobile */
+    gap: clamp(2rem, 4vh, 3rem);
+  }
+  
+  .hero-text {
+    /* Add gap between name and tagline on mobile */
+    gap: clamp(1rem, 2vh, 1.5rem);
+  }
+  
+  .hero-name {
+    letter-spacing: 0.15em;
+  }
+  
+  .hero-tagline {
+    letter-spacing: 0.12em;
+    max-width: 90%;
+  }
+  
+  .hero-role {
+    max-width: 100%;
+  }
+  
+  .hero-role br {
+    display: none;
+  }
 }
