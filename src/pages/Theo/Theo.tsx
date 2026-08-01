@@ -22,7 +22,7 @@ import { theoNavItems } from "@/config/navigation";
 import { useIsMobile } from "@/hooks/useIsMobile";
 
 
-function Theo() {
+export default function Theo() {
   const heroRef = useRef<HTMLDivElement>(null);
   const [showNavbar, setShowNavbar] = useState(false);
   const isMobile = useIsMobile();
@@ -142,8 +142,6 @@ function Theo() {
     </main>
   );
 }
-
-export default Theo;
 
 const reflectionsContent: ReflectionsContent = {
   intro: [

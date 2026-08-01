@@ -20,3 +20,18 @@
   gap: clamp(125px, 12.153vw + 0px, 175px);
   justify-content: flex-end;
 }
+
+/* MOBILE STYLES */
+@media (max-width: 767px) {
+  .quote-cards {
+    gap: clamp(16px, 4vw, 20px);
+  }
+
+  /* Stack all cards in single column */
+  .quote-cards-first-row,
+  .quote-cards-second-row {
+    flex-direction: column;
+    gap: clamp(16px, 4vw, 20px); /* Same gap as parent */
+    justify-content: flex-start; /* Remove flex-end offset */
+  }
+}

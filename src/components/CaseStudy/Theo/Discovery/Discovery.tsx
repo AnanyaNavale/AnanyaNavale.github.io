@@ -7,7 +7,7 @@ import QuoteCards from "./QuoteCards/QuoteCards";
 
 import interviewDiagram from "../../../../assets/images/theo/interview-diagram.png";
 
-function Discovery({ id }: { id: string }) {
+export default function Discovery({ id }: { id: string }) {
   return (
     <Section innerWidth={1140} className="theo-discovery" id={id}>
       <SectionHeader
@@ -37,14 +37,14 @@ function Discovery({ id }: { id: string }) {
           {
             size: "large",
             content: <>And we wanted to help all of them.</>,
+            textAlignment: "center",
           },
         ]}
+        contentAlignment="center"
       />
     </Section>
   );
 }
-
-export default Discovery;
 
 const textContent: {
   firstParagraph: TextBlockItem[];
@@ -85,23 +85,6 @@ const quoteCardContent = {
     {
       quote: (
         <>
-          “As long as I can break a problem up into chunks, I’m okay with it.”
-        </>
-      ),
-      attr: "— high school senior (17)",
-      borderColor: "var(--color-theo-tertiary)",
-    },
-    {
-      quote:
-        "“I don't have control over my brain, so everything else would be nice.”",
-      attr: "— freelance graphic designer (26)",
-      borderColor: "#B99E8A",
-    },
-  ],
-  secondRow: [
-    {
-      quote: (
-        <>
           “It’s usually my partner, Patti, who will say, ‘You’ve been on that
           task for eight hours—have you eaten?’ And I’ll be like, ‘Oh, no…’”
         </>
@@ -114,6 +97,23 @@ const quoteCardContent = {
         "“I’m always thinking about what I can or should’ve done versus what I have done.”",
       attr: "— biology Ph.D. student (24)",
       borderColor: "var(--color-theo-primary)",
+    },
+  ],
+  secondRow: [
+    {
+      quote: (
+        <>
+          “As long as I can break a problem up into chunks, I’m okay with it.”
+        </>
+      ),
+      attr: "— high school senior (17)",
+      borderColor: "var(--color-theo-tertiary)",
+    },
+    {
+      quote:
+        "“I don't have control over my brain, so everything else would be nice.”",
+      attr: "— freelance graphic designer (26)",
+      borderColor: "#B99E8A",
     },
   ],
 };

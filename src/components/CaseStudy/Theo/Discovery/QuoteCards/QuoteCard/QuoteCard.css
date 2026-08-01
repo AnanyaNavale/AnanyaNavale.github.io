@@ -31,3 +31,24 @@
 
   align-self: flex-end;
 }
+
+/* MOBILE STYLES */
+@media (max-width: 767px) {
+  .quote-card {
+    width: 100%; /* Full width */
+    height: auto; /* Let content determine height */
+    min-height: clamp(100px, 25vw, 130px); /* Ensure minimum height */
+    padding: clamp(16px, 4vw, 20px) clamp(12px, 3vw, 16px) clamp(16px, 4vw, 20px) clamp(20px, 5vw, 24px);
+    gap: clamp(12px, 3vw, 16px);
+    border-radius: clamp(12px, 3vw, 16px);
+    border-left-width: clamp(4px, 1vw, 6px);
+  }
+
+  .quote-card-text {
+    font-size: clamp(15px, 3.75vw, 17px);
+  }
+
+  .quote-card-attr {
+    font-size: clamp(11px, 2.75vw, 13px);
+  }
+}
