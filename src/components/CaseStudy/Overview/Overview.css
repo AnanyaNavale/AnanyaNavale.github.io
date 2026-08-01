@@ -51,5 +51,34 @@
 
   font-size: clamp(12px, 2vw, 14px);
   font-style: italic;
+}
 
+/* MOBILE STYLES */
+@media (max-width: 767px) {
+  .overview {
+    margin-top: clamp(60px, 15vw, 100px);
+    margin-bottom: clamp(40px, 10vw, 60px);
+    padding: clamp(40px, 10vw, 50px) clamp(24px, 6vw, 32px);
+    gap: clamp(16px, 4vw, 20px);
+  }
+
+  .overview-header {
+    font-size: clamp(32px, 8vw, 40px);
+  }
+
+  .overview-body {
+    font-size: clamp(15px, 3.75vw, 17px);
+    max-width: 100%;
+  }
+
+  .overview-third-paragraph-outer {
+    border-radius: clamp(16px, 4vw, 20px);
+    width: 100%;
+  }
+
+  .overview-third-paragraph-inner {
+    padding: clamp(10px, 4vw, 12px);
+    border-radius: clamp(14px, 3.5vw, 18px);
+    font-size: clamp(13px, 3.25vw, 15px);
+  }
 }

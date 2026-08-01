@@ -119,8 +119,8 @@ function Boogie() {
           }
           thirdParagraph={
             <>
-              Completed in collaboration with Stanford's DisGo Task Force as
-              part of
+              Completed in collaboration with
+              Stanford's&nbsp;DisGo&nbsp;Task&nbsp;Force as part of
               <br />
               CS 377Q: Designing for Accessibility.
             </>
