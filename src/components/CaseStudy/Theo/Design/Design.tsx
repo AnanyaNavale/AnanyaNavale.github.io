@@ -2,7 +2,7 @@ import "./Design.css";
 
 import Section from "@/components/Section/Section";
 import SectionHeader from "@/components/Section/SectionHeader/SectionHeader";
-import TextBlock, { type TextBlockItem } from "@/components/TextBlock/TextBlock";
+import TextBlock, { type TextBlockItem } from "@/components/Section/TextBlock/TextBlock";
 
 import evolutionDiagram from "@/assets/images/theo/goal-breakdown-evolution.png";
 import card1 from "@/assets/images/theo/screens/card-1.png";

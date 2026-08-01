@@ -2,7 +2,7 @@ import "./Reflections.css"
 
 import Section from "../../Section/Section";
 import SectionHeader from "../../Section/SectionHeader/SectionHeader";
-import TextBlock, { type TextBlockItem } from "../../TextBlock/TextBlock";
+import TextBlock, { type TextBlockItem } from "../../Section/TextBlock/TextBlock";
 import Questions from "../../Section/Questions/Questions";
 import { type QuestionProps } from "../../Section/Questions/Question/Question";
 

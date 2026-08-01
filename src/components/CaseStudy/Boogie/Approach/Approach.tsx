@@ -2,7 +2,7 @@ import "./Approach.css";
 
 import Section from "@/components/Section/Section";
 import SectionHeader from "@/components/Section/SectionHeader/SectionHeader";
-import TextBlock, { type TextBlockItem } from "@/components/TextBlock/TextBlock";
+import TextBlock, { type TextBlockItem } from "@/components/Section/TextBlock/TextBlock";
 import Challenge from "./Challenge/Challenge";
 import ProductThinking from "./ProductThinking/ProductThinking";
 

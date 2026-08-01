@@ -2,7 +2,7 @@ import "./KeyInsight.css";
 
 import Section from "@/components/Section/Section";
 import SectionHeader from "@/components/Section/SectionHeader/SectionHeader";
-import TextBlock, { type TextBlockItem } from "@/components/TextBlock/TextBlock";
+import TextBlock, { type TextBlockItem } from "@/components/Section/TextBlock/TextBlock";
 
 import gradientBorder from "@/assets/images/boogie/gradient-border.svg";
 import { BsArrowDown } from "react-icons/bs";

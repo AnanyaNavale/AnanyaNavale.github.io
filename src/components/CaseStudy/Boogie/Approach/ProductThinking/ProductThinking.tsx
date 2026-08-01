@@ -3,7 +3,7 @@ import "./ProductThinking.css";
 import SectionHeader from "@/components/Section/SectionHeader/SectionHeader";
 import TextBlock, {
   type TextBlockItem,
-} from "@/components/TextBlock/TextBlock";
+} from "@/components/Section/TextBlock/TextBlock";
 
 import images from "@/assets/images/boogie/images.png";
 import iphone from "@/assets/images/iphone-no-camera.svg";

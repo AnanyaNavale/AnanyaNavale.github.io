@@ -3,7 +3,7 @@
   display: flex;
 
   gap: clamp(16px, 1.7vw, 20px);
-  align-content: center;
+  align-items: center;
 }
 
 .question-number-outer {
@@ -58,4 +58,33 @@
   font-size: clamp(16px, 1.35vw, 17px);
   font-weight: 400;
   color: var(--color-text-light);
+}
+
+/* MOBILE STYLES */
+@media (max-width: 767px) {
+  .question {
+    gap: clamp(16px, 4vw, 20px);
+    /* align-items: flex-start; Align to top on mobile */
+  }
+
+  .question-number-outer {
+    width: clamp(60px, 15vw, 80px);
+    height: clamp(60px, 15vw, 80px);
+  }
+
+  .question-number {
+    font-size: clamp(24px, 6vw, 32px);
+  }
+
+  .question-text {
+    gap: clamp(8px, 2vw, 10px);
+  }
+
+  .question-theme {
+    font-size: clamp(13px, 3.25vw, 15px);
+  }
+
+  .question-content {
+    font-size: clamp(15px, 3.75vw, 17px);
+  }
 }

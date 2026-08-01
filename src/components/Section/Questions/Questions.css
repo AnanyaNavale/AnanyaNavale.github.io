@@ -5,3 +5,10 @@
 
   gap: clamp(35px, 4vw, 50px);
 }
+
+/* MOBILE STYLES */
+@media (max-width: 767px) {
+  .questions {
+    gap: clamp(28px, 7vw, 40px);
+  }
+}

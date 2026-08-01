@@ -118,12 +118,12 @@ function Boogie() {
             </>
           }
           thirdParagraph={
-            <>
+            <span>
               Completed in collaboration with
               Stanford's&nbsp;DisGo&nbsp;Task&nbsp;Force as part of
               <br />
               CS 377Q: Designing for Accessibility.
-            </>
+            </span>
           }
         />
       </div>

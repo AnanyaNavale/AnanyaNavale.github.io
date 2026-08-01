@@ -2,7 +2,7 @@ import "./Approach.css"
 
 import Section from "../../../Section/Section"
 import SectionHeader from "../../../Section/SectionHeader/SectionHeader"
-import TextBlock, { type TextBlockItem } from "../../../TextBlock/TextBlock"
+import TextBlock, { type TextBlockItem } from "../../../Section/TextBlock/TextBlock"
 import ExperiencePrototypes from "./ExperiencePrototypes/ExperiencePrototypes"
 
 function Approach({ id }: { id: string }) {

@@ -2,7 +2,7 @@ import "./Design.css";
 
 import Section from "@/components/Section/Section";
 import SectionHeader from "@/components/Section/SectionHeader/SectionHeader";
-import TextBlock, { type TextBlockItem } from "@/components/TextBlock/TextBlock";
+import TextBlock, { type TextBlockItem } from "@/components/Section/TextBlock/TextBlock";
 import Screens, { type ScreenItem } from "./Screens/Screens";
 
 import storyMap from "@/assets/images/lunacart/story-map.jpg";

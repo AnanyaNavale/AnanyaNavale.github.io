@@ -46,3 +46,28 @@
 
   padding-bottom: clamp(10px, 1.1vw, 13px);
 }
+
+/* MOBILE STYLES */
+@media (max-width: 767px) {
+  .section-header {
+    gap: clamp(8px, 2vw, 12px);
+  }
+
+  .section-heading {
+    font-size: clamp(14px, 3.5vw, 18px);
+  }
+
+  .section-tagline {
+    font-size: clamp(36px, 9vw, 48px);
+    line-height: clamp(40px, 10vw, 52px);
+  }
+
+  .subsection-tagline h4 {
+    font-size: clamp(24px, 6vw, 32px);
+  }
+
+  .subsection-tagline h3 {
+    font-size: clamp(32px, 8vw, 42px);
+    padding-bottom: clamp(8px, 2vw, 10px);
+  }
+}

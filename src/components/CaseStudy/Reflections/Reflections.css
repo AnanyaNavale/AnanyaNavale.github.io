@@ -17,3 +17,14 @@
 .reflections .text-block .large {
   color: var(--color-text-light);
 }
+
+/* MOBILE STYLES */
+@media (max-width: 767px) {
+  .reflections {
+    padding: clamp(50px, 12vw, 70px) clamp(24px, 6vw, 32px) clamp(60px, 15vw, 80px);
+  }
+
+  .reflections .section-inner {
+    gap: clamp(24px, 6vw, 32px);
+  }
+}
