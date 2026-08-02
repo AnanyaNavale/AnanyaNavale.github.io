@@ -1,9 +1,9 @@
 .theo-vision {
-  padding: clamp(71px, 6.944vw + 0px, 100px) clamp(107px, 10.417vw + 0px, 150px) clamp(143px, 13.889vw + 0px, 200px);
+  padding: clamp(71px, 6.944vw, 100px) clamp(107px, 10.417vw, 150px) clamp(143px, 13.889vw, 200px);
 }
 
 .theo-vision .section-inner {
-  gap: clamp(36px, 3.472vw + 0px, 50px);
+  gap: clamp(36px, 3.472vw, 50px);
 }
 
 .vision-storyboard {
@@ -14,83 +14,228 @@
   align-items: center;
   justify-content: center;
   align-self: center;
-  padding: clamp(21px, 2.083vw + 0px, 30px);
-  gap: clamp(14px, 1.389vw + 0px, 20px);
+  padding: clamp(21px, 2.083vw, 30px);
+  gap: clamp(14px, 1.389vw, 20px);
 
   background: var(--color-background-gray-frame);
-  border-radius: clamp(21px, 2.083vw + 0px, 30px);
+  border-radius: clamp(21px, 2.083vw, 30px);
 }
 
 .vision-storyboard h5 {
   font-family: var(--font-label);
-  font-size: clamp(10px, 0.972vw + 0px, 14px);
+  font-size: clamp(10px, 0.972vw, 14px);
   font-weight: 400;
   letter-spacing: 0.15em;
   text-transform: uppercase;
 }
 
 .vision-storyboard img {
-  width: clamp(427px, 41.667vw + 0px, 600px);
-  height: clamp(498px, 48.611vw + 0px, 700px);
-
-  border-radius: clamp(7px, 0.694vw + 0px, 10px);
+  width: clamp(427px, 41.667vw, 600px);
+  height: clamp(498px, 48.611vw, 700px);
+  border-radius: clamp(7px, 0.694vw, 10px);
 }
 
 .vision-video-container {
   width: 100%;
+  height: auto;
+  display: flex;
   position: relative;
 }
 
 .vision-video-container img {
-  width: 100%;
-  height: clamp(426px, 41.528vw + 0px, 598px);
+  width: clamp(692px, 67.569vw, 969px);
   position: relative;
-
   z-index: 2;
   pointer-events: none;
 }
 
 .vision-video {
-  width: clamp(564px, 52.05vw + 0px, 748px);
-  height: clamp(374px, 34.236vw + 0px, 493px);
+  width: clamp(508px, 52.5vw, 748px);
+  height: clamp(336px, 34.236vw, 493px);
   position: absolute;
-
-  left: clamp(80px, 8vw + 0px, 116px);
-  top: clamp(18px, 1.79vw + 0px, 26px);
+  left: clamp(54px, 7.72vw, 111px);
+  top: clamp(11px, 1.25vw, 18px);
   z-index: 1;
+}
+
+.vision-video-award {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(8px, 0.833vw, 10px);
+  position: absolute;
+  top: 30%;
+  right: clamp(16px, 1.667vw, 24px);
+}
+
+.vision-video-award-text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.vision-video-award span {
+  font-family: var(--font-label);
+  font-size: clamp(9px, 0.833vw, 12px);
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.vision-video-award-light {
+  color: var(--color-text-body);
+}
+
+.vision-video-award-dark {
+  color: var(--color-text-header);
 }
 
 .vision-backstory-container {
   width: 100%;
   display: flex;
-
-  padding: clamp(21px, 2.083vw + 0px, 30px);
-  gap: clamp(36px, 3.472vw + 0px, 50px);
-
-  border-radius: clamp(21px, 2.083vw + 0px, 30px);
+  padding: clamp(21px, 2.083vw, 30px);
+  gap: clamp(36px, 3.472vw, 50px);
+  border-radius: clamp(21px, 2.083vw, 30px);
   background: var(--color-background-gray-frame);
 }
 
 .vision-backstory-img {
-  width: clamp(228px, 22.222vw + 0px, 320px);
+  width: clamp(228px, 22.222vw, 320px);
   display: flex;
-
   justify-content: center;
 }
 
 .vision-backstory-img img {
-  width: clamp(132px, 12.847vw + 0px, 185px);
+  width: clamp(132px, 12.847vw, 185px);
   object-fit: contain;
 }
 
 .vision-backstory-text-block {
-  width: clamp(406px, 39.583vw + 0px, 570px);
+  width: clamp(406px, 39.583vw, 570px);
   display: flex;
   flex-direction: column;
-
-  gap: clamp(14px, 1.389vw + 0px, 20px);
+  gap: clamp(14px, 1.389vw, 20px);
 }
 
 .vision-backstory-text-block img {
-  width: clamp(43px, 4.167vw + 0px, 60px);
+  width: clamp(43px, 4.167vw, 60px);
+}
+
+/* MOBILE STYLES */
+@media (max-width: 767px) {
+  .theo-vision {
+    padding: clamp(50px, 12vw, 70px) clamp(24px, 6vw, 32px) clamp(60px, 15vw, 80px);
+  }
+
+  .theo-vision .section-inner {
+    gap: clamp(28px, 7vw, 36px);
+  }
+
+  .vision-storyboard {
+    width: 100%;
+    padding: clamp(16px, 4vw, 20px);
+    border-radius: clamp(16px, 4vw, 20px);
+    gap: clamp(12px, 3vw, 16px);
+    align-self: stretch;
+  }
+
+  .vision-storyboard h5 {
+    font-size: clamp(11px, 2.75vw, 13px);
+  }
+
+  .vision-storyboard img {
+    width: 100%;
+    height: auto;
+    border-radius: clamp(8px, 2vw, 12px);
+  }
+
+  .vision-video-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: clamp(12px, 3vw, 16px);
+  }
+
+  .vision-video-container img {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  .vision-video {
+    width: clamp(208px, 68.7vw, 298px); /* Min: 210→208 (thinner at 320), Max: 297→298 (wider at 430) */
+    height: clamp(148px, 46vw, 195px);
+    position: absolute;
+    left: 10.937%;
+    top: clamp(1.515%, 1.8%, 1.8%);
+    z-index: 1;
+  }
+
+  .vision-video-award {
+    position: static;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: clamp(12px, 3vw, 16px);
+  }
+
+  .vision-video-award-text {
+    width: auto;
+  }
+
+  .vision-video-award span {
+    font-family: var(--font-label);
+    font-size: clamp(8px, 2vw, 10px);
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  .vision-backstory-container {
+    flex-direction: column;
+    padding: clamp(20px, 5vw, 28px);
+    gap: clamp(24px, 6vw, 32px);
+    border-radius: clamp(16px, 4vw, 20px);
+    align-items: center;
+  }
+
+  .vision-backstory-img {
+    width: 100%;
+    max-width: clamp(180px, 45vw, 240px);
+  }
+
+  .vision-backstory-img img {
+    width: 70%;
+    height: auto;
+  }
+
+  .vision-backstory-text-block {
+    width: 100%;
+    gap: clamp(16px, 4vw, 20px);
+    /* text-align: center; */
+  }
+
+  .vision-backstory-text-block .case-study-body-text {
+    font-size: clamp(14px, 3.75vw, 17px);
+  }
+
+  .vision-backstory-text-block .case-study-large-text {
+    font-size: clamp(17px, 4.25vw, 20px);
+  }
+
+  .vision-backstory-text-block img {
+    width: clamp(45px, 12.5vw, 60px);
+    vertical-align: middle;
+  }
+}
+
+/* Surgical fix for 320px only */
+@media (max-width: 374px) {
+  .vision-video {
+    width: 213px; /* Exactly what you need at 320 */
+    height: 145px; /* Keep the height */
+    top: clamp(1%, 1.5%, 1.8%); 
+  }
 }

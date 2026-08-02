@@ -26,22 +26,22 @@ export default function Design({ id }: { id: string }) {
     <Section innerWidth={1140} className="theo-design" id={id}>
       <SectionHeader
         title="Design"
-        tagline={"The interface had to feel like\nthe friend it promise to be."}
+        tagline={
+          isMobile
+            ? "The interface had to feel like the friend it promised to be."
+            : "The interface had to feel like\nthe friend it promised to be."
+        }
       />
 
       <TextBlock text={textContent.firstParagraph} />
 
       <section className="design-evolution">
-        <div className="design-diagram-label">
-          Goal Breakdown Evolution
-        </div>
+        <div className="design-diagram-label">Goal Breakdown Evolution</div>
         <img src={evolutionDiagram} alt="" />
       </section>
 
       <section className="design-final-screens">
-        <div className="design-diagram-label">
-          Design Principles in Action
-        </div>
+        <div className="design-diagram-label">Design Principles in Action</div>
         {isMobile ? (
           // Mobile: Simple column of cards
           <div className="design-final-screens-block">

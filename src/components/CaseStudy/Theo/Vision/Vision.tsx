@@ -10,8 +10,11 @@ import storyboard from "@/assets/images/theo/storyboard.png"
 import videoContainer from "@/assets/images/theo/video-container.svg"
 import theo from "@/assets/images/theo/theo.png"
 import theoLogo from "@/assets/images/theo/theo-logo.png"
+import { useIsMobile } from "@/hooks/useIsMobile";
 
 function Vision({ id }: { id: string }) {
+  const isMobile = useIsMobile();
+
   return (
     <Section innerWidth={1140} className="theo-vision" id={id}>
       <SectionHeader
@@ -26,19 +29,94 @@ function Vision({ id }: { id: string }) {
         <img src={storyboard} alt="" />
       </div>
 
-      <div className="vision-video-container">
-        <img src={videoContainer} alt="" />
-        <iframe
-          width="772"
-          height="500"
-          className="vision-video"
-          src="https://www.youtube.com/embed/h_XQMDgb8Sk?si=wGzuZNiROAlZZIfP"
-          title="YouTube video player"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerPolicy="strict-origin-when-cross-origin"
-          allowFullScreen
-        />
-      </div>
+      {isMobile ? (
+        <div className="vision-video-container">
+          <img src={videoContainer} alt="" />
+          <iframe
+            className="vision-video"
+            src="https://www.youtube.com/embed/h_XQMDgb8Sk?si=wGzuZNiROAlZZIfP&modestbranding=1&rel=0&showinfo=0"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          />
+          <div className="vision-video-award">
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-between",
+              }}
+            >
+              <div className="vision-video-award-text">
+                <span className="vision-video-award-light">Winner:</span>
+                <span className="vision-video-award-dark">
+                  Best Production Values
+                </span>
+              </div>
+              <div className="vision-video-award-text">
+                <span className="vision-video-award-light">
+                  Stanford CS 147 <br /> Film Festival
+                </span>
+              </div>
+            </div>
+
+            <div className="vision-video-award-text">
+              <span className="vision-video-award-light">Runner-Up:</span>
+              <span className="vision-video-award-dark">
+                Best Overall
+                <br />
+                Best Project Concept
+                <br />
+                Staff Pick
+                <br />
+                Best Acting
+                <br />
+                Best Music
+              </span>
+            </div>
+          </div>
+        </div>
+      ) : (
+        <div className="vision-video-container">
+          <img src={videoContainer} alt="" />
+          <iframe
+            className="vision-video"
+            src="https://www.youtube.com/embed/h_XQMDgb8Sk?si=wGzuZNiROAlZZIfP"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          />
+          <div className="vision-video-award">
+            <div className="vision-video-award-text">
+              <span className="vision-video-award-light">Winner:</span>
+              <span className="vision-video-award-dark">
+                Best Production Values
+              </span>
+            </div>
+            <div className="vision-video-award-text">
+              <span className="vision-video-award-light">Runner-Up:</span>
+              <span className="vision-video-award-dark">
+                Best Overall
+                <br />
+                Best Project Concept
+                <br />
+                Staff Pick
+                <br />
+                Best Acting
+                <br />
+                Best Music
+              </span>
+            </div>
+            <div className="vision-video-award-text">
+              <span className="vision-video-award-light">
+                Stanford CS 147 <br /> Film Festival
+              </span>
+            </div>
+          </div>
+        </div>
+      )}
 
       <div className="vision-backstory-container">
         <div className="vision-backstory-img">
