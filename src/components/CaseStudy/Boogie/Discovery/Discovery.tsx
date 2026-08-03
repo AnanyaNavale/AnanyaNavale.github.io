@@ -1,4 +1,5 @@
 import "./Discovery.css";
+import { useRef, useEffect } from "react";
 
 import Section from "@/components/Section/Section";
 import SectionHeader from "@/components/Section/SectionHeader/SectionHeader";
@@ -14,6 +15,40 @@ import line1 from "@/assets/images/boogie/line-1.svg";
 import line2 from "@/assets/images/boogie/line-2.svg";
 
 function Discovery({ id }: { id: string }) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const vid = videoRef.current;
+    if (!vid) return;
+
+    // 1. Force the mute property on mount
+    vid.muted = true;
+
+    // 2. Try normal autoplay first
+    vid.play().catch(() => {
+      // 3. Fallback: If blocked by Low Power Mode, wait for a user touch or scroll
+      const playVideoOnGesture = () => {
+        vid
+          .play()
+          .then(() => {
+            cleanUp(); // Playback succeeded! Remove listeners.
+          })
+          .catch((err) => console.log("Playback still blocked:", err));
+      };
+
+      const cleanUp = () => {
+        window.removeEventListener("touchstart", playVideoOnGesture);
+        window.removeEventListener("scroll", playVideoOnGesture);
+      };
+
+      // Add listeners to catch the very first user interaction
+      window.addEventListener("touchstart", playVideoOnGesture, {
+        passive: true,
+      });
+      window.addEventListener("scroll", playVideoOnGesture, { passive: true });
+    });
+  }, []);
+
   return (
     <Section innerWidth={1200} className="boogie-discovery" id={id}>
       <SectionHeader
@@ -64,7 +99,15 @@ function Discovery({ id }: { id: string }) {
             </p>
             <div className="discovery-flexigo-diagram-column-vid-wrapper">
               <img src={iphone} alt="" />
-              <video src={list} autoPlay loop muted playsInline />
+              <video
+                ref={videoRef}
+                src={list}
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload="auto"
+              />
             </div>
           </div>
         </div>
@@ -74,9 +117,9 @@ function Discovery({ id }: { id: string }) {
           content={
             <>
               "Instead of being able to input a search keyword… I kind of have
-              this mental model of where my preferred locations are. Around 80% of
-              the scroll bar is where 'O' appears, so 2 above that will get me to…
-              where I live…"
+              this mental model of where my preferred locations are. Around 80%
+              of the scroll bar is where 'O' appears, so 2 above that will get
+              me to… where I live…"
             </>
           }
           attr={
