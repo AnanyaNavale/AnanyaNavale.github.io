@@ -53,7 +53,7 @@ function BackToTopButton({ isVisible = true }: BackToTopButtonProps) {
   return (
     <button
       ref={buttonRef}
-      className={`back-to-top back-to-top-theme-${theme} ${isVisible ? "visible" : ""}`}
+      className={`back-to-top glass back-to-top-theme-${theme} ${isVisible ? "visible" : ""}`}
       onClick={scrollToTop}
       aria-label="Back to top"
     >

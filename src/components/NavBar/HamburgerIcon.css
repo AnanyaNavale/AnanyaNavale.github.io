@@ -1,6 +1,6 @@
 .hamburger-button {
-  width: clamp(44px, 3.5vw, 50px);
-  height: clamp(44px, 3.5vw, 50px);
+  width: clamp(40px, 10vw, 44px);
+  height: clamp(40px, 10vw, 44px);
   
   border: none;
   border-radius: 100px;
@@ -11,12 +11,39 @@
   
   cursor: pointer;
   
-  color: var(--color-text-header);
+  /* Theme-aware color gradient (like navbar) */
+  background: linear-gradient(
+    to bottom,
+    var(--color-text-light) 0%,
+    var(--color-text-light) 50%,
+    var(--color-text-header) 50%,
+    var(--color-text-header) 100%
+  );
+
+  color: var(--color-icon);
+  
+  background-size: 100% 200%;
+  background-position: 0% 100%; /* Start with dark (header color) */
+  
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   
   transition:
+    background-position 0.4s ease,
     background 0.3s ease,
-    color 0.3s ease,
     transform 0.2s ease;
+}
+
+.hamburger-button svg {
+  width: clamp(18px, 4.5vw, 20px); /* 18px@320 → 20px@430 */
+  height: clamp(18px, 4.5vw, 20px);
+}
+
+/* Dark theme - shift to light text */
+.hamburger-button.hamburger-theme-dark {
+  background-position: 0% 0%;
+  color: var(--color-icon-light);
 }
 
 .hamburger-button:hover {
@@ -33,9 +60,10 @@
     145deg,
     rgba(30, 30, 30, 1) 0%,
     rgba(0, 0, 0, 1) 100%
-  );
+  ) !important;
+  color: var(--color-icon-light);
   
-  color: var(--color-text-light);
+  -webkit-text-fill-color: var(--color-text-light); /* Override gradient when open */
   
   box-shadow:
     0 4px 12px rgba(0, 0, 0, 0.6),

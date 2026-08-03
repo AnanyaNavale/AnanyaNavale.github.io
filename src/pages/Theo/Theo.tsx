@@ -2,6 +2,7 @@ import "./Theo.css";
 import { useEffect, useRef, useState } from "react";
 
 import NavBar from "@/components/NavBar/CaseStudyNavBar";
+import MobileNavBar from "@/components/NavBar/CaseStudyNavBarMobile";
 import BackButton from "@/components/BackButton/BackButton";
 import BackToTopButton from "@/components/BackToTopButton/BackToTopButton";
 import Hero from "../../components/CaseStudy/Hero/Hero";
@@ -51,6 +52,8 @@ export default function Theo() {
       <div className={`navbar-wrapper ${showNavbar ? "visible" : ""}`}>
         <NavBar items={theoNavItems} />
       </div>
+
+      <MobileNavBar items={theoNavItems} />
       <BackToTopButton isVisible={showNavbar} />
 
       {/* Hero */}

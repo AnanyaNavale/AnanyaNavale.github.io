@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 
 import BackButton from "@/components/BackButton/BackButton";
 import NavBar from "@/components/NavBar/CaseStudyNavBar";
+import MobileNavBar from "@/components/NavBar/CaseStudyNavBarMobile"
 import BackToTopButton from "@/components/BackToTopButton/BackToTopButton";
 import Hero from "../../components/CaseStudy/Hero/Hero";
 import Overview from "../../components/CaseStudy/Overview/Overview";
@@ -53,6 +54,8 @@ function Boogie() {
       <div className={`navbar-wrapper ${showNavbar ? "visible" : ""}`}>
         <NavBar items={boogieNavItems} />
       </div>
+
+      <MobileNavBar items={boogieNavItems} />
       <BackToTopButton isVisible={showNavbar} />
       <div ref={heroRef}>
         <Hero
