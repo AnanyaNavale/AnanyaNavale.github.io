@@ -29,7 +29,7 @@
   right: 0;
   bottom: 0;
   
-  width: min(225px, 75vw);
+  width: min(250px, 75vw);
   
   background: var(--color-text-header);
   
@@ -37,10 +37,12 @@
   
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   padding: 2rem 1.5rem;
   
   animation: panel-slide-in 0.35s ease-out forwards;
+  
+  overflow-y: auto; /* Allow scrolling if many items */
 }
 
 .mobile-menu-panel[data-closing="true"] {
@@ -77,14 +79,22 @@
 .mobile-menu-items {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 0.5rem;
 }
 
 .mobile-menu-item {
   width: 100%;
 }
 
+.mobile-menu-item-parent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
 .mobile-menu-link {
+  flex: 1;
   display: block;
   text-decoration: none;
   color: var(--color-text-light);
@@ -104,7 +114,66 @@
   opacity: 0.7;
 }
 
-/* Glass pill */
+/* Submenu link - smaller, indented */
+.mobile-menu-link.submenu {
+  font-size: 11px;
+  padding: 0.875rem 1.125rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 100px;
+  margin-left: 0.5rem;
+}
+
+/* Dropdown button */
+.mobile-menu-dropdown-button {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  cursor: pointer;
+  
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.mobile-menu-dropdown-button:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: scale(1.05);
+}
+
+.mobile-menu-dropdown-button:active {
+  transform: scale(0.95);
+}
+
+/* Submenu container */
+.mobile-menu-submenu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding-top: 0.5rem;
+  padding-left: 0.75rem;
+  
+  animation: submenu-expand 0.3s ease-out;
+}
+
+@keyframes submenu-expand {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Glass pill for active state */
 .mobile-menu-link .active-pill {
   display: inline-block;
   padding: 0.875rem 1.5rem;

@@ -24,3 +24,27 @@
   width: clamp(602px, 58.854vw + 0px, 845px);
   height: auto;
 }
+
+/* MOBILE STYLES */
+@media (max-width: 767px) {
+  .theo-discovery {
+    padding: clamp(50px, 12vw, 70px) clamp(24px, 6vw, 32px) clamp(50px, 12vw, 70px);
+  }
+
+  .theo-discovery .section-inner {
+    gap: clamp(28px, 7vw, 36px);
+  }
+
+  /* Full width diagram on mobile */
+  .discovery-interview-diagram-container {
+    width: 100%;
+    padding: clamp(12px, 3vw, 16px);
+    border-radius: clamp(16px, 4vw, 20px);
+    align-self: stretch; /* Full width */
+  }
+
+  .discovery-interview-diagram {
+    width: 100%;
+    height: auto;
+  }
+}

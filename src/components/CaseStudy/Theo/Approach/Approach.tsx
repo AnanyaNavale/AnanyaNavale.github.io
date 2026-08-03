@@ -4,13 +4,20 @@ import Section from "../../../Section/Section"
 import SectionHeader from "../../../Section/SectionHeader/SectionHeader"
 import TextBlock, { type TextBlockItem } from "../../../Section/TextBlock/TextBlock"
 import ExperiencePrototypes from "./ExperiencePrototypes/ExperiencePrototypes"
+import { useIsMobile } from "@/hooks/useIsMobile"
 
 function Approach({ id }: { id: string }) {
+  const isMobile = useIsMobile();
+
   return (
     <Section innerWidth={1200} className="theo-approach" id={id}>
       <SectionHeader
         title="Approach"
-        tagline={"So a single form of support was\nnever going to be enough."}
+        tagline={
+          isMobile
+            ? "So a single form of support was never going to be enough."
+            : "So a single form of support was\nnever going to be enough."
+        }
       />
 
       <TextBlock text={textContent.firstParagraph} />

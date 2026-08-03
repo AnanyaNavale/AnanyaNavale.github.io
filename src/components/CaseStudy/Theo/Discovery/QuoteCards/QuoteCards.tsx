@@ -7,7 +7,7 @@ type QuoteCardsProps = {
   secondRow: QuoteCardProps[];
 }
 
-function QuoteCards({ firstRow, secondRow }: QuoteCardsProps) {
+export default function QuoteCards({ firstRow, secondRow }: QuoteCardsProps) {
   return (
     <div className="quote-cards">
       <div className="quote-cards-first-row">
@@ -31,5 +31,3 @@ function QuoteCards({ firstRow, secondRow }: QuoteCardsProps) {
     </div>
   );
 }
-
-export default QuoteCards;

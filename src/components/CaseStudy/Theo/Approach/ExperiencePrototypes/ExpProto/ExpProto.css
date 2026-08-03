@@ -139,3 +139,95 @@
   width: clamp(20px, 1.944vw + 0px, 28px);
   height: clamp(20px, 1.944vw + 0px, 28px);
 }
+
+/* MOBILE STYLES */
+@media (max-width: 767px) {
+  .exp-proto {
+    width: clamp(240px, 69.77vw, 300px); /* Match carousel width exactly */
+    margin: 0;
+    gap: clamp(8px, 2vw, 10px);
+    padding-bottom: 5px;
+  }
+
+  .exp-proto-card {
+    width: 100%;
+    padding: 0 0 clamp(16px, 4vw, 18px) 0;
+    gap: clamp(16px, 4vw, 18px);
+    border-radius: clamp(16px, 4vw, 18px);
+  }
+
+  .exp-proto-header {
+    padding: clamp(9px, 2.25vw, 10px) 0;
+    font-size: clamp(10px, 2.5vw, 11px);
+  }
+
+  .exp-proto-content {
+    padding: 0 clamp(18px, 4.5vw, 22px);
+    gap: clamp(12px, 3vw, 14px);
+  }
+
+  .exp-proto-title-container {
+    gap: clamp(6px, 1.5vw, 7px);
+  }
+
+  .exp-proto-title {
+    font-size: clamp(11px, 2.75vw, 12px);
+  }
+
+  .exp-proto-description {
+    font-size: clamp(10px, 2.5vw, 11px);
+    line-height: clamp(12px, 3vw, 13px);
+  }
+
+  /* Single image */
+  .exp-proto-img {
+    /* width: 100%; */
+    height: auto;
+    max-height: clamp(200px, 50vw, 250px);
+    object-fit: contain;
+    border-radius: clamp(8px, 2vw, 10px);
+  }
+
+  /* Multiple images container */
+  .exp-proto-img-container {
+    height: auto;
+    min-height: clamp(200px, 50vw, 250px); /* Add min-height to match single image */
+    gap: clamp(8px, 2vw, 10px);
+    justify-content: center; /* Center the two images vertically */
+  }
+
+  .exp-proto-img-container img {
+    width: 100%;
+    max-width: clamp(140px, 35vw, 180px);
+    height: auto;
+    border-radius: clamp(8px, 2vw, 10px);
+  }
+
+  /* Text sections */
+  .exp-proto-text {
+    gap: clamp(12px, 3vw, 14px);
+  }
+
+  .exp-proto-text-section {
+    gap: clamp(6px, 1.5vw, 7px);
+  }
+
+  .exp-proto-text-title {
+    font-size: clamp(11px, 2.75vw, 12px);
+  }
+
+  .exp-proto-text-content {
+    font-size: clamp(11px, 2.75vw, 12px);
+  }
+
+  /* Icon at bottom */
+  .exp-proto-icon-frame {
+    padding: clamp(11px, 2.75vw, 12px);
+    box-shadow: 0px 2px 4px rgba(47, 27, 12, 0.35);
+  }
+
+  .exp-proto-icon {
+    width: clamp(20px, 5vw, 22px);
+    height: clamp(20px, 5vw, 22px);
+  }
+}

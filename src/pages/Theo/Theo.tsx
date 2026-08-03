@@ -2,6 +2,7 @@ import "./Theo.css";
 import { useEffect, useRef, useState } from "react";
 
 import NavBar from "@/components/NavBar/CaseStudyNavBar";
+import MobileNavBar from "@/components/NavBar/CaseStudyNavBarMobile";
 import BackButton from "@/components/BackButton/BackButton";
 import BackToTopButton from "@/components/BackToTopButton/BackToTopButton";
 import Hero from "../../components/CaseStudy/Hero/Hero";
@@ -22,7 +23,7 @@ import { theoNavItems } from "@/config/navigation";
 import { useIsMobile } from "@/hooks/useIsMobile";
 
 
-function Theo() {
+export default function Theo() {
   const heroRef = useRef<HTMLDivElement>(null);
   const [showNavbar, setShowNavbar] = useState(false);
   const isMobile = useIsMobile();
@@ -51,6 +52,8 @@ function Theo() {
       <div className={`navbar-wrapper ${showNavbar ? "visible" : ""}`}>
         <NavBar items={theoNavItems} />
       </div>
+
+      <MobileNavBar items={theoNavItems} />
       <BackToTopButton isVisible={showNavbar} />
 
       {/* Hero */}
@@ -142,8 +145,6 @@ function Theo() {
     </main>
   );
 }
-
-export default Theo;
 
 const reflectionsContent: ReflectionsContent = {
   intro: [

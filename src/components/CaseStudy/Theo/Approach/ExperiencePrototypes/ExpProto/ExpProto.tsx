@@ -19,7 +19,7 @@ type ExpProtoProps = {
   iconBackground: string;
 }
 
-function ExpProto({ header, color, headerColor, title, description, images, text, icon, iconBackground }: ExpProtoProps) {
+export default function ExpProto({ header, color, headerColor, title, description, images, text, icon, iconBackground }: ExpProtoProps) {
 
   const Icon = icon === "up" ? MdOutlineThumbUp : MdOutlineThumbDown;
 
@@ -67,5 +67,3 @@ function ExpProto({ header, color, headerColor, title, description, images, text
     </section>
   );
 }
-
-export default ExpProto;
