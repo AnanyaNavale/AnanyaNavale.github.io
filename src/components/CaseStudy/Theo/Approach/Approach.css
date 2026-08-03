@@ -5,3 +5,25 @@
 .theo-approach .section-inner {
   gap: clamp(36px, 3.472vw + 0px, 50px);
 }
+
+/* MOBILE STYLES */
+@media (max-width: 767px) {
+  .theo-approach {
+    padding: clamp(50px, 12vw, 70px) 0 clamp(50px, 12vw, 70px) 0; /* Remove horizontal padding */
+  }
+
+  .theo-approach .section-inner {
+    gap: clamp(28px, 7vw, 36px);
+  }
+
+  /* Add padding to non-carousel children */
+  .theo-approach .section-header,
+  .theo-approach .text-block {
+    padding: 0 clamp(24px, 6vw, 32px);
+  }
+
+  /* Carousel gets no padding - full bleed */
+  .theo-approach .carousel-wrapper {
+    padding: 0;
+  }
+}
