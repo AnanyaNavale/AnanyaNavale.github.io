@@ -51,3 +51,14 @@
 
   min-height: clamp(29px, 2.778vw + 0px, 40px);
 }
+
+/* MOBILE STYLES */
+@media (max-width: 767px) {
+  .boogie-opportunity {
+    padding: clamp(50px, 12vw, 70px) clamp(24px, 6vw, 32px) clamp(60px, 15vw, 80px);
+  }
+
+  .boogie-opportunity .section-inner {
+    gap: clamp(28px, 7vw, 36px);
+  }
+}
