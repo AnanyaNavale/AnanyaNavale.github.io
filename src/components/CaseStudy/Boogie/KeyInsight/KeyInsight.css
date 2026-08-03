@@ -62,3 +62,73 @@
   width: 100%;
   height: 100%;
 }
+
+/* MOBILE STYLES */
+@media (max-width: 767px) {
+  .boogie-key-insight {
+    padding: clamp(50px, 12vw, 70px) clamp(24px, 6vw, 32px) clamp(50px, 12vw, 70px);
+  }
+
+  .boogie-key-insight .section-inner {
+    gap: clamp(28px, 7vw, 36px);
+  }
+
+  .key-insight-diagram {
+    padding: 0;
+    gap: clamp(8px, 2vw, 12px);
+  }
+
+  .key-insight-diagram svg {
+    width: clamp(28px, 7vw, 36px);
+    height: clamp(28px, 7vw, 36px);
+  }
+
+  .key-insight-diagram-pov {
+    gap: clamp(10px, 2.5vw, 12px);
+    border-radius: clamp(12px, 3vw, 16px);
+    min-height: clamp(100px, 25vw, 130px); /* Ensure consistent box height */
+    justify-content: center;
+  }
+
+  .key-insight-diagram-pov h6 {
+    font-size: clamp(13px, 3.25vw, 15px);
+    margin-top: clamp(16px, 4vw, 20px);
+  }
+
+  .key-insight-diagram-pov p {
+    font-size: clamp(14px, 3.5vw, 16px);
+    margin-bottom: clamp(16px, 4vw, 20px);
+    padding: 0 clamp(16px, 4vw, 20px);
+    text-align: center;
+  }
+
+  /* Middle POV - SVG border needs full size */
+  .key-insight-diagram-pov.middle {
+    padding: 0;
+  }
+
+  .key-insight-diagram-pov.middle h6 {
+    z-index: 1;
+    position: relative;
+  }
+
+  .key-insight-diagram-pov.middle p {
+    z-index: 1;
+    position: relative;
+  }
+
+  /* Gradient border SVG - should match parent box size */
+  .key-insight-diagram-pov.middle img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%; /* Changed from 10px to 100% */
+    z-index: 0;
+  }
+
+  .key-insight-diagram-pov.middle h6,
+  .key-insight-diagram-pov.middle p {
+    position: relative;
+    z-index: 1;
+  }
+}
