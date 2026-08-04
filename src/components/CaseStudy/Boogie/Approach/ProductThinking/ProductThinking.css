@@ -72,18 +72,13 @@
 
   border-radius: clamp(21px, 2.083vw + 0px, 30px);
   background: var(--color-background-light-frame);
-  box-shadow: 0px 0px 4px rgba(47, 27, 12, 0.35);
+  box-shadow: 0px 2px 4px rgba(47, 27, 12, 0.35);
   overflow: hidden;
 }
 
 .pt-designs-images-image img {
-  width: clamp(209px, 20.347vw + 0px, 293px);
-  height: clamp(427px, 41.667vw + 0px, 600px);
-  transform: translateY(clamp(-100px, -5.529vw - 15.64px, -77px));
-  /* 
-  1042: -77px
-  1280:  -87px
-  1440/1920: -100px */
+  width: 100%;
+  /* height: fit-content; */
 }
 
 .pt-designs-images-text {
@@ -123,28 +118,12 @@
 
   border-radius: clamp(21px, 2.083vw + 0px, 30px);
   background: var(--color-background-light-frame);
-  box-shadow: 0px 0px 4px rgba(47, 27, 12, 0.35);
+  box-shadow: 0px 2px 4px rgba(47, 27, 12, 0.35);
   overflow: hidden;
 }
 
-.pt-designs-mode-image img {
-  width: clamp(209px, 20.347vw + 0px, 293px);
-  height: clamp(427px, 41.667vw + 0px, 600px);
-  inset: 0;
-  position: relative;
-  z-index: 2;
-}
-
 .pt-designs-mode-image video {
-  position: absolute;
-  width: clamp(190px, 18.542vw + 0px, 267px);
-  height: clamp(413px, 40.208vw + 0px, 579px);
-  z-index: 1;
-  transform: translateY(clamp(7px, 0.694vw + 0px, 10px));
-
-  justify-self: center;
-
-  border-radius: clamp(21px, 2.083vw + 0px, 30px);
+  width: 100%;
 }
 
 .pt-designs-mode-text {
@@ -187,4 +166,126 @@
 .pt-designs-form-image img {
   width: clamp(272px, 26.528vw + 0px, 382px);
   border-radius: clamp(7px, 0.694vw + 0px, 10px);
+  box-shadow: 0px 2px 4px rgba(47, 27, 12, 0.35);
+}
+
+@media (max-width: 768px) {
+  .boogie-product-thinking {
+    padding: clamp(50px, 12vw, 70px) 0 0;
+    gap: clamp(24px, 5.581vw + 0px, 36px);
+  }
+
+  .pt-designs {
+    flex-direction: column;
+    padding: 0 clamp(24px, 6vw, 32px);
+    gap: clamp(32px, 7.442vw + 0px, 48px);
+  }
+
+  .pt-designs h5 {
+    font-size: clamp(11px, 2.558vw + 0px, 14px);
+    text-align: center;
+  }
+
+  .pt-designs h6 {
+    font-size: clamp(14px, 3.256vw + 0px, 18px);
+    line-height: clamp(17px, 3.953vw + 0px, 22px);
+  }
+
+  .pt-designs p {
+    font-size: clamp(11px, 2.558vw + 0px, 14px);
+  }
+
+  .pt-designs-first-col {
+    width: 100%;
+    gap: clamp(32px, 7.442vw + 0px, 48px);
+  }
+
+  .pt-designs-images {
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(16px, 4vw, 20px);
+  }
+
+  .pt-designs-images-image {
+    width: 100%;
+    max-width: clamp(240px, 70vw, 340px);
+    gap: clamp(12px, 3vw, 16px);
+    align-self: center;
+  }
+
+  .pt-designs-images-image-wrapper {
+    width: 100%; /* Fill parent */
+    height: auto; /* Let content determine height */
+    padding: 0 clamp(16px, 4vw, 20px);
+    border-radius: clamp(16px, 4vw, 20px);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .pt-designs-images-image img {
+    width: 100%; /* Fill wrapper */
+    height: auto;
+  }
+
+  .pt-designs-images-text {
+    width: 90%;
+    gap: clamp(8px, 2vw, 12px);
+  }
+
+  .pt-designs-mode {
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(16px, 4vw, 20px);
+  }
+
+  .pt-designs-mode-image {
+    width: 100%;
+    max-width: clamp(240px, 70vw, 340px);
+    gap: clamp(12px, 3vw, 16px);
+    align-self: center;
+  }
+
+  .pt-designs-mode-image-wrapper {
+    width: 100%; /* Fill parent */
+    height: auto; /* Let content determine height */
+    padding: clamp(16px, 4vw, 20px) clamp(16px, 4vw, 20px) 0;
+    border-radius: clamp(16px, 4vw, 20px);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .pt-designs-mode-image video {
+    width: 100%; /* Fill wrapper */
+    height: auto;
+  }
+
+  .pt-designs-mode-text {
+    width: 90%;
+    gap: clamp(8px, 2vw, 12px);
+  }
+
+  .pt-designs-second-col {
+    width: 100%;
+    height: auto;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: clamp(16px, 4vw, 20px);
+  }
+
+  .pt-designs-form-text {
+    width: 90%;
+    gap: clamp(8px, 2vw, 12px);
+  }
+
+  .pt-designs-form-image {
+    width: 100%;
+    max-width: clamp(240px, 70vw, 340px);
+    gap: clamp(12px, 3vw, 16px);
+    align-self: center;
+  }
+
+  .pt-designs-form-image img {
+    width: 100%;
+    border-radius: clamp(8px, 2vw, 12px);
+  }
 }

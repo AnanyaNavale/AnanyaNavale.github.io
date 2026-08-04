@@ -43,6 +43,7 @@
 .chat-msg {
   display: flex;
   flex-direction: column;
+  max-width: (159px, 15.486vw, 223px);
 
   padding: clamp(11px, 1.042vw + 0px, 15px);
   gap: clamp(7px, 0.694vw + 0px, 10px);
@@ -72,4 +73,38 @@
   font-family: var(--font-chat);
   font-size: clamp(10px, 0.972vw + 0px, 14px);
   font-weight: 350;
+}
+
+@media (max-width: 768px) {
+  .chat-conversation {
+    width: 65%;
+    gap: clamp(16px, 3.721vw + 0px, 24px);
+    padding-bottom: clamp(12px, 2.791vw + 0px, 16px);
+    border-radius: clamp(16px, 3.721vw + 0px, 24px);
+  }
+
+  .chat-label {
+    padding: clamp(8px, 1.86vw + 0px, 12px) 0;
+    font-size: clamp(14px, 3.256vw + 0px, 18px);
+  }
+
+  .chat-content {
+    padding: 0 clamp(12px, 2.791vw + 0px, 16px);
+    gap: clamp(8px, 1.86vw + 0px, 12px);
+  }
+
+  .chat-msg {
+    max-width: clamp(220px, 60vw + 0px, 280px);
+    padding: clamp(12px, 2.791vw + 0px, 16px);
+    gap: clamp(8px, 1.86vw + 0px, 12px);
+    border-radius: clamp(12px, 2.791vw + 0px, 16px);
+  }
+
+  .chat-msg h6 {
+    font-size: clamp(12px, 2.558vw + 0px, 16px);
+  }
+
+  .chat-msg p {
+    font-size: clamp(12px, 2.558vw + 0px, 16px);
+  }
 }

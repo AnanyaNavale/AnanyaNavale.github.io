@@ -23,16 +23,16 @@
 
 .carousel-items {
   display: flex;
-  gap: clamp(20px, 5vw, 28px); /* 20px@320 → 28px@430 for peek */
+  gap: var(--carousel-item-gap, clamp(20px, 5vw, 28px));
 }
 
 .carousel-item {
-  flex: 0 0 clamp(240px, 69.77vw, 300px); /* 240px@320 → 300px@430 */
-  width: clamp(240px, 69.77vw, 300px);
+  flex: 0 0 var(--carousel-item-width, clamp(240px, 69.77vw, 300px));
+  width: var(--carousel-item-width, clamp(240px, 69.77vw, 300px));
   box-sizing: border-box;
   display: flex;
   justify-content: center;
-  align-items: flex-start; /* Changed from center to prevent height differences */
+  align-items: flex-start;
 }
 
 /* Arrow Buttons */
