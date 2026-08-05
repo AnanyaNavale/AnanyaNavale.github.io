@@ -84,3 +84,48 @@
   height: clamp(301px, 29.375vw + 0px, 423px);
   filter: drop-shadow(0px 0px 4px rgba(47, 27, 12, 0.35));
 }
+
+/* Mobile styles for KeyInsight section */
+@media (max-width: 768px) {
+  .lunacart-key-insight {
+    padding: clamp(50px, 18.182vw + 31.818px, 70px) 
+             clamp(20px, 9.091vw + 10.909px, 30px) 
+             clamp(50px, 18.182vw + 31.818px, 70px);
+  }
+
+  .lunacart-key-insight .section-inner {
+    gap: clamp(30px, 18.182vw + 11.818px, 50px);
+  }
+
+  .key-insight-quotes {
+    padding: 0;
+    gap: clamp(20px, 9.091vw + 10.909px, 30px);
+  }
+
+  .key-insight-bento {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    gap: clamp(12px, 3.636vw + 4.545px, 16px);
+  }
+
+  .key-insight-bento-pyramid-wrapper {
+    width: 100%;
+    padding: clamp(12px, 3.636vw + 4.545px, 16px);
+    border-radius: clamp(15px, 5.455vw + 7.273px, 20px);
+  }
+
+  .key-insight-bento-pyramid-wrapper img {
+    width: 100%;
+  }
+
+  .key-insight-bento-middle-row {
+    width: 100%;
+    display: flex;
+    height: auto;
+  }
+
+  .key-insight-bento > img {
+    width: 100%;
+  }
+}
