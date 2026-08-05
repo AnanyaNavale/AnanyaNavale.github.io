@@ -72,7 +72,7 @@ const chatContent: {
           by Coupa Cafe.
         </>
       ),
-      maxWidth: "clamp(159px, 15.486vw, 223px)",
+      // maxWidth: "clamp(159px, 15.486vw, 223px)",
     },
     {
       sender: "BoogieBot",
@@ -87,7 +87,7 @@ const chatContent: {
           up from?
         </>
       ),
-      maxWidth: "clamp(159px, 15.486vw, 223px)",
+      // maxWidth: "clamp(159px, 15.486vw, 223px)",
     },
   ],
   secondConvo: [
@@ -100,12 +100,12 @@ const chatContent: {
           booking, say "That's it!"
         </>
       ),
-      maxWidth: "clamp(159px, 15.486vw, 223px)",
+      // maxWidth: "clamp(159px, 15.486vw, 223px)",
     },
     {
       sender: "You",
       message: <>That's it!</>,
-      maxWidth: "clamp(61px, 5.972vw, 86px)",
+      // maxWidth: "clamp(61px, 5.972vw, 86px)",
     },
     {
       sender: "BoogieBot",
@@ -121,7 +121,7 @@ const chatContent: {
           up from?
         </>
       ),
-      maxWidth: "clamp(159px, 15.486vw, 223px)",
+      // maxWidth: "clamp(159px, 15.486vw, 223px)",
     },
   ],
   thirdConvo: [
@@ -134,7 +134,7 @@ const chatContent: {
           Building?
         </>
       ),
-      maxWidth: "clamp(134px, 13.056vw, 188px)",
+      // maxWidth: "clamp(134px, 13.056vw, 188px)",
     },
     {
       sender: "BoogieBot",
@@ -147,7 +147,7 @@ const chatContent: {
           like to be picked up from?
         </>
       ),
-      maxWidth: "clamp(143px, 13.889vw, 200px)",
+      // maxWidth: "clamp(143px, 13.889vw, 200px)",
     },
   ],
 };

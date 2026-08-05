@@ -153,3 +153,117 @@
 .boogie-discovery .discovery-quotes .quote {
   border-left-color: var(--color-boogie-primary);
 }
+
+/* MOBILE STYLES */
+@media (max-width: 767px) {
+  .boogie-discovery {
+    padding: clamp(50px, 12vw, 70px) clamp(24px, 6vw, 32px) clamp(50px, 12vw, 70px);
+  }
+
+  .boogie-discovery .section-inner {
+    gap: clamp(28px, 7vw, 36px);
+  }
+
+  .discovery-flexigo-diagram {
+    gap: clamp(40px, 10vw, 56px);
+  }
+
+  .discovery-flexigo-diagram-label {
+    padding: clamp(8px, 2vw, 10px) clamp(16px, 4vw, 20px);
+    font-size: clamp(11px, 2.75vw, 13px);
+  }
+
+  .discovery-flexigo-diagram-screens {
+    flex-direction: column;
+    gap: clamp(40px, 10vw, 56px);
+  }
+
+  .discovery-flexigo-diagram-column {
+    width: 100%;
+    max-width: clamp(240px, 70vw, 340px);
+    gap: clamp(16px, 4vw, 20px);
+    align-self: center; /* Center the constrained column */
+  }
+
+  .discovery-flexigo-diagram-column.reverse {
+    flex-direction: column-reverse;
+    gap: clamp(16px, 4vw, 20px);
+  }
+
+  .discovery-flexigo-diagram-column p {
+    font-size: clamp(13px, 3.25vw, 15px);
+  }
+
+  .discovery-flexigo-diagram-column br {
+    display: none;
+  }
+
+  .discovery-flexigo-diagram-column img {
+    width: clamp(200px, 58vw, 300px);
+  }
+
+  .discovery-flexigo-diagram-column-img-wrapper {
+    width: 100%;
+    height: clamp(280px, 75vw, 380px);
+    padding: 0 clamp(12px, 3vw, 16px) clamp(16px, 4vw, 20px);
+    border-radius: clamp(16px, 4vw, 20px);
+    justify-content: center;
+  }
+
+  .discovery-flexigo-diagram-column.reverse .discovery-flexigo-diagram-column-img-wrapper {
+    width: 100%;
+    height: clamp(220px, 60vw, 300px);
+    padding: clamp(16px, 4vw, 20px) clamp(12px, 3vw, 16px) 0;
+    border-radius: clamp(16px, 4vw, 20px);
+    justify-content: center;
+  }
+
+  .discovery-flexigo-diagram-column-text {
+    width: 100%;
+    padding: clamp(16px, 4vw, 20px);
+    border-radius: clamp(16px, 4vw, 20px);
+  }
+
+  .center-pin {
+    width: clamp(200px, 58vw, 300px);
+    height: clamp(410px, 112vw, 575px);
+  }
+
+  .multi-pin {
+    width: clamp(200px, 58vw, 300px);
+    height: clamp(410px, 112vw, 575px);
+  }
+
+  .discovery-flexigo-diagram-column .line {
+    height: clamp(215px, 31vw + 110px, 245px);
+    transform: translateX(clamp(16px, 4vw, 20px)) translateY(clamp(-10px, 4.55vw - 24.55px, -5px));
+  }
+
+  /* .discovery-flexigo-diagram-column.reverse .line {
+    height: 185px;
+    transform: translateX(75px);
+  } */
+
+  .discovery-flexigo-diagram-column.reverse .line {
+    height: clamp(175px, 43vw, 185px);
+    transform: translateX(clamp(60px, 9vw + 26.2px, 80px));
+  }
+
+  .discovery-flexigo-diagram-column-vid-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .discovery-flexigo-diagram-column-vid-wrapper img {
+    width: clamp(180px, 52vw, 270px);
+  }
+
+  .discovery-flexigo-diagram-column video {
+    width: clamp(162px, 47vw, 243px);
+  }
+
+  .discovery-quotes {
+    width: 100%;
+  }
+}

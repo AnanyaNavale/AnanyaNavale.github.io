@@ -74,3 +74,72 @@
 
   gap: clamp(7px, 0.694vw + 0px, 10px);
 }
+
+@media (max-width: 768px) {
+  .boogie-approach {
+    padding: clamp(50px, 12vw, 70px) 0 clamp(50px, 12vw, 70px);
+  }
+
+  .boogie-approach .section-inner {
+    gap: clamp(28px, 7vw, 36px);
+  }
+
+  .boogie-approach .section-header,
+  .boogie-approach .text-block {
+    padding: 0 clamp(24px, 6vw, 32px);
+  }
+
+  .boogie-approach-inner {
+    gap: clamp(24px, 5.581vw + 0px, 36px);
+  }
+
+  .approach-screens-mobile {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(24px, 5.581vw + 0px, 36px);
+  }
+
+  .approach-screens-mobile p {
+    text-align: center;
+  }
+
+  .approach-screens-mobile .approach-screens-first-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(7px, 1.628vw + 0px, 10px);
+    padding: 0 clamp(24px, 6vw, 32px);
+  }
+
+  .approach-screens-mobile .approach-screens-first-col img {
+    max-height: clamp(500px, 139.535vw + 0px, 650px);
+  }
+
+  .approach-screens-mobile .approach-screens-divider {
+    font-family: var(--font-label);
+    font-weight: 600;
+    color: var(--color-text-header);
+    font-size: clamp(12px, 2.791vw + 0px, 14px);
+    padding: 0 clamp(24px, 6vw, 32px);
+  }
+
+  /* Carousel gets no padding - full bleed */
+  .approach-screens-mobile .carousel-wrapper {
+    padding: 0;
+  }
+
+  .approach-screens-mobile .approach-screens-second-col-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(7px, 1.628vw + 0px, 10px);
+  }
+
+  .approach-screens-mobile .approach-screens-second-col-screen img {
+    max-height: clamp(500px, 139.535vw + 0px, 650px);
+    width: 100%;
+    object-fit: contain;
+  }
+}

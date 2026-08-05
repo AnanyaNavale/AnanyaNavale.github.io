@@ -6,13 +6,16 @@ import TextBlock, { type TextBlockItem } from "@/components/Section/TextBlock/Te
 
 import firstSlide from "@/assets/images/boogie/first-slide.png";
 import secondSlide from "@/assets/images/boogie/second-slide.png";
+import { useIsMobile } from "@/hooks/useIsMobile";
 
 function Handoff({ id }: { id: string }) {
+  const isMobile = useIsMobile();
+
   return (
     <Section innerWidth={1140} className="boogie-handoff" id={id}>
       <SectionHeader
         title="Handoff"
-        tagline={"Boogie made its way to\nStanford's DisGo Task Force."}
+        tagline={isMobile ? "Boogie made its way to Stanford's DisGo Task Force." : "Boogie made its way to\nStanford's DisGo Task Force."}
       />
 
       <TextBlock text={textContent.firstParagraph} />

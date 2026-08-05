@@ -19,6 +19,8 @@ type MobileMenuProps = {
   onClose: () => void;
   items: MobileMenuItem[];
   showLogo?: boolean;
+  expandedItems: Set<string>;
+  setExpandedItems: React.Dispatch<React.SetStateAction<Set<string>>>;
 };
 
 export default function MobileMenu({
@@ -26,9 +28,10 @@ export default function MobileMenu({
   onClose,
   items,
   showLogo = false,
+  expandedItems,
+  setExpandedItems,
 }: MobileMenuProps) {
   const [isVisible, setIsVisible] = useState(false);
-  const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
 
   useEffect(() => {
     if (isOpen) {

@@ -27,3 +27,25 @@
 .handoff-link a {
   color: var(--color-boogie-primary);
 }
+
+@media (max-width: 768px) {
+  .boogie-handoff {
+    padding: clamp(50px, 12vw, 70px) clamp(24px, 6vw, 32px) clamp(70px, 16vw, 100px);
+  }
+
+  .boogie-handoff .section-inner {
+    gap: clamp(28px, 7vw, 36px);
+  }
+
+  .handoff-slides {
+    width: 100%;
+    padding: clamp(16px, 4vw, 20px);
+    gap: clamp(16px, 4vw, 20px);
+    border-radius: clamp(16px, 4vw, 20px);
+  }
+
+  .handoff-slides img {
+    max-width: 100%;
+    width: 100%;
+  }
+}

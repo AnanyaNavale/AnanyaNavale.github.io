@@ -6,12 +6,16 @@ type CarouselProps = {
   items: React.ReactNode[];
   paginationColors?: string[];
   inactiveDotColor?: string;
+  itemWidth?: string; // any valid CSS width value, e.g. "280px" or "clamp(240px, 70vw, 320px)"
+  itemGap?: string; // any valid CSS gap value
 };
 
 export default function Carousel({
   items,
   paginationColors = [],
   inactiveDotColor = "#EAEAEA",
+  itemWidth,
+  itemGap,
 }: CarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
@@ -165,7 +169,15 @@ export default function Carousel({
   const isLastSlide = currentIndex === items.length - 1;
 
   return (
-    <div className="carousel-wrapper">
+    <div
+      className="carousel-wrapper"
+      style={
+        {
+          "--carousel-item-width": itemWidth,
+          "--carousel-item-gap": itemGap,
+        } as React.CSSProperties
+      }
+    >
       <button
         className={`carousel-arrow carousel-arrow-left glass ${isFirstSlide ? "carousel-arrow-hidden" : ""}`}
         onClick={handlePrevious}
@@ -228,7 +240,7 @@ export default function Carousel({
             style={{
               backgroundColor:
                 index === currentIndex
-                  ? paginationColors[index] || inactiveDotColor
+                  ? paginationColors[index] || paginationColors[0]
                   : inactiveDotColor,
             }}
             aria-label={`Go to slide ${index + 1}`}

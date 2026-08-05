@@ -6,8 +6,7 @@ import TextBlock, {
 } from "@/components/Section/TextBlock/TextBlock";
 
 import images from "@/assets/images/boogie/images.png";
-import iphone from "@/assets/images/iphone-no-camera.svg";
-import mode from "@/assets/images/boogie/mode-toggle.mov";
+import mode from "@/assets/images/boogie/mode-toggle.mp4";
 import form from "@/assets/images/boogie/google-form.png";
 
 function ProductThinking({ id }: { id: string }) {
@@ -46,7 +45,6 @@ function ProductThinking({ id }: { id: string }) {
             <div className="pt-designs-mode-image">
               <h5>Dark / Light Mode Toggle</h5>
               <div className="pt-designs-mode-image-wrapper">
-                <img src={iphone} alt="" />
                 <video src={mode} autoPlay loop muted playsInline />
               </div>
             </div>

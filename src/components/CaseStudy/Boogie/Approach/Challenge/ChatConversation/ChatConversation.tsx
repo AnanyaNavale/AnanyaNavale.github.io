@@ -3,7 +3,7 @@ import "./ChatConversation.css";
 export type ChatItem = {
   sender: "BoogieBot" | "You";
   message: React.ReactNode;
-  maxWidth: React.CSSProperties["maxWidth"];
+  // maxWidth: React.CSSProperties["maxWidth"];
 };
 
 type ChatConversationProps = {
@@ -12,7 +12,7 @@ type ChatConversationProps = {
   chats: ChatItem[];
 }
 
-function ChatRow({ sender, message, maxWidth }: ChatItem) {
+function ChatRow({ sender, message }: ChatItem) {
   return (
     <div
       className="chat-row"
@@ -24,7 +24,6 @@ function ChatRow({ sender, message, maxWidth }: ChatItem) {
       <div
         className="chat-msg boogiebot"
         style={{
-          maxWidth: maxWidth,
           backgroundColor:
             sender === "BoogieBot"
               ? "var(--color-background-light-frame"
@@ -38,11 +37,10 @@ function ChatRow({ sender, message, maxWidth }: ChatItem) {
     : (<div
         className="chat-msg you"
         style={{
-          maxWidth: maxWidth,
           backgroundColor: "var(--color-boogie-primary)",
         }}
       >
-        <h6>{sender}</h6>
+        <h6>{sender}:</h6>
         <p>{message}</p>
       </div>)}
       
@@ -50,7 +48,7 @@ function ChatRow({ sender, message, maxWidth }: ChatItem) {
   );
 }
 
-function ChatConversation({ label, labelColor, chats }: ChatConversationProps) {
+export default function ChatConversation({ label, labelColor, chats }: ChatConversationProps) {
   return (
     <div className="chat-conversation">
       <div className="chat-label" style={{ backgroundColor: labelColor }}>
@@ -61,12 +59,10 @@ function ChatConversation({ label, labelColor, chats }: ChatConversationProps) {
           <ChatRow
             sender={item.sender}
             message={item.message}
-            maxWidth={item.maxWidth}
+            // maxWidth={item.maxWidth}
           />
         ))}
       </div>
     </div>
   );
 }
-
-export default ChatConversation;

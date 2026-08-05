@@ -1,13 +1,18 @@
 import "./KeyInsight.css";
 
+import { useIsMobile } from "@/hooks/useIsMobile";
 import Section from "@/components/Section/Section";
 import SectionHeader from "@/components/Section/SectionHeader/SectionHeader";
 import TextBlock, { type TextBlockItem } from "@/components/Section/TextBlock/TextBlock";
 
 import gradientBorder from "@/assets/images/boogie/gradient-border.svg";
+import gradientBorderMobile from "@/assets/images/boogie/gradient-border-mobile.svg";
 import { BsArrowDown } from "react-icons/bs";
 
+
 function KeyInsight({ id }: { id: string }) {
+  const isMobile = useIsMobile();
+
   return (
     <Section innerWidth={1140} className="boogie-key-insight" id={id}>
       <SectionHeader
@@ -33,7 +38,7 @@ function KeyInsight({ id }: { id: string }) {
         </div>
         <BsArrowDown color="var(--color-boogie-tertiary)" />
         <div className="key-insight-diagram-pov middle">
-          <img src={gradientBorder} />
+          <img src={isMobile ? gradientBorderMobile : gradientBorder} />
           <h6 style={{ color: "var(--color-text-header)" }}>Flexigo</h6>
           <p style={{ color: "var(--color-text-header)" }}>
             “<u>Memorial Auditorium</u>” → <i>Chain of context broken</i>
