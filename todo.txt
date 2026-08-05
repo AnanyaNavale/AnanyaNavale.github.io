@@ -1,6 +1,6 @@
 - [x] Finding out how to include large images (Theo final screens) - blurriness
 - [x] Adjust images in LunaCart Key Insight section bento
-- [] Sometimes on loading, videos don't show - screens just show blank (LunaCart, Boogie) - even on repeated reloads
+- [] Sometimes on loading, videos don't show - screens just show blank (LunaCart, Boogie) - even on repeated reloads***
 - [x] Shift ref for menu visibility to after Overview, not Hero
 - [x] Make submenu open on hover, not on click
 - [x] Make submenu items materialize like bubbles, not just appear instantaneously
@@ -12,9 +12,9 @@
 - [] Add thumbnails to case study footer cards
 - [] Go through every section in every case study to check that padding ranges are the same across the board - desktop and mobile
 - [] Adjust line spacing for subsection taglines in mobile
-- [] Revisit spacing in Boogie Challenge chat bubble widths
+- [] Revisit spacing in Boogie Challenge chat bubble widths***
 - [] Standardize shadows across website
-- [] Adjust submenu item coloration during background change
+- [x] Adjust submenu item coloration during background change
 - [] Double check consistency between back and BTT buttons
 - [x] Fix CaseStudyNavBarMobile to only highlight submenu item when dropdown open
 
