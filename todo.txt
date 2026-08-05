@@ -16,7 +16,7 @@
 - [] Standardize shadows across website
 - [] Adjust submenu item coloration during background change
 - [] Double check consistency between back and BTT buttons
-- [] Fix CaseStudyNavBarMobile to only highlight submenu item when dropdown open
+- [x] Fix CaseStudyNavBarMobile to only highlight submenu item when dropdown open
 
 
 MISCELLANEOUS/NOTEPAD/CODE DUMP:

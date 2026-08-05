@@ -29,7 +29,7 @@
   right: 0;
   bottom: 0;
   
-  width: min(250px, 75vw);
+  width: min(260px, 80vw); /* Increased from 250px to 280px */
   
   background: var(--color-text-header);
   
@@ -42,7 +42,7 @@
   
   animation: panel-slide-in 0.35s ease-out forwards;
   
-  overflow-y: auto; /* Allow scrolling if many items */
+  overflow-y: auto;
 }
 
 .mobile-menu-panel[data-closing="true"] {
@@ -107,6 +107,8 @@
   
   padding: 1rem 1.25rem;
   
+  white-space: nowrap; /* Prevent wrapping */
+  
   transition: opacity 0.2s ease;
 }
 
@@ -118,7 +120,6 @@
 .mobile-menu-link.submenu {
   font-size: 11px;
   padding: 0.875rem 1.125rem;
-  /* background: rgba(255, 255, 255, 0.05); */
   border-radius: 100px;
   margin-left: 0.5rem;
 }

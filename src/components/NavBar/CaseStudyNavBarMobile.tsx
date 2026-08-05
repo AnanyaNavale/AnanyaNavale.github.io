@@ -13,6 +13,7 @@ export default function CaseStudyNavBarMobile({
 }: CaseStudyNavBarMobileProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState<string | null>(null);
+  const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
   const [hamburgerTheme, setHamburgerTheme] = useState<"light" | "dark">(
     "light",
   );
@@ -107,28 +108,40 @@ export default function CaseStudyNavBarMobile({
   }, [items]);
 
   // Convert NavItems to MobileMenuItems with hierarchy
-  const convertToMobileItems = (navItems: NavItem[]): MobileMenuItem[] => {
-    return navItems.map((item) => ({
-      label: item.label,
-      href: item.href,
-      isActive:
-        activeSection === item.href ||
-        (item.children?.some((child) => child.href === activeSection) ?? false),
-      onClick: () => {
-        const element = document.querySelector(item.href);
-        element?.scrollIntoView({ behavior: "smooth" });
-      },
-      children: item.children?.map((child) => ({
-        label: child.label,
-        href: child.href,
-        isActive: activeSection === child.href,
-        onClick: () => {
-          const element = document.querySelector(child.href);
-          element?.scrollIntoView({ behavior: "smooth" });
-        },
-      })),
-    }));
-  };
+  const convertToMobileItems = useCallback(
+    (navItems: NavItem[]): MobileMenuItem[] => {
+      return navItems.map((item) => {
+        const isExpanded = expandedItems.has(item.label);
+        const hasActiveChild =
+          item.children?.some((child) => child.href === activeSection) ?? false;
+
+        return {
+          label: item.label,
+          href: item.href,
+          // Parent is active only if:
+          // - Its own section is active, OR
+          // - Submenu is closed AND a child is active
+          isActive:
+            activeSection === item.href || (!isExpanded && hasActiveChild),
+          onClick: () => {
+            const element = document.querySelector(item.href);
+            element?.scrollIntoView({ behavior: "smooth" });
+          },
+          children: item.children?.map((child) => ({
+            label: child.label,
+            href: child.href,
+            // Child is active only when submenu is open and it's the active section
+            isActive: isExpanded && activeSection === child.href,
+            onClick: () => {
+              const element = document.querySelector(child.href);
+              element?.scrollIntoView({ behavior: "smooth" });
+            },
+          })),
+        };
+      });
+    },
+    [activeSection, expandedItems],
+  );
 
   const mobileMenuItems = convertToMobileItems(items);
 
@@ -153,6 +166,8 @@ export default function CaseStudyNavBarMobile({
         onClose={handleClose}
         items={mobileMenuItems}
         showLogo={false}
+        expandedItems={expandedItems}
+        setExpandedItems={setExpandedItems}
       />
     </>
   );

@@ -14,7 +14,7 @@ type NavBarProps = {
   items: NavItem[];
 };
 
-function NavBar({ items }: NavBarProps) {
+export default function NavBar({ items }: NavBarProps) {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [activeSection, setActiveSection] = useState<string | null>(null);
   const [navbarTheme, setNavbarTheme] = useState<"light" | "dark">("light");
@@ -270,12 +270,12 @@ function NavBar({ items }: NavBarProps) {
       {openItem?.children &&
         createPortal(
           <div
-            className="navbar-submenu-wrapper"
+            className={`navbar-submenu-wrapper navbar-theme-${navbarTheme}`}
             style={{
               position: "fixed",
               top: submenuPosition.top,
               left: submenuPosition.left,
-              transform: "translateX(-50%)", // Keep centering here
+              transform: "translateX(-50%)",
               zIndex: 1000,
             }}
             onMouseEnter={() => handleMouseEnter(openItem.label)}
@@ -283,7 +283,6 @@ function NavBar({ items }: NavBarProps) {
           >
             <div
               className="navbar-submenu"
-              // Keep submenu open when hovering over it
               onMouseEnter={() => setOpenDropdown(openItem.label)}
               onMouseLeave={() => setOpenDropdown(null)}
             >
@@ -305,5 +304,3 @@ function NavBar({ items }: NavBarProps) {
     </>
   );
 }
-
-export default NavBar;
