@@ -6,9 +6,14 @@ import TextBlock, { type TextBlockItem } from "@/components/Section/TextBlock/Te
 import Quote from "../../Quote/Quote";
 
 import circleDiagram from "@/assets/images/lunacart/circle-diagram.svg";
+import circleDiagramMobile from "@/assets/images/lunacart/circle-diagram-mobile.svg";
 import affinityMap from "@/assets/images/lunacart/affinity-map.jpg";
+import affinityMapMobile from "@/assets/images/lunacart/affinity-map-mobile.jpg";
+import { useIsMobile } from "@/hooks/useIsMobile";
 
-function Discovery({ id }: { id: string }) {
+export default function Discovery({ id }: { id: string }) {
+  const isMobile = useIsMobile();
+
   return (
     <Section innerWidth={1140} className="lunacart-discovery" id={id}>
       <SectionHeader
@@ -35,18 +40,16 @@ function Discovery({ id }: { id: string }) {
 
       <TextBlock text={textContent.secondParagraph} />
 
-      <img className="discovery-diagram" src={circleDiagram} alt="" />
+      <img className="discovery-diagram" src={isMobile ? circleDiagramMobile : circleDiagram} alt="" />
 
       <TextBlock text={textContent.thirdParagraph} />
 
       <div className="discovery-affinity-map">
-        <img src={affinityMap} alt="" />
+        <img src={isMobile ? affinityMapMobile : affinityMap} alt="" />
       </div>
     </Section>
   );
 }
-
-export default Discovery;
 
 const textContent: {
   firstParagraph: TextBlockItem[];

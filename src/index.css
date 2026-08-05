@@ -26,6 +26,12 @@ body {
   flex-direction: column;
 }
 
+@media (max-width: 768px) {
+  body {
+    font-size: clamp(14px, 1.818vw + 8.182px, 16px);
+  }
+}
+
 #root {
   /* Root takes all available space */
   flex: 1;
