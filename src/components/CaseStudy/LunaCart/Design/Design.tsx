@@ -1,9 +1,14 @@
 import "./Design.css";
+import { useIsMobile } from "@/hooks/useIsMobile";
+import { useEffect, useRef } from "react";
 
 import Section from "@/components/Section/Section";
 import SectionHeader from "@/components/Section/SectionHeader/SectionHeader";
-import TextBlock, { type TextBlockItem } from "@/components/Section/TextBlock/TextBlock";
+import TextBlock, {
+  type TextBlockItem,
+} from "@/components/Section/TextBlock/TextBlock";
 import Screens, { type ScreenItem } from "./Screens/Screens";
+import Carousel from "@/components/Carousel/Carousel";
 
 import storyMap from "@/assets/images/lunacart/story-map.jpg";
 import wireflow from "@/assets/images/lunacart/wireflow.png";
@@ -14,13 +19,87 @@ import g1s3 from "@/assets/images/lunacart/screens/checkout.png";
 import g2s1 from "@/assets/images/lunacart/screens/reflection-1.png";
 import g2s2 from "@/assets/images/lunacart/screens/reflection-2.png";
 import g2s3 from "@/assets/images/lunacart/screens/reflection-3.mov";
-import g3s1 from "@/assets/images/lunacart/screens/food-item.mp4";
+import g3s1 from "@/assets/images/lunacart/screens/food-item-compressed.mp4";
 import g3s2 from "@/assets/images/lunacart/screens/cancelation.png";
 import g3s3 from "@/assets/images/lunacart/screens/dark-mode.png";
 import iphone from "@/assets/images/iphone.svg";
 import iphoneNoCamera from "@/assets/images/iphone-no-camera.svg";
 
-function Design({ id }: { id: string }) {
+// Renders a single screen card — identical markup to what Screens.tsx
+// renders per-item, so it inherits the same .screen CSS.
+function MobileScreenCard({ item }: { item: ScreenItem }) {
+  // 1. Add the TypeScript type helper to the Ref
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const vid = videoRef.current;
+    if (!vid) return;
+
+    vid.muted = true;
+
+    // We declare cleanUp out here so the entire hook can access it
+    let cleanUpListeners = () => {};
+
+    vid.play().catch(() => {
+      const playVideoOnGesture = () => {
+        vid
+          .play()
+          .then(() => {
+            cleanUpListeners(); // Remove listeners once playing successfully
+          })
+          .catch((err) => console.log("Playback still blocked:", err));
+      };
+
+      cleanUpListeners = () => {
+        window.removeEventListener("touchstart", playVideoOnGesture);
+        window.removeEventListener("scroll", playVideoOnGesture);
+      };
+
+      window.addEventListener("touchstart", playVideoOnGesture, {
+        passive: true,
+      });
+      window.addEventListener("scroll", playVideoOnGesture, { passive: true });
+    });
+
+    // 2. React expects the cleanup function to be returned out here!
+    return () => {
+      cleanUpListeners();
+    };
+  }, [item.video]);
+
+  return (
+    <div className="mobile-screen-card">
+      <div className="mobile-screen-card-text">
+        <h6>{item.title}</h6>
+        <p>{item.content}</p>
+      </div>
+      {item.video ? (
+        <div className="mobile-screen-card-video-container">
+          <img src={item.image} alt="" />
+          {/* 3. CRUCIAL: Added the ref link and preload tag here */}
+          <video
+            ref={videoRef}
+            src={item.video}
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="auto"
+          />
+        </div>
+      ) : (
+        <div>
+          <img src={item.image} alt="" />
+        </div>
+      )}
+    </div>
+  );
+}
+
+
+export default function Design({ id }: { id: string }) {
+  const isMobile = useIsMobile();
+
   return (
     <Section innerWidth={1200} className="lunacart-design" id={id}>
       <SectionHeader
@@ -38,23 +117,65 @@ function Design({ id }: { id: string }) {
           <img src={wireflow} />
         </div>
       </div>
-      <Screens screens={screensContent.firstGroup} label="Final Screens" />
+
+      {isMobile ? (
+        <>
+          <div className="design-screens-label">Final UI Screens</div>
+          <Carousel
+            items={screensContent.firstGroup.map((item, i) => (
+              <MobileScreenCard key={i} item={item} />
+            ))}
+            itemWidth="clamp(240px, 69.77vw, 300px)"
+            itemGap="clamp(16px, 4vw, 20px)"
+            paginationColors={["var(--color-lunacart-quaternary)"]}
+            inactiveDotColor="var(--color-text-dark)"
+          />
+        </>
+      ) : (
+        <Screens screens={screensContent.firstGroup} label="Final Screens" />
+      )}
+
       <SectionHeader
         tagline="Reflections made them personal."
         subSectionTagline="Pre-commitment made choices intentional."
       />
-      <Screens screens={screensContent.secondGroup} />
+
+      {isMobile ? (
+        <Carousel
+          items={screensContent.secondGroup.map((item, i) => (
+            <MobileScreenCard key={i} item={item} />
+          ))}
+          itemWidth="clamp(240px, 69.77vw, 300px)"
+          itemGap="clamp(16px, 4vw, 20px)"
+          paginationColors={["var(--color-lunacart-quaternary)"]}
+          inactiveDotColor="var(--color-text-dark)"
+        />
+      ) : (
+        <Screens screens={screensContent.secondGroup} />
+      )}
+
       <SectionHeader
         tagline="room for change."
         subSectionTagline="Intentional choices also needed"
       />
       <TextBlock text={textContent.secondParagraph} contentAlignment="center" />
-      <Screens screens={screensContent.thirdGroup} />
+
+      {isMobile ? (
+        <Carousel
+          items={screensContent.thirdGroup.map((item, i) => (
+            <MobileScreenCard key={i} item={item} />
+          ))}
+          itemWidth="clamp(240px, 69.77vw, 300px)"
+          itemGap="clamp(16px, 4vw, 20px)"
+          paginationColors={["var(--color-lunacart-quaternary)"]}
+          inactiveDotColor="var(--color-text-dark)"
+        />
+      ) : (
+        <Screens screens={screensContent.thirdGroup} />
+      )}
     </Section>
   );
 }
-
-export default Design;
 
 const textContent: {
   firstParagraph: TextBlockItem[];
@@ -153,7 +274,7 @@ const screensContent: {
       ),
     },
     {
-      image: g2s3,
+      image: iphone,
       title: "Music is food for the soul",
       content: (
         <>
@@ -163,12 +284,12 @@ const screensContent: {
         </>
       ),
       reverse: true,
-      video: iphone,
+      video: g2s3,
     },
   ],
   thirdGroup: [
     {
-      image: g3s1,
+      image: iphoneNoCamera,
       title: "Meals, your way",
       content: (
         <>
@@ -176,7 +297,7 @@ const screensContent: {
           meal choices, portion sizes, and dietary preferences.
         </>
       ),
-      video: iphoneNoCamera,
+      video: g3s1,
     },
     {
       image: g3s2,

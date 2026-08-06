@@ -1,22 +1,23 @@
 import "./LunaCart.css";
 import { useEffect, useRef, useState } from "react";
 
-import NavBar from "../../components/NavBar/CaseStudyNavBar";
+import NavBar from "@/components/NavBar/CaseStudyNavBar";
+import MobileNavBar from "@/components/NavBar/CaseStudyNavBarMobile";
 import BackButton from "@/components/BackButton/BackButton";
 import BackToTopButton from "@/components/BackToTopButton/BackToTopButton";
-import Hero from "../../components/CaseStudy/Hero/Hero";
-import Overview from "../../components/CaseStudy/Overview/Overview";
+import Hero from "@/components/CaseStudy/Hero/Hero";
+import Overview from "@/components/CaseStudy/Overview/Overview";
 import Discovery from "@/components/CaseStudy/LunaCart/Discovery/Discovery";
 import KeyInsight from "@/components/CaseStudy/LunaCart/KeyInsight/KeyInsight";
 import Approach from "@/components/CaseStudy/LunaCart/Approach/Approach";
 import Design from "@/components/CaseStudy/LunaCart/Design/Design";
 import Reflections, {
   type ReflectionsContent,
-} from "../../components/CaseStudy/Reflections/Reflections";
-import Footer from "../../components/CaseStudy/Footer/Footer";
+} from "@/components/CaseStudy/Reflections/Reflections";
+import Footer from "@/components/CaseStudy/Footer/Footer";
 
-import heroBackground from "../../assets/images/lunacart/hero-background.jpg";
-import heroScreen from "../../assets/images/lunacart/hero-screen.png";
+import heroBackground from "@/assets/images/lunacart/hero-background.jpg";
+import heroScreen from "@/assets/images/lunacart/hero-screen.png";
 import { BsLink45Deg, BsWordpress } from "react-icons/bs";
 import { lunacartNavItems } from "@/config/navigation";
 import { useIsMobile } from "@/hooks/useIsMobile";
@@ -51,6 +52,7 @@ function LunaCart() {
       <div className={`navbar-wrapper ${showNavbar ? "visible" : ""}`}>
         <NavBar items={lunacartNavItems} />
       </div>
+      <MobileNavBar items={lunacartNavItems}/>
       <BackToTopButton isVisible={showNavbar} />
 
       <div ref={heroRef}>

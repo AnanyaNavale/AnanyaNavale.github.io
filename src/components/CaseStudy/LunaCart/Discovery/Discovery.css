@@ -28,7 +28,7 @@
 .discovery-affinity-map {
   width: 100%;
 
-  padding: clamp(21px, 2.083vw + 0px, 30px);
+  padding: clamp(18px, 1.083vw + 0px, 24px);
 
   border-radius: clamp(21px, 2.083vw + 0px, 30px);
   background: var(--color-background-gray-frame);
@@ -38,4 +38,38 @@
   width: clamp(769px, 75vw + 0px, 1080px);
 
   border-radius: clamp(11px, 1.042vw + 0px, 15px);
+}
+
+/* Mobile styles for Discovery section */
+@media (max-width: 768px) {
+  .lunacart-discovery {
+    padding: clamp(50px, 18.182vw + 31.818px, 70px) 
+             clamp(20px, 9.091vw + 10.909px, 30px) 
+             clamp(50px, 18.182vw + 31.818px, 70px);
+  }
+
+  .lunacart-discovery .section-inner {
+    gap: clamp(30px, 18.182vw + 11.818px, 50px);
+  }
+
+  .discovery-quotes {
+    padding: 0;
+    gap: clamp(20px, 9.091vw + 10.909px, 30px);
+  }
+
+  .discovery-diagram {
+    width: 100%;
+  }
+
+  .discovery-affinity-map {
+    width: auto;
+    align-self: center;
+    padding: clamp(15px, 5.455vw + 7.273px, 20px);
+    border-radius: clamp(15px, 5.455vw + 7.273px, 20px);
+  }
+
+  .discovery-affinity-map img {
+    width: clamp(200px, 72.727vw + 7.273px, 300px);
+    border-radius: clamp(8px, 2.727vw + 3.636px, 11px);
+  }
 }

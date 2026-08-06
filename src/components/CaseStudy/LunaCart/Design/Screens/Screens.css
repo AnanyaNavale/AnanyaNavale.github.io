@@ -66,7 +66,7 @@
   position: relative;
 }
 
-.screen-video {
+.screen-video-container video {
   position: absolute;
   width: clamp(190px, 18.542vw + 0px, 267px);
   height: clamp(414px, 40.347vw + 0px, 581px);

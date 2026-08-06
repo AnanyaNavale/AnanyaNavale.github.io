@@ -14,7 +14,7 @@ type ScreensProps = {
   className?: string;
 }
 
-function Screens({ screens, label }: ScreensProps) {
+export default function Screens({ screens, label }: ScreensProps) {
   return (
     <div className="screens">
       {label && <div className="screens-label">{label}</div>}
@@ -27,10 +27,9 @@ function Screens({ screens, label }: ScreensProps) {
             </div>
             {item.video ? (
               <div className="screen-video-container">
-                <img src={item.video} alt="" />
+                <img src={item.image} alt="" />
                 <video
-                  className="screen-video"
-                  src={item.image}
+                  src={item.video}
                   autoPlay
                   loop
                   muted
@@ -48,5 +47,3 @@ function Screens({ screens, label }: ScreensProps) {
     </div>
   );
 }
-
-export default Screens;

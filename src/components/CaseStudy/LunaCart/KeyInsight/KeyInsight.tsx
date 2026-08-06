@@ -6,11 +6,17 @@ import TextBlock, { type TextBlockItem } from "@/components/Section/TextBlock/Te
 import Quote from "../../Quote/Quote";
 
 import arrillaga from "@/assets/images/lunacart/arrillaga-nights-labeled.png";
+import arrillagaMobile from "@/assets/images/lunacart/arrillaga-nights-labeled-mobile.png";
 import pyramid from "@/assets/images/lunacart/food-pyramid.png";
 import lateNight from "@/assets/images/lunacart/late-night-labeled.png";
+import lateNightMobile from "@/assets/images/lunacart/late-night-labeled-mobile.png";
 import tap from "@/assets/images/lunacart/tap-menu-labeled.png";
+import tapMobile from "@/assets/images/lunacart/tap-menu-labeled-mobile.png";
+import { useIsMobile } from "@/hooks/useIsMobile";
 
-function KeyInsight({ id }: { id: string }) {
+export default function KeyInsight({ id }: { id: string }) {
+  const isMobile = useIsMobile();
+
   return (
     <Section innerWidth={1140} className="lunacart-key-insight" id={id}>
       <SectionHeader
@@ -41,23 +47,34 @@ function KeyInsight({ id }: { id: string }) {
 
       <TextBlock text={textContent.secondParagraph} />
 
-      <div className="key-insight-bento">
-        <div className="key-insight-bento-first-col">
+      {isMobile ? (
+        <div className="key-insight-bento">
           <div className="key-insight-bento-pyramid-wrapper">
             <img src={pyramid} alt="" />
           </div>
-          <img src={lateNight} alt="" />
+          <div className="key-insight-bento-middle-row">
+            <img src={lateNightMobile} alt="" style={{ width: "53%" }} />
+            <img src={arrillagaMobile} alt="" style={{ width: "47%" }} />
+          </div>
+          <img src={tapMobile} alt="" />
         </div>
-        <div className="key-insight-bento-second-col">
-          <img src={arrillaga} alt="" />
-          <img src={tap} alt="" />
+      ) : (
+        <div className="key-insight-bento">
+          <div className="key-insight-bento-first-col">
+            <div className="key-insight-bento-pyramid-wrapper">
+              <img src={pyramid} alt="" />
+            </div>
+            <img src={lateNight} alt="" />
+          </div>
+          <div className="key-insight-bento-second-col">
+            <img src={arrillaga} alt="" />
+            <img src={tap} alt="" />
+          </div>
         </div>
-      </div>
+      )}
     </Section>
   );
 }
-
-export default KeyInsight;
 
 const textContent: {
   firstParagraph: TextBlockItem[];

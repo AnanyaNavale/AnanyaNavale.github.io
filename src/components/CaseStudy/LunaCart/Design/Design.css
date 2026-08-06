@@ -91,3 +91,107 @@
 .lunacart-design .screen-content {
   text-align: left;
 }
+
+@media (max-width: 768px) {
+  .lunacart-design {
+    padding: clamp(50px, 12vw, 70px) 0 clamp(50px, 12vw, 70px);
+  }
+
+  .lunacart-design .section-inner {
+    gap: clamp(28px, 7vw, 36px);
+  }
+
+  .lunacart-design .section-header,
+  .lunacart-design .text-block {
+    padding: 0 clamp(24px, 6vw, 32px);
+  }
+
+  .design-model-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 clamp(24px, 6vw, 32px);
+    gap: clamp(24px, 5.581vw + 0px, 36px);
+  }
+
+  .design-story-map img,
+  .design-wireflow img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .design-screens-label {
+    width: fit-content;
+
+    background: var(--color-lunacart-labels);
+    border-radius: 100px;
+    filter: drop-shadow(0px 4px 4px rgba(47, 27, 12, 0.35));
+
+    font-family: var(--font-label);
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-text-header);
+
+    padding: clamp(8px, 2vw, 10px) clamp(16px, 4vw, 20px);
+    font-size: clamp(11px, 2.75vw, 13px);
+  }
+
+  .mobile-screen-card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: clamp(20px, 4vw, 24px);
+    gap: clamp(14px, 3.5vw, 18px);
+
+    background: var(--color-background-light-frame);
+    border-radius: clamp(20px, 5vw, 30px);
+  }
+
+  .mobile-screen-card-text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(6px, 1.5vw, 8px);
+  }
+
+  .mobile-screen-card-text h6 {
+    font-size: 14px;
+    font-weight: 650;
+    color: var(--color-text-header);
+    text-align: left;
+  }
+
+  .mobile-screen-card-text p {
+    font-size: 12px;
+    color: var(--color-text-body);
+    text-align: left;
+    min-height: calc(1.4em * 4);
+  }
+
+  .mobile-screen-card img {
+    width: 100%;
+    position: relative;
+    height: auto;
+    z-index: 2;
+  }
+
+  .mobile-screen-card-video-container {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    position: relative;
+    pointer-events: none;
+  }
+
+  .mobile-screen-card-video-container video {
+    position: absolute;
+    width: 91%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: clamp(21px, 2.083vw + 0px, 30px);
+    z-index: 1;
+  }
+}

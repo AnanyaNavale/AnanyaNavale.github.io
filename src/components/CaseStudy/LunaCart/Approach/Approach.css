@@ -7,9 +7,9 @@
   gap: clamp(36px, 3.472vw + 0px, 50px);
 }
 
-.lunacart-approach img {
+/* .lunacart-approach img {
   width: 100%;
-}
+} */
 
 .approach-intervention-diagram {
   width: 100%;
@@ -179,6 +179,7 @@
 }
 
 .intervention-diagram-second-row-connector {
+  width: 100%;
   position: absolute;
   height: clamp(114px, 11.111vw + 0px, 160px);
   bottom: clamp(178px, 17.361vw + 0px, 250px);
@@ -199,4 +200,206 @@
 
 .intervention-diagram-second-row-connector.blue {
   left: clamp(220px, 21.615vw - 1.4px, 310px);
+}
+
+@media (max-width: 768px) {
+  .lunacart-approach {
+    padding: clamp(50px, 12vw, 70px) clamp(24px, 6vw, 32px) clamp(50px, 12vw, 70px);
+  }
+
+  .lunacart-approach .section-inner {
+    gap: clamp(28px, 7vw, 36px);
+  }
+
+  .lunacart-approach img {
+    /* width: 100%; */
+  }
+
+  .approach-intervention-diagram-mobile {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(48px, 12vw, 64px); /* generous gap — this is where lines will eventually sit */
+    position: relative;
+  }
+
+  .intervention-diagram-row-mobile {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(16px, 4vw, 20px);
+  }
+
+  .intervention-diagram-row-mobile h4 {
+    font-family: var(--font-label);
+    font-size: clamp(11px, 2.5vw, 13px);
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-text-header);
+  }
+
+  .intervention-diagram-row-mobile h5 {
+    font-family: var(--font-label);
+    font-size: clamp(10px, 2.3vw, 12px);
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-text-header);
+  }
+
+  .intervention-diagram-row-mobile.title-container {
+    gap: clamp(4px, 1vw, 5px);
+    text-align: center;
+  }
+
+  .intervention-card.highlighted {
+    box-shadow: 0px 0px 8px rgba(44, 67, 157, 0.604);
+  }
+
+  .intervention-card.food-ecosystem {
+    padding: clamp(16px, 4vw, 20px) clamp(14px, 3.5vw, 18px);
+  }
+
+  .intervention-card.behavior {
+    padding: clamp(12px, 3vw, 16px);
+  }
+
+  .intervention-card.design-implications {
+    padding: clamp(16px, 4vw, 20px);
+  }
+
+  /* --- Tier 1: standard 2x2 grid --- */
+  .intervention-cards-mobile.food-ecosystem-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(12px, 3vw, 16px);
+    width: 100%;
+  }
+
+  /* --- Tier 2: inverted triangle. Top row = 2 cards side by side,
+     bottom row = 1 highlighted card, centered, narrower than the row above --- */
+  .intervention-cards-mobile.behavior-triangle {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(12px, 3vw, 16px);
+    width: 100%;
+  }
+
+  .intervention-cards-mobile.behavior-triangle br {
+    display: none;
+  }
+
+  .intervention-cards-mobile.behavior-triangle > *:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .intervention-cards-mobile.behavior-triangle > *:nth-child(3) {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .intervention-cards-mobile.behavior-triangle > *:nth-child(2) {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+    width: 70%; /* narrower, so it visually reads as the "point" of the triangle */
+    justify-self: center;
+  }
+
+  /* --- Tier 3: offset 2x2 grid — rows shifted horizontally so lines have room to pass through --- */
+  .intervention-cards-mobile.design-implications-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(24px, 6vw, 32px) clamp(24px, 6vw, 32px); /* bigger row-gap than column-gap, for line clearance */
+    width: 100%;
+  }
+
+  .intervention-cards-mobile.design-implications-grid > *:nth-child(1),
+  .intervention-cards-mobile.design-implications-grid > *:nth-child(2) {
+    transform: translateX(clamp(-12px, -3vw, -8px)); /* top row shifted slightly left */
+  }
+
+  .intervention-cards-mobile.design-implications-grid > *:nth-child(3),
+  .intervention-cards-mobile.design-implications-grid > *:nth-child(4) {
+    transform: translateX(clamp(8px, 3vw, 12px));
+  }
+
+  .intervention-cards-mobile.design-implications-grid > *:nth-child(1) {
+    box-shadow: 0px 0px 8px rgba(253, 183, 78, 0.604);
+  }
+
+  .intervention-cards-mobile.design-implications-grid > *:nth-child(2) {
+    box-shadow: 0px 0px 8px rgba(192, 115, 0, 0.604);
+  }
+
+  .intervention-cards-mobile.design-implications-grid > *:nth-child(3) {
+    box-shadow: 0px 0px 8px rgba(125, 86, 163, 0.604);
+  }
+
+  .intervention-cards-mobile.design-implications-grid > *:nth-child(4) {
+    box-shadow: 0px 0px 8px rgba(20, 30, 72, 0.604);
+  }
+
+  /* .intervention-diagram-first-row-connector-mobile {
+    position: absolute;
+    width: clamp(122.492px, 2.28vw + 115.196px, 125px);
+    top: clamp(360.5px, -49.4545vw + 552.9545px, 408.5px);
+    left: clamp(-109.909px, 40.9091vw - 109.909px, 66px);
+    transform: none;
+    z-index: 1;
+  } */
+
+  /* .intervention-diagram-first-row-connector-mobile img {
+    width: 100%;
+  } */
+
+  .intervention-diagram-second-row-connector-mobile {
+    position: absolute;
+    /* width: clamp(122.492px, 2.28vw + 115.196px, 125px); */
+    /* height: clamp(60px, 15vw, 85px); */
+    /* bottom: clamp(260px, 65vw, 320px); */
+    z-index: 3;
+  }
+
+  .intervention-diagram-second-row-connector-mobile.pale-orange {
+    /* 430 */
+    width: 80px;
+    left: 15px;
+    bottom: 375px;
+
+    /* 320 */
+    z-index: 1;
+  }
+
+  .intervention-diagram-second-row-connector-mobile.orange {
+    /* 430 */
+    width: 80px;
+    right: 80px;
+    bottom: 350px;
+
+    /* 320 */
+    z-index: 1;
+  }
+
+  .intervention-diagram-second-row-connector-mobile.purple {
+    /* 430 */
+    width: 110px;
+    left: 70px;
+    bottom: 150px;
+
+    /* 320 */
+    z-index: 1;
+  }
+
+  .intervention-diagram-second-row-connector-mobile.blue {
+    /* 430 */
+    width: 160px;
+    right: -10px;
+    bottom: 170px;
+
+    /* 320 */
+    z-index: 1;
+  }
 }

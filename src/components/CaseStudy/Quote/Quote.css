@@ -30,3 +30,24 @@
   text-transform: uppercase;
   color: var(--color-text-body);
 }
+
+/* Mobile styles for Quote component */
+@media (max-width: 768px) {
+  .quote {
+    padding: clamp(3px, 0.909vw + 1.091px, 4px) 
+             0 
+             clamp(3px, 0.909vw + 1.091px, 4px) 
+             clamp(15px, 5.455vw + 7.273px, 20px);
+    
+    border-left-width: clamp(2px, 0.909vw + 1.091px, 3px);
+  }
+
+  .quote-text {
+    max-width: 100%;
+    gap: clamp(10px, 3.636vw + 4.545px, 14px);
+  }
+
+  .quote-attr {
+    font-size: clamp(9px, 2.727vw + 3.636px, 11px);
+  }
+}
