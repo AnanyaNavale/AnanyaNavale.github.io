@@ -125,7 +125,13 @@
     height: auto;
   }
 
+  .key-insight-bento-middle-row img {
+    width: 50%;
+    filter: drop-shadow(0px 0px 4px rgba(47, 27, 12, 0.35));
+  }
+
   .key-insight-bento > img {
     width: 100%;
+    filter: drop-shadow(0px 0px 4px rgba(47, 27, 12, 0.35));
   }
 }

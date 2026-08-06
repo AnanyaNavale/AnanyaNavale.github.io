@@ -11,6 +11,7 @@ import pyramid from "@/assets/images/lunacart/food-pyramid.png";
 import lateNight from "@/assets/images/lunacart/late-night-labeled.png";
 import lateNightMobile from "@/assets/images/lunacart/late-night-labeled-mobile.png";
 import tap from "@/assets/images/lunacart/tap-menu-labeled.png";
+import tapMobile from "@/assets/images/lunacart/tap-menu-labeled-mobile.png";
 import { useIsMobile } from "@/hooks/useIsMobile";
 
 export default function KeyInsight({ id }: { id: string }) {
@@ -52,14 +53,10 @@ export default function KeyInsight({ id }: { id: string }) {
             <img src={pyramid} alt="" />
           </div>
           <div className="key-insight-bento-middle-row">
-            <img src={lateNightMobile} alt="" />
-            <img src={arrillagaMobile} alt="" />
+            <img src={lateNightMobile} alt="" style={{ width: "53%" }} />
+            <img src={arrillagaMobile} alt="" style={{ width: "47%" }} />
           </div>
-          <img src={tap} alt="" />
-          {/* <div className="key-insight-bento-second-col">
-            <img src={arrillaga} alt="" />
-            
-          </div> */}
+          <img src={tapMobile} alt="" />
         </div>
       ) : (
         <div className="key-insight-bento">

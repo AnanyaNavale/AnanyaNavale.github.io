@@ -18,6 +18,13 @@ import line3 from "@/assets/images/lunacart/interventions/line3.svg";
 import line4 from "@/assets/images/lunacart/interventions/line4.svg";
 import line5 from "@/assets/images/lunacart/interventions/line5.svg";
 
+// import line1Mobile from "@/assets/images/lunacart/interventions/line1-mobile.svg";
+// import line2Mobile from "@/assets/images/lunacart/interventions/line2-mobile.svg";
+// import line3Mobile from "@/assets/images/lunacart/interventions/line3-mobile.svg";
+// import line4Mobile from "@/assets/images/lunacart/interventions/line4-mobile.svg";
+// import line5Mobile from "@/assets/images/lunacart/interventions/line5-mobile.svg";
+import { useIsMobile } from "@/hooks/useIsMobile";
+
 type InterventionCardProps = {
   type: "food-ecosystem" | "behavior" | "design-implications";
   title?: string;
@@ -55,96 +62,159 @@ function InterventionCard({type, title, description, image, highlighted, number,
   );
 }
 
-function Approach({ id }: { id: string }) {
+export default function Approach({ id }: { id: string }) {
+  const isMobile = useIsMobile();
+
   return (
     <Section innerWidth={1200} className="lunacart-approach" id={id}>
       <SectionHeader
         title="Approach"
         tagline={
-          "Providing healthier options at\nnight wasn't on the menu.\nNeither was a real-time fix."
+          isMobile
+            ? "Providing healthier options at night wasn't on the menu.\nNeither was a real-time fix."
+            : "Providing healthier options at\nnight wasn't on the menu.\nNeither was a real-time fix."
         }
       />
 
       <TextBlock text={textContent.firstParagraph} />
 
-      <div className="approach-intervention-diagram">
-        <div className="intervention-diagram-row food-ecosystem">
-          <h4>Food Ecosystem Interventions</h4>
-          <div className="intervention-cards food-ecosystem">
-            {interventionCardContent.firstRow.map((card) => (
-              <InterventionCard
-                type={card.type}
-                title={card.title}
-                description={card.description}
-                image={card.image}
-                highlighted={card.highlighted}
-              />
-            ))}
+      {isMobile ? (
+        <div className="approach-intervention-diagram-mobile">
+          {/* Tier 1 */}
+          <div className="intervention-diagram-row-mobile food-ecosystem">
+            <h4>Food Ecosystem Interventions</h4>
+            <div className="intervention-cards-mobile food-ecosystem-grid">
+              {interventionCardContent.firstRow.map((card, i) => (
+                <InterventionCard key={i} {...card} />
+              ))}
+            </div>
+          </div>
+
+          {/* Line between tier 1 and tier 2 */}
+          {/* <div className="intervention-diagram-first-row-connector-mobile">
+            <img src={line1Mobile} alt="" />
+          </div> */}
+
+          {/* Tier 2 */}
+          <div className="intervention-diagram-row-mobile behavior">
+            <h4>Behavioral Interventions</h4>
+            <div className="intervention-cards-mobile behavior-triangle">
+              {interventionCardContent.secondRow.map((card, i) => (
+                <InterventionCard key={i} {...card} />
+              ))}
+            </div>
+          </div>
+
+          {/* Four fan-out lines between tier 2 and tier 3 */}
+          {/* <img
+            className="intervention-diagram-second-row-connector-mobile pale-orange"
+            src={line2Mobile}
+            alt=""
+          />
+          <img
+            className="intervention-diagram-second-row-connector-mobile orange"
+            src={line3Mobile}
+            alt=""
+          />
+          <img
+            className="intervention-diagram-second-row-connector-mobile purple"
+            src={line4Mobile}
+            alt=""
+          />
+          <img
+            className="intervention-diagram-second-row-connector-mobile blue"
+            src={line5Mobile}
+            alt=""
+          /> */}
+
+          {/* Tier 3 */}
+          <div className="intervention-diagram-row-mobile design-implications">
+            <div className="intervention-diagram-row-mobile title-container">
+              <h5>Tested Intervention</h5>
+              <h4>Design Implications</h4>
+            </div>
+            <div className="intervention-cards-mobile design-implications-grid">
+              {interventionCardContent.thirdRow.map((card, index) => (
+                <InterventionCard key={index} {...card} number={index + 1} />
+              ))}
+            </div>
           </div>
         </div>
-        <div className="intervention-diagram-first-row-connector">
-          <img src={line1} />
-        </div>
-        <div className="intervention-diagram-row behavior">
-          <h4>Behavioral Interventions</h4>
-          <div className="intervention-cards behavior">
-            {interventionCardContent.secondRow.map((card) => (
-              <InterventionCard
-                type={card.type}
-                title={card.title}
-                description={card.description}
-                image={card.image}
-                highlighted={card.highlighted}
-              />
-            ))}
+      ) : (
+        <div className="approach-intervention-diagram">
+          <div className="intervention-diagram-row food-ecosystem">
+            <h4>Food Ecosystem Interventions</h4>
+            <div className="intervention-cards food-ecosystem">
+              {interventionCardContent.firstRow.map((card) => (
+                <InterventionCard
+                  type={card.type}
+                  title={card.title}
+                  description={card.description}
+                  image={card.image}
+                  highlighted={card.highlighted}
+                />
+              ))}
+            </div>
+          </div>
+          <div className="intervention-diagram-first-row-connector">
+            <img src={line1} />
+          </div>
+          <div className="intervention-diagram-row behavior">
+            <h4>Behavioral Interventions</h4>
+            <div className="intervention-cards behavior">
+              {interventionCardContent.secondRow.map((card) => (
+                <InterventionCard
+                  type={card.type}
+                  title={card.title}
+                  description={card.description}
+                  image={card.image}
+                  highlighted={card.highlighted}
+                />
+              ))}
+            </div>
+          </div>
+          <img
+            className="intervention-diagram-second-row-connector pale-orange"
+            src={line2}
+          />
+          <img
+            className="intervention-diagram-second-row-connector orange"
+            src={line3}
+          />
+          <img
+            className="intervention-diagram-second-row-connector purple"
+            src={line4}
+          />
+          <img
+            className="intervention-diagram-second-row-connector blue"
+            src={line5}
+          />
+          <div className="intervention-diagram-row design-implications">
+            <div className="intervention-diagram-row title-container">
+              <h5>Tested Intervention</h5>
+              <h4>Design Implications</h4>
+            </div>
+            <div className="intervention-cards design-implications">
+              {interventionCardContent.thirdRow.map((card, index) => (
+                <InterventionCard
+                  type={card.type}
+                  title={card.title}
+                  description={card.description}
+                  image={card.image}
+                  highlighted={card.highlighted}
+                  number={index + 1}
+                  background={card.background}
+                />
+              ))}
+            </div>
           </div>
         </div>
-        {/* <div className="intervention-diagram-second-row-connector">
-          
-        </div> */}
-        <img
-          className="intervention-diagram-second-row-connector pale-orange"
-          src={line2}
-        />
-        <img
-          className="intervention-diagram-second-row-connector orange"
-          src={line3}
-        />
-        <img
-          className="intervention-diagram-second-row-connector purple"
-          src={line4}
-        />
-        <img
-          className="intervention-diagram-second-row-connector blue"
-          src={line5}
-        />
-        <div className="intervention-diagram-row design-implications">
-          <div className="intervention-diagram-row title-container">
-            <h5>Tested Intervention</h5>
-            <h4>Design Implications</h4>
-          </div>
-          <div className="intervention-cards design-implications">
-            {interventionCardContent.thirdRow.map((card, index) => (
-              <InterventionCard
-                type={card.type}
-                title={card.title}
-                description={card.description}
-                image={card.image}
-                highlighted={card.highlighted}
-                number={index + 1}
-                background={card.background}
-              />
-            ))}
-          </div>
-        </div>
-      </div>
+      )}
 
       <TextBlock text={textContent.secondParagraph} />
     </Section>
   );
 }
-
-export default Approach;
 
 const textContent: {
   firstParagraph: TextBlockItem[];

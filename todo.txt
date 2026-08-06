@@ -15,7 +15,7 @@
 - [] Revisit spacing in Boogie Challenge chat bubble widths***
 - [] Standardize shadows across website
 - [x] Adjust submenu item coloration during background change
-- [] Double check consistency between back and BTT buttons
+- [] Double check style consistency between back and BTT buttons
 - [x] Fix CaseStudyNavBarMobile to only highlight submenu item when dropdown open
 - [] Make "Tap to switch" (Boogie) clickable as well (not just screens)
 
