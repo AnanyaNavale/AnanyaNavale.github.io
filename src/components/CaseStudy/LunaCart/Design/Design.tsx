@@ -230,8 +230,9 @@ const screensContent: {
       title: "Food tastes better together",
       content: (
         <>
-          Prioritizing health without compromising taste—food that combines
-          freshness, flavor, and fiber (sometimes).
+          Group orders help users spread the love to their friends, using
+          positive peer influence to encourage healthy eating while keeping
+          snacking social!
         </>
       ),
       reverse: true,
