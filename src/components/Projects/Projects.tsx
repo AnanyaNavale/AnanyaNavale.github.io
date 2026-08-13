@@ -18,7 +18,7 @@ export default function Projects() {
         title="LunaCart"
         tag="Behavioral Design"
         tagColor="var(--color-lunacart-labels)"
-        description="Reframing late-night eating as a systems problem by using behavioral research to help students make healthier food choices before hunger set in."
+        description="Helping students turn the tables on late-night junk food through daytime meal-planning."
         metadata={[
           {
             label: "Role",
@@ -42,7 +42,7 @@ export default function Projects() {
         title="Boogie"
         tag="Inclusive Design"
         tagColor="var(--color-boogie-labels)"
-        description="Redesigning accessible campus transportation for blind and low-vision riders around the way people naturally navigate, rather than the way maps are organized."
+        description="Reshaping campus navigation for blind and low-vision riders through a system that understands places like a human."
         metadata={[
           {
             label: "Role",
@@ -68,7 +68,7 @@ export default function Projects() {
         title="Theo"
         tag="Emotional Design"
         tagColor="var(--color-theo-labels)"
-        description="Exploring how AI can support attention regulation for learners with ADHD through structure, accountability, and encouragement."
+        description="Breaking down focus barriers for ADHD learners through structured study sessions and an animated companion."
         metadata={[
           {
             label: "Role",

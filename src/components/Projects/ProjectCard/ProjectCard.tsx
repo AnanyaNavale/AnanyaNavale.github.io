@@ -10,7 +10,7 @@ type ProjectCardProps = {
   title: string;
   tag: string;
   tagColor: string;
-  description: string;
+  description: React.ReactNode;
   metadata: MetadataItem[];
 
   backgroundImage: string;
