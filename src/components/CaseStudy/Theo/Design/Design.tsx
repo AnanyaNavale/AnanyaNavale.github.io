@@ -33,7 +33,7 @@ export default function Design({ id }: { id: string }) {
         }
       />
 
-      <TextBlock text={textContent.firstParagraph} />
+      <TextBlock text={textContent.firstParagraph} contentAlignment="center"/>
 
       <section className="design-evolution">
         <div className="design-diagram-label">Goal Breakdown Evolution</div>
@@ -95,6 +95,7 @@ const textContent: {
           <i>their</i> goals, <i>their</i> way.
         </>
       ),
+      textAlignment: "center",
     },
     {
       size: "large",
@@ -103,6 +104,7 @@ const textContent: {
           Users decided. <strong>Theo</strong> guided.
         </>
       ),
+      textAlignment: "center",
     },
   ],
 };
