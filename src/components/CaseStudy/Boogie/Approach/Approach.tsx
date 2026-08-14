@@ -33,7 +33,7 @@ export default function Approach({ id }: { id: string }) {
   ];
 
   return (
-    <Section innerWidth={1200} className="boogie-approach" id={id}>
+    <Section className="boogie-approach" id={id}>
       <div className="boogie-approach-inner">
         <SectionHeader
           title="Approach"
@@ -41,7 +41,7 @@ export default function Approach({ id }: { id: string }) {
             "Addresses became landmarks.\nHuman dispatchers became digital."
           }
         />
-        <TextBlock text={textContent.firstParagraph} />
+        <TextBlock text={textContent.firstParagraph} contentAlignment="center" />
 
         {isMobile ? (
           <div className="approach-screens-mobile">

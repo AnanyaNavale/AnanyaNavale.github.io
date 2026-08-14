@@ -38,7 +38,7 @@
 
 /* MOBILE STYLES */
 /* Hide logo on mobile */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .logo {
     display: none;
   }

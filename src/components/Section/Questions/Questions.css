@@ -7,7 +7,7 @@
 }
 
 /* MOBILE STYLES */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .questions {
     gap: clamp(28px, 7vw, 40px);
   }

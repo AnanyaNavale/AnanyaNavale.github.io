@@ -132,7 +132,7 @@ function LunaCart() {
       <Design id="design" />
 
       <Reflections
-        tagline="Designing for behavior means designing for reality."
+        tagline={"Designing for behavior means\ndesigning for reality."}
         content={reflectionsContent}
         questions={reflectionQuestions}
         id="reflections"

@@ -1,15 +1,17 @@
 import "./Discovery.css"
 
-import Section from "../../../Section/Section";
-import SectionHeader from "../../../Section/SectionHeader/SectionHeader";
-import TextBlock, { type TextBlockItem } from "../../../Section/TextBlock/TextBlock";
+import Section from "@/components/Section/Section";
+import SectionHeader from "@/components/Section/SectionHeader/SectionHeader";
+import TextBlock, {
+  type TextBlockItem,
+} from "@/components/Section/TextBlock/TextBlock";
 import QuoteCards from "./QuoteCards/QuoteCards";
 
-import interviewDiagram from "../../../../assets/images/theo/interview-diagram.png";
+import interviewDiagram from "@/assets/images/theo/interview-diagram.png";
 
 export default function Discovery({ id }: { id: string }) {
   return (
-    <Section innerWidth={1140} className="theo-discovery" id={id}>
+    <Section className="theo-discovery" id={id}>
       <SectionHeader
         title="Discovery"
         tagline={"Focus is a lot more nuanced\nthan you think."}

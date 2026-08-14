@@ -12,7 +12,7 @@ function Handoff({ id }: { id: string }) {
   const isMobile = useIsMobile();
 
   return (
-    <Section innerWidth={1140} className="boogie-handoff" id={id}>
+    <Section className="boogie-handoff" id={id}>
       <SectionHeader
         title="Handoff"
         tagline={isMobile ? "Boogie made its way to Stanford's DisGo Task Force." : "Boogie made its way to\nStanford's DisGo Task Force."}
@@ -25,7 +25,7 @@ function Handoff({ id }: { id: string }) {
         <img src={secondSlide} alt="" />
       </div>
 
-      <TextBlock text={textContent.secondParagraph} />
+      <TextBlock text={textContent.secondParagraph} contentAlignment="center"/>
     </Section>
   );
 }
@@ -67,6 +67,7 @@ const textContent: {
           potential to improve hundreds of daily journeys.
         </>
       ),
+      textAlignment: "center",
     },
   ],
 };

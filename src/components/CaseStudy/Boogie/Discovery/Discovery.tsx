@@ -50,7 +50,7 @@ function Discovery({ id }: { id: string }) {
   }, []);
 
   return (
-    <Section innerWidth={1200} className="boogie-discovery" id={id}>
+    <Section className="boogie-discovery" id={id}>
       <SectionHeader
         title="Discovery"
         tagline="The system wasn’t accessible to the people it was built for."

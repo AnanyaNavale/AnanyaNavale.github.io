@@ -202,7 +202,7 @@
 }
 
 /* MOBILE STYLES */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .project-card {
     flex-direction: column-reverse; /* Text on bottom, image on top */
     gap: 0;

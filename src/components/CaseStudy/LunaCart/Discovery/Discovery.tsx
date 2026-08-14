@@ -15,7 +15,7 @@ export default function Discovery({ id }: { id: string }) {
   const isMobile = useIsMobile();
 
   return (
-    <Section innerWidth={1140} className="lunacart-discovery" id={id}>
+    <Section className="lunacart-discovery" id={id}>
       <SectionHeader
         title="Discovery"
         tagline="Late-night eating by itself wasn't the real problem."

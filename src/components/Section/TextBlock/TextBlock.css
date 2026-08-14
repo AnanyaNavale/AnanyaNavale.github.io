@@ -19,7 +19,7 @@
 }
 
 /* MOBILE STYLES */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .text-block {
     gap: clamp(20px, 5vw, 24px);
   }

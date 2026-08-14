@@ -25,7 +25,7 @@ function Reflections({
   id,
 }: ReflectionsProps) {
   return (
-    <Section innerWidth={1140} className="reflections" id={id} dataTheme="dark">
+    <Section className="reflections" id={id} dataTheme="dark">
       <SectionHeader title="Reflections" tagline={tagline} />
 
       <TextBlock text={content.intro} width="100%" />

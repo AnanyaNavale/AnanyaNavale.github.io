@@ -2,23 +2,28 @@
   width: 100%;
   display: flex;
 
+  padding-inline: clamp(86px, 8.333vw + 0px, 120px);
   justify-content: center;
+  
 }
 
 .section-inner {
   width: 100%;
+  max-width: 1200px;
   display: flex;
   flex-direction: column;
+
 }
 
 /* MOBILE STYLES */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .section {
-    padding: 0 clamp(24px, 6vw, 32px); /* Add horizontal padding on mobile */
+    padding-inline: clamp(24px, 6vw, 32px);
   }
 
   .section-inner {
     max-width: 100% !important; /* Override inline style */
     width: 100% !important; /* Override inline style */
+    /* gap: clamp(28px, 7vw, 36px); */
   }
 }

@@ -18,7 +18,7 @@ export default function KeyInsight({ id }: { id: string }) {
   const isMobile = useIsMobile();
 
   return (
-    <Section innerWidth={1140} className="lunacart-key-insight" id={id}>
+    <Section className="lunacart-key-insight" id={id}>
       <SectionHeader
         title="Key Insight"
         tagline={

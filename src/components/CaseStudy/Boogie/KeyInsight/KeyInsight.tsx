@@ -14,7 +14,7 @@ function KeyInsight({ id }: { id: string }) {
   const isMobile = useIsMobile();
 
   return (
-    <Section innerWidth={1140} className="boogie-key-insight" id={id}>
+    <Section className="boogie-key-insight" id={id}>
       <SectionHeader
         title="Key Insight"
         tagline={"The problem wasn’t visibility.\nIt was translation."}

@@ -54,7 +54,7 @@
 }
 
 /* MOBILE STYLES */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .overview {
     margin-top: clamp(60px, 15vw, 100px);
     margin-bottom: clamp(40px, 10vw, 60px);

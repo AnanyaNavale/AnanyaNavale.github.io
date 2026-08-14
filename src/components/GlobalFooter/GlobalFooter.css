@@ -86,7 +86,7 @@
 }
 
 /* Mobile adjustments */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .global-footer {
     padding: clamp(24px, 6vw, 32px) clamp(1.5rem, 6vw, 2rem);
   }
@@ -117,7 +117,7 @@
 }
 
 /* Mobile adjustments */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .global-footer {
     padding: clamp(20px, 5vw, 24px) clamp(1.5rem, 6vw, 2rem); /* Reduced vertical padding */
   }

@@ -1,7 +1,7 @@
 import "./Section.css"
 
 type SectionProps = {
-  innerWidth: React.CSSProperties["width"];
+  // innerWidth: React.CSSProperties["width"];
   children: React.ReactNode;
   className: string;
   id: string;
@@ -9,7 +9,7 @@ type SectionProps = {
 };
 
 function Section({
-  innerWidth,
+  // innerWidth,
   children,
   className,
   id,
@@ -21,7 +21,7 @@ function Section({
     >
       <section
         className="section-inner"
-        style={{ width: innerWidth, maxWidth: innerWidth }}
+        // style={{ width: innerWidth, maxWidth: innerWidth }}
       >
         {children}
       </section>

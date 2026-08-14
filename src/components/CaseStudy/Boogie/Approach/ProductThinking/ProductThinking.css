@@ -4,7 +4,7 @@
   flex-direction: column;
 
   align-items: center;
-  padding: clamp(71px, 6.944vw + 0px, 100px) 0 0;
+  padding-top: clamp(70px, 8vw, 100px);
   gap: clamp(36px, 3.472vw + 0px, 50px);
 }
 
@@ -171,8 +171,8 @@
 
 @media (max-width: 768px) {
   .boogie-product-thinking {
-    padding: clamp(50px, 12vw, 70px) 0 0;
-    gap: clamp(24px, 5.581vw + 0px, 36px);
+    padding-top: clamp(50px, 18.182vw + 31.818px, 70px);
+    gap: clamp(28px, 7vw, 36px);
   }
 
   .pt-designs {

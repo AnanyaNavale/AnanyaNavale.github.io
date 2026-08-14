@@ -101,7 +101,7 @@ export default function Design({ id }: { id: string }) {
   const isMobile = useIsMobile();
 
   return (
-    <Section innerWidth={1200} className="lunacart-design" id={id}>
+    <Section className="lunacart-design" id={id}>
       <SectionHeader
         title="Design"
         tagline="So late-night eating had to depend on daytime planning."
@@ -253,7 +253,7 @@ const screensContent: {
       image: g2s1,
       title: (
         <>
-          <s>Calorie tracking</s> Vibe check
+          <s>Calorie tracker</s> Vibe check
         </>
       ),
       content: (

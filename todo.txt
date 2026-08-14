@@ -9,9 +9,14 @@
 - [x] Adjust submenu item coloration during background change
 - [x] Fix CaseStudyNavBarMobile to only highlight submenu item when dropdown open
 
-- [] Reword project card descriptions for LunaCart & Boogie
+- [x] Reword project card descriptions
+- [x] Go through every section in every case study to check that padding ranges are the same across the board - desktop
+- [x] Go through every section in every case study to check that section gap ranges are the same across the board - desktop
+- [x] Go through every section in every case study to check that padding ranges are the same across the board - mobile
+- [x] Go through every section in every case study to check that section gap ranges are the same across the board - mobile
+- [] Widen tagline font size range for desktop
+
 - [] Add arrows between intervention levels on mobile (LC)
-- [] Go through every section in every case study to check that padding ranges are the same across the board - desktop and mobile
 - [] Sometimes on loading, videos don't show - screens just show blank (LunaCart, Boogie)*
 - [] Adjust line spacing for subsection taglines in mobile
 - [] Standardize shadows across website

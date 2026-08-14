@@ -1,5 +1,5 @@
 .boogie-approach {
-  padding: clamp(71px, 6.944vw + 0px, 100px) clamp(86px, 8.333vw + 0px, 120px) clamp(71px, 6.944vw + 0px, 100px); 
+  padding-block: clamp(70px, 8vw, 100px);
   background: var(--color-background-gray-frame);
 }
 
@@ -77,7 +77,7 @@
 
 @media (max-width: 768px) {
   .boogie-approach {
-    padding: clamp(50px, 12vw, 70px) 0 clamp(50px, 12vw, 70px);
+    padding: clamp(50px, 18.182vw + 31.818px, 70px) 0;
   }
 
   .boogie-approach .section-inner {
@@ -90,7 +90,7 @@
   }
 
   .boogie-approach-inner {
-    gap: clamp(24px, 5.581vw + 0px, 36px);
+    gap: clamp(28px, 7vw, 36px);
   }
 
   .approach-screens-mobile {

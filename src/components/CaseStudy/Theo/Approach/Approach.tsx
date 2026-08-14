@@ -10,7 +10,7 @@ function Approach({ id }: { id: string }) {
   const isMobile = useIsMobile();
 
   return (
-    <Section innerWidth={1200} className="theo-approach" id={id}>
+    <Section className="theo-approach" id={id}>
       <SectionHeader
         title="Approach"
         tagline={

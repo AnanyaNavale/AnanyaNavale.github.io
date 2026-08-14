@@ -1,5 +1,5 @@
 .boogie-opportunity {
-  padding: clamp(71px, 6.944vw + 0px, 100px) clamp(107px, 10.417vw + 0px, 150px) clamp(143px, 13.889vw + 0px, 200px);
+  padding-block: clamp(70px, 8vw, 100px) clamp(143px, 13.889vw + 0px, 200px);
 }
 
 .boogie-opportunity .section-inner {
@@ -53,9 +53,9 @@
 }
 
 /* MOBILE STYLES */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .boogie-opportunity {
-    padding: clamp(50px, 12vw, 70px) clamp(24px, 6vw, 32px) clamp(60px, 15vw, 80px);
+    padding-block: clamp(50px, 18.182vw + 31.818px, 70px) clamp(60px, 15vw, 80px);
   }
 
   .boogie-opportunity .section-inner {

@@ -1,15 +1,11 @@
 .lunacart-approach {
-  padding: clamp(71px, 6.944vw + 0px, 100px) clamp(86px, 8.333vw + 0px, 120px) clamp(143px, 13.889vw + 0px, 200px);
+  padding-block: clamp(70px, 8vw, 100px) clamp(143px, 13.889vw + 0px, 200px);
   overflow: hidden;
 }
 
 .lunacart-approach .section-inner {
   gap: clamp(36px, 3.472vw + 0px, 50px);
 }
-
-/* .lunacart-approach img {
-  width: 100%;
-} */
 
 .approach-intervention-diagram {
   width: 100%;
@@ -204,15 +200,11 @@
 
 @media (max-width: 768px) {
   .lunacart-approach {
-    padding: clamp(50px, 12vw, 70px) clamp(24px, 6vw, 32px) clamp(50px, 12vw, 70px);
+    padding-block: clamp(50px, 18.182vw + 31.818px, 70px);
   }
 
   .lunacart-approach .section-inner {
     gap: clamp(28px, 7vw, 36px);
-  }
-
-  .lunacart-approach img {
-    /* width: 100%; */
   }
 
   .approach-intervention-diagram-mobile {
@@ -316,15 +308,16 @@
     width: 100%;
   }
 
-  .intervention-cards-mobile.design-implications-grid > *:nth-child(1),
+  /* Remove row offsets */
+  /* .intervention-cards-mobile.design-implications-grid > *:nth-child(1),
   .intervention-cards-mobile.design-implications-grid > *:nth-child(2) {
-    transform: translateX(clamp(-12px, -3vw, -8px)); /* top row shifted slightly left */
+    transform: translateX(clamp(-12px, -3vw, -8px));
   }
 
   .intervention-cards-mobile.design-implications-grid > *:nth-child(3),
   .intervention-cards-mobile.design-implications-grid > *:nth-child(4) {
     transform: translateX(clamp(8px, 3vw, 12px));
-  }
+  } */
 
   .intervention-cards-mobile.design-implications-grid > *:nth-child(1) {
     box-shadow: 0px 0px 8px rgba(253, 183, 78, 0.604);

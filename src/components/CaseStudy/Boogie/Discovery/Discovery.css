@@ -1,5 +1,5 @@
 .boogie-discovery {
-  padding: clamp(71px, 6.944vw + 0px, 100px) clamp(86px, 8.333vw + 0px, 120px) clamp(71px, 6.944vw + 0px, 100px);
+  padding-block: clamp(70px, 8vw, 100px);
 }
 
 .boogie-discovery .section-inner {
@@ -155,9 +155,9 @@
 }
 
 /* MOBILE STYLES */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .boogie-discovery {
-    padding: clamp(50px, 12vw, 70px) clamp(24px, 6vw, 32px) clamp(50px, 12vw, 70px);
+    padding-block: clamp(50px, 18.182vw + 31.818px, 70px);
   }
 
   .boogie-discovery .section-inner {

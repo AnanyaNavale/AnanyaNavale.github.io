@@ -141,7 +141,7 @@
 }
 
 /* MOBILE STYLES */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .exp-proto {
     width: clamp(240px, 69.77vw, 300px); /* Match carousel width exactly */
     margin: 0;

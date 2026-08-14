@@ -61,7 +61,7 @@
 }
 
 /* MOBILE STYLES */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .question {
     gap: clamp(16px, 4vw, 20px);
     /* align-items: flex-start; Align to top on mobile */

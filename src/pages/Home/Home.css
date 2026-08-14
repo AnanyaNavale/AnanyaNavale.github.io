@@ -16,7 +16,7 @@
 }
 
 /* Mobile adjustments */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .home {
     gap: clamp(120px, 20vh, 180px);
     padding-top: clamp(100px, 15vh, 140px);

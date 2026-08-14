@@ -14,7 +14,7 @@ function Challenge({ id }: { id: string }) {
         tagline="human ambiguity."
         subSectionTagline="But digital dispatchers still had to navigate"
       />
-      <TextBlock text={textContent.firstParagraph} />
+      <TextBlock text={textContent.firstParagraph} contentAlignment="center"/>
 
       <div className="challenge-chats">
         <ChatConversation

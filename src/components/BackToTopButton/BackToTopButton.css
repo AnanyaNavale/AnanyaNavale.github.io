@@ -76,7 +76,7 @@
 }
 
 /* MOBILE STANDARDIZATION */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .back-to-top {
     width: clamp(40px, 10vw, 44px);
     height: clamp(40px, 10vw, 44px);

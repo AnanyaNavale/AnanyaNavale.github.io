@@ -17,7 +17,7 @@ function ProductThinking({ id }: { id: string }) {
         tagline="more than one way of seeing."
         subSectionTagline="And accessibility meant designing for"
       />
-      <TextBlock text={textContent.firstParagraph} />
+      <TextBlock text={textContent.firstParagraph} contentAlignment="center"/>
 
       <div className="pt-designs">
         <div className="pt-designs-first-col">

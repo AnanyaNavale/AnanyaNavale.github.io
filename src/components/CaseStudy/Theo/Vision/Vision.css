@@ -1,5 +1,5 @@
 .theo-vision {
-  padding: clamp(71px, 6.944vw, 100px) clamp(107px, 10.417vw, 150px) clamp(143px, 13.889vw, 200px);
+  padding-block: clamp(70px, 8vw, 100px) clamp(143px, 13.889vw + 0px, 200px);
 }
 
 .theo-vision .section-inner {
@@ -36,7 +36,7 @@
 }
 
 .vision-video-container {
-  width: 100%;
+  width: 95%;
   height: auto;
   display: flex;
   position: relative;
@@ -90,16 +90,17 @@
 }
 
 .vision-backstory-container {
-  width: 100%;
+  width: fit-content;
   display: flex;
   padding: clamp(21px, 2.083vw, 30px);
-  gap: clamp(36px, 3.472vw, 50px);
+  gap: clamp(30px, 3.472vw, 40px);
+  align-self: center;
   border-radius: clamp(21px, 2.083vw, 30px);
   background: var(--color-background-gray-frame);
 }
 
 .vision-backstory-img {
-  width: clamp(228px, 22.222vw, 320px);
+  width: clamp(200px, 22vw, 300px);
   display: flex;
   justify-content: center;
 }
@@ -121,9 +122,9 @@
 }
 
 /* MOBILE STYLES */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .theo-vision {
-    padding: clamp(50px, 12vw, 70px) clamp(24px, 6vw, 32px) clamp(60px, 15vw, 80px);
+    padding-block: clamp(50px, 18.182vw + 31.818px, 70px) clamp(60px, 15vw, 80px);
   }
 
   .theo-vision .section-inner {

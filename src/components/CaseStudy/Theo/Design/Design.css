@@ -1,11 +1,12 @@
 .theo-design {
-  padding: clamp(71px, 6.944vw + 0px, 100px) clamp(107px, 10.417vw + 0px, 150px) clamp(143px, 13.889vw + 0px, 200px);
+  padding-block: clamp(70px, 8vw, 100px) clamp(143px, 13.889vw + 0px, 200px);
 
   background: var(--color-background-gray-frame);
 }
 
 .theo-design .section-inner {
-  gap: clamp(53px, 5.208vw + 0px, 75px);
+  /* gap: clamp(53px, 5.208vw + 0px, 75px); */
+  gap: clamp(36px, 3.472vw, 50px);
 }
 
 .theo-design .section-header {
@@ -146,13 +147,13 @@
 }
 
 /* MOBILE STYLES */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .theo-design {
-    padding: clamp(50px, 12vw, 70px) clamp(24px, 6vw, 32px) clamp(60px, 15vw, 80px);
+    padding-block: clamp(50px, 18.182vw + 31.818px, 70px) clamp(60px, 15vw, 80px);
   }
 
   .theo-design .section-inner {
-    gap: clamp(32px, 8vw, 40px);
+    gap: clamp(28px, 7vw, 36px);
   }
 
   .design-diagram-label {

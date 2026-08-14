@@ -13,7 +13,7 @@ export default function Opportunity({ id }: { id: string }) {
   const isMobile = useIsMobile();
 
   return (
-    <Section innerWidth={1140} className="boogie-opportunity" id={id}>
+    <Section className="boogie-opportunity" id={id}>
       <SectionHeader
         title="Opportunity"
         tagline={

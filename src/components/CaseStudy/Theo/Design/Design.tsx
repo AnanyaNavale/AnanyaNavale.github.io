@@ -23,7 +23,7 @@ export default function Design({ id }: { id: string }) {
   const isMobile = useIsMobile();
 
   return (
-    <Section innerWidth={1140} className="theo-design" id={id}>
+    <Section className="theo-design" id={id}>
       <SectionHeader
         title="Design"
         tagline={

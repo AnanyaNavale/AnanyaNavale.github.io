@@ -48,7 +48,7 @@
 }
 
 /* MOBILE STYLES */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .section-header {
     gap: clamp(8px, 2vw, 12px);
   }

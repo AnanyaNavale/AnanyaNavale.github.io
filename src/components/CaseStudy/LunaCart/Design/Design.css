@@ -1,5 +1,5 @@
 .lunacart-design {
-  padding: clamp(71px, 6.944vw + 0px, 100px) clamp(86px, 8.333vw + 0px, 120px) clamp(143px, 13.889vw + 0px, 200px);
+  padding-block: clamp(70px, 8vw, 100px) clamp(143px, 13.889vw + 0px, 200px);
   background: var(--color-background-gray-frame);
 }
 
@@ -94,7 +94,7 @@
 
 @media (max-width: 768px) {
   .lunacart-design {
-    padding: clamp(50px, 12vw, 70px) 0 clamp(50px, 12vw, 70px);
+    padding: clamp(50px, 18.182vw + 31.818px, 70px) 0;
   }
 
   .lunacart-design .section-inner {

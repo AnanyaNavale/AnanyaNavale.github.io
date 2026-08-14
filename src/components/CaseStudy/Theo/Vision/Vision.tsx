@@ -16,7 +16,7 @@ function Vision({ id }: { id: string }) {
   const isMobile = useIsMobile();
 
   return (
-    <Section innerWidth={1140} className="theo-vision" id={id}>
+    <Section className="theo-vision" id={id}>
       <SectionHeader
         title="Vision"
         tagline={"But the feeling had to take root\nbefore the form."}
@@ -127,8 +127,8 @@ function Vision({ id }: { id: string }) {
           <p className="case-study-large-text">Why a teddy bear?</p>
           <p className="case-study-body-text">
             Inspired by the comfort and neutrality of a childhood stuffed
-            animal, Theo was designed to feel gentle, supportive, and
-            judgment-free.
+            animal, <strong>Theo</strong> was designed to feel gentle,
+            supportive, and judgment-free.
           </p>
           <p className="case-study-body-text">
             <p className="case-study-large-text">Classic. Kind. Calm.</p>

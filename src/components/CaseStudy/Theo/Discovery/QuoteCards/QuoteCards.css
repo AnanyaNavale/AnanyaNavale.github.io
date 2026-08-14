@@ -22,7 +22,7 @@
 }
 
 /* MOBILE STYLES */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .quote-cards {
     gap: clamp(16px, 4vw, 20px);
   }

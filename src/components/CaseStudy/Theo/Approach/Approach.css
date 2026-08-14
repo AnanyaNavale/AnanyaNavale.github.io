@@ -1,5 +1,5 @@
 .theo-approach {
-  padding: clamp(71px, 6.944vw + 0px, 100px) clamp(86px, 8.333vw + 0px, 120px) clamp(71px, 6.944vw + 0px, 100px);
+  padding-block: clamp(70px, 8vw, 100px);
 }
 
 .theo-approach .section-inner {
@@ -7,9 +7,9 @@
 }
 
 /* MOBILE STYLES */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .theo-approach {
-    padding: clamp(50px, 12vw, 70px) 0 clamp(50px, 12vw, 70px) 0; /* Remove horizontal padding */
+    padding: clamp(50px, 18.182vw + 31.818px, 70px) 0;
   }
 
   .theo-approach .section-inner {

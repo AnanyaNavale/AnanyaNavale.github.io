@@ -33,7 +33,7 @@
 }
 
 /* MOBILE STYLES */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .quote-card {
     width: 100%; /* Full width */
     height: auto; /* Let content determine height */

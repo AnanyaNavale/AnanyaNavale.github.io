@@ -253,7 +253,7 @@
 }
 
 /* MOBILE STYLES */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .case-study-footer {
     padding: clamp(50px, 12vw, 70px) clamp(24px, 6vw, 32px) clamp(40px, 10vw, 60px);
     gap: clamp(40px, 10vw, 60px);

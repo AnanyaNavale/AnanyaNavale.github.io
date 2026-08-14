@@ -1,5 +1,5 @@
 .lunacart-key-insight {
-  padding: clamp(71px, 6.944vw + 0px, 100px) clamp(107px, 10.417vw + 0px, 150px) clamp(71px, 6.944vw + 0px, 100px);
+  padding-block: clamp(70px, 8vw, 100px);
 }
 
 .lunacart-key-insight .section-inner {
@@ -88,13 +88,11 @@
 /* Mobile styles for KeyInsight section */
 @media (max-width: 768px) {
   .lunacart-key-insight {
-    padding: clamp(50px, 18.182vw + 31.818px, 70px) 
-             clamp(20px, 9.091vw + 10.909px, 30px) 
-             clamp(50px, 18.182vw + 31.818px, 70px);
+    padding-block: clamp(50px, 18.182vw + 31.818px, 70px);
   }
 
   .lunacart-key-insight .section-inner {
-    gap: clamp(30px, 18.182vw + 11.818px, 50px);
+    gap: clamp(28px, 7vw, 36px);
   }
 
   .key-insight-quotes {

@@ -153,7 +153,7 @@
 }
 
 /* MOBILE STYLES */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .view-case-study-button {
     position: relative; /* Remove absolute positioning */
     bottom: auto;
