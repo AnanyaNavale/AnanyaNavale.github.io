@@ -21,6 +21,7 @@ import heroBackground from "../../assets/images/boogie/hero-background.jpg";
 import heroScreen from "../../assets/images/boogie/hero-screen.png";
 
 import { BsGithub } from "react-icons/bs";
+import { FaFigma } from "react-icons/fa6";
 import { boogieNavItems } from "@/config/navigation";
 import { useIsMobile } from "@/hooks/useIsMobile";
 
@@ -98,6 +99,11 @@ function Boogie() {
               icon: BsGithub,
               label: "GitHub Codebase",
               href: "https://github.com/AnanyaNavale/CS377Q-Boogie",
+            },
+            {
+              icon: FaFigma,
+              label: "Figma Prototype",
+              href: "https://www.figma.com/proto/VZeg3Z2oDSWlrv6xtTLAQ6/Boogie?node-id=0-1&t=6fXsHoqms4giNXiu-1",
             },
           ]}
         />

@@ -19,6 +19,7 @@ import heroLeftScreen from "../../assets/images/theo/hero-screen-1.png";
 import heroRightScreen from "../../assets/images/theo/hero-screen-2.png";
 
 import { BsLink45Deg, BsGithub } from "react-icons/bs";
+import { FaFigma } from "react-icons/fa6";
 import { theoNavItems } from "@/config/navigation";
 import { useIsMobile } from "@/hooks/useIsMobile";
 
@@ -101,6 +102,11 @@ export default function Theo() {
               icon: BsGithub,
               label: "GitHub Codebase",
               href: "https://github.com/AnanyaNavale/CS147-Theo",
+            },
+            {
+              icon: FaFigma,
+              label: "Figma Prototype",
+              href: "https://www.figma.com/proto/PydVDc7BACGHCt1FJZ5py3/Theo--Medium-Fi-Prototype?node-id=0-1&t=5u0jqZ3oEAjuiepe-1",
             },
           ]}
         />
